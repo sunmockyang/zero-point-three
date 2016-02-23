@@ -157,45 +157,39 @@
 
 <script type="text/javascript">
 
-var fullscreenElements = [];
 var scrollRanges = {
 	fullPageRange: {start: 0, end: 0},
 	introVideoFadeRange: {start: 0, end: 0},
 	articleStartRange: {start: 0, end: 0}
 };
 
-var bufferRange = 0.1;
-var video1, video2;
 var introVideoController = null;
 
 function main() {
-	fullscreenElements = document.getElementsByClassName('fullscreen');
-	video1 = document.getElementById('video1');
-	video2 = document.getElementById('video2');
-
+	// Intro video
+	var video1 = document.getElementById('video1');
+	var video2 = document.getElementById('video2');
 	introVideoController = new IntroVideo(video1, video2, scrollRanges);
 
 	onResize();
 
-	ScrollRange(scrollRanges.fullPageRange, mainScrollHandler);
-}
+	AddScrollHandler(scrollRanges.fullPageRange, mainScrollHandler);
+};
 
 function mainScrollHandler(t, y) {
-	introVideoController.OnScroll(y);
-}
+	introVideoController.onScroll(y);
+};
 
 function onResize() {
-	scrollRanges.introVideoFadeRange.start = document.documentElement.clientHeight - 200;
-	scrollRanges.introVideoFadeRange.end = document.documentElement.clientHeight;
+	introVideoController.onResize();
 
-	scrollRanges.articleStartRange.start = document.documentElement.clientHeight * 1.75;
-	scrollRanges.articleStartRange.end = document.documentElement.clientHeight * 2;
+	scrollRanges.fullPageRange.end = ( 'scrollMaxY' in window ) ? window.scrollMaxY : (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+
+	var fullscreenElements = document.getElementsByClassName('fullscreen');
 	for (var i = 0; i < fullscreenElements.length; i++) {
 		window.requestAnimationFrame(resizeFullscreen.bind(this, fullscreenElements[i]));
 	};
-
-	scrollRanges.fullPageRange.end = ( 'scrollMaxY' in window ) ? window.scrollMaxY : (document.documentElement.scrollHeight - document.documentElement.clientHeight);
-}
+};
 
 function resizeFullscreen (elem) {
 	var width = document.documentElement.clientWidth;
@@ -222,12 +216,12 @@ function resizeFullscreen (elem) {
 		elem.style.top = "0px";
 		elem.style.left = (width - height * aspectRatio) / 2 + "px";
 	}
-}
+};
 
 var Mathx = {};
 Mathx.clamp = function(t, min, max) {
 	return Math.min(max, Math.max(min, t));
-}
+};
 
 window.onload = main;
 window.onresize = onResize;
