@@ -5,8 +5,12 @@ function IntroVideo(video1, video2, scrollRanges) {
 	this.video2 = video2;
 	this.scrollRanges = scrollRanges;
 
+	this.playing = true;
+
 	this.video1Source = "https://s3.amazonaws.com/sunnymock/zeropointthree/1422577769051.webm";
 	this.video2Source = "https://s3.amazonaws.com/sunnymock/zeropointthree/1420393862539.webm";
+	// this.video1Source = "old/img/bird1.webm";
+	// this.video2Source = "old/img/bird2.webm";
 
 	this.loadVideo(this.video1, this.video1Source, "video/webm");
 	this.loadVideo(this.video2, this.video2Source, "video/webm");
@@ -40,6 +44,13 @@ IntroVideo.prototype.onResize = function() {
 IntroVideo.prototype.onScroll = function(currentY){
 	this.setVideo1Level(this.scrollRanges.introVideoFadeRange, currentY);
 	this.setVideo2Level(this.scrollRanges.introVideoFadeRange, this.scrollRanges.articleStartRange, currentY);
+
+	if (currentY > this.scrollRanges.articleStartRange.end) {
+		this.playVideo(false);
+	}
+	else {
+		this.playVideo(true);
+	}
 }
 
 IntroVideo.prototype.setVideo1Level = function(introVideoFadeRange, currentY) {
@@ -61,3 +72,16 @@ IntroVideo.prototype.setVideo2Level = function(introVideoFadeRange, articleStart
 		this.setOpacityLevel(this.video2, t);
 	}
 }
+
+IntroVideo.prototype.playVideo = function(play) {
+	if (play && !this.playing) {
+		this.playing = true;
+		this.video1.play();
+		this.video2.play();
+	}
+	else if (!play && this.playing){
+		this.playing = false;
+		this.video1.pause();
+		this.video2.pause();
+	}
+};
