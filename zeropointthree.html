@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<html>
+<head>
+	<title>0.3%</title>
+
+	<script type="text/javascript">
+	var dataSrc = "js/data.json";
+	var data = null;
+
+	function loadJSON(callback) {   
+		var xobj = new XMLHttpRequest();
+		xobj.overrideMimeType("application/json");
+		xobj.open('GET', dataSrc, true);
+		xobj.onreadystatechange = function () {
+		if (xobj.readyState == 4 && xobj.status == "200") {
+			callback(xobj.responseText);
+			}
+		};
+		xobj.send(null);  
+	}
+	loadJSON(function(text) {data = JSON.parse(text)});
+	</script>
+
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+<body>
+<!-- Background media -->
+
+<!-- Article -->
+
+<!-- Footer -->
+
+<script type="text/javascript">
+function main() {
+	console.log(data);
+}
+
+window.onload = main;
+</script>
+
+</body>
+</html>
