@@ -1,4 +1,6 @@
 {
-	"video1_url": "https://s3.amazonaws.com/sunnymock/zeropointthree/1422577769051.webm",
-	"video2_url": "https://s3.amazonaws.com/sunnymock/zeropointthree/1420393862539.webm"
+	"video1_url": "old/version 0/img/bird1.webm",
+	"video2_url": "old/version 0/img/bird2.webm",
+	"_video1_url": "https://s3.amazonaws.com/sunnymock/zeropointthree/1422577769051.webm",
+	"_video2_url": "https://s3.amazonaws.com/sunnymock/zeropointthree/1420393862539.webm"
 }

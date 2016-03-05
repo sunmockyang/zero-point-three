@@ -26,18 +26,47 @@
 </head>
 <body>
 <!-- Background media -->
+<div class="background-media">
+<!--  autoplay="autoplay" -->
+	<video class="fullscreen video" id="video1" data-aspect-ratio="1.7778" muted="true" loop>
+	</video>
+	<video class="fullscreen video" id="video2" data-aspect-ratio="1.7778" muted="true" loop>
+	</video>
+</div>
+
+<!-- Title -->
+<div>0.3%</div>
+<div>That is the percentage of Christians in an average Middle Eastern Country.</div>
 
 <!-- Article -->
 
 <!-- Footer -->
 
 <script type="text/javascript">
+// Global vars
+var app = null;
+var elements = null;
+
 function main() {
-	console.log(data);
+	elements = {
+		video1Elem: document.getElementById('video1'),
+		video2Elem: document.getElementById('video2'),
+		fullscreenElements: document.getElementsByClassName('fullscreen')
+	};
+
+	app = new ZeroPointThree(data, elements);
+}
+
+function onResize() {
+	app.onResize();
 }
 
 window.onload = main;
+window.onresize = onResize;
 </script>
 
+<script type="text/javascript" src="js/ZeroPointThree.js"></script>
+<script type="text/javascript" src="js/IntroVideo.js"></script>
+<!-- <script type="text/javascript" src="js/ScrollRange.js"></script> -->
 </body>
 </html>
