@@ -1,3 +1,6 @@
+watch:
+	sass --watch scss/stylesheet.scss:stylesheet.css
+
 css:
 	sass scss/stylesheet.scss stylesheet.css
 

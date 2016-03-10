@@ -19,26 +19,34 @@
 		};
 		xobj.send(null);  
 	}
-	loadJSON(function(text) {data = JSON.parse(text)});
+	loadJSON(function(text) {data = JSON.parse(text); onLoad();});
 	</script>
 
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 <body>
 <!-- Background media -->
-<div class="background-media">
+<div class="background-media-container">
 <!--  autoplay="autoplay" -->
 	<video class="fullscreen video" id="video1" data-aspect-ratio="1.7778" muted="true" loop>
 	</video>
-	<video class="fullscreen video" id="video2" data-aspect-ratio="1.7778" muted="true" loop>
+	<video class="fullscreen video" id="video2" data-aspect-ratio="1.7778" data-scale="1.2" muted="true" loop>
 	</video>
+	<!-- add a down arrow here. Look up middle eastern street sign -->
 </div>
 
 <!-- Title -->
-<div>0.3%</div>
-<div>That is the percentage of Christians in an average Middle Eastern Country.</div>
+<div class="intro-title-container">
+	<div id="title1" class="intro-title"></div>
+	<div id="title2" class="intro-title"></div>
+</div>
 
+<div id="intro-buffer"></div>
 <!-- Article -->
+
+<div class="article-container">
+	<div id="intro-paragraph"></div>
+</div>
 
 <!-- Footer -->
 
@@ -49,8 +57,18 @@ var elements = null;
 
 function main() {
 	elements = {
-		video1Elem: document.getElementById('video1'),
-		video2Elem: document.getElementById('video2'),
+		intro: {
+			scrollBuffer: document.getElementById('intro-buffer'),
+			video1: document.getElementById('video1'),
+			video2: document.getElementById('video2'),
+			title1: document.getElementById('title1'),
+			title2: document.getElementById('title2')
+		},
+
+		article: {
+			container: document.getElementsByClassName("article-container")[0]
+		},
+
 		fullscreenElements: document.getElementsByClassName('fullscreen')
 	};
 
@@ -61,12 +79,19 @@ function onResize() {
 	app.onResize();
 }
 
-window.onload = main;
+function onLoad() {
+	if (document.readyState === "complete" && data != null) {
+		main();
+	}
+}
+
+window.onload = onLoad;
 window.onresize = onResize;
 </script>
 
 <script type="text/javascript" src="js/ZeroPointThree.js"></script>
 <script type="text/javascript" src="js/IntroVideo.js"></script>
-<!-- <script type="text/javascript" src="js/ScrollRange.js"></script> -->
+<script type="text/javascript" src="js/Article.js"></script>
+<script type="text/javascript" src="js/ScrollRange.js"></script>
 </body>
 </html>

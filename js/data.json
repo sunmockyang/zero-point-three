@@ -1,6 +1,14 @@
 {
-	"video1_url": "old/version 0/img/bird1.webm",
-	"video2_url": "old/version 0/img/bird2.webm",
-	"_video1_url": "https://s3.amazonaws.com/sunnymock/zeropointthree/1422577769051.webm",
-	"_video2_url": "https://s3.amazonaws.com/sunnymock/zeropointthree/1420393862539.webm"
+	"intro": {
+		"video1_url": "old/version 0/img/bird1.webm",
+		"video2_url": "old/version 0/img/bird2.webm",
+		"video1_url": "https://s3.amazonaws.com/sunnymock/a/1409173216797.webm",
+		"video2_url": "https://s3.amazonaws.com/sunnymock/a/1409017907820.webm"
+	},
+
+	"article": {
+		"title1": "0.3%",
+		"title2": "Divergent, Underground and Undetected: The Plight of a religious minority living in a Muslim world",
+		"intro-paragraph": "The constitution establishes the country as a civil state based on citizenship, prohibits the use of mosques and houses of worship to advance political agendas or objectives, and guarantees freedom of belief, conscience, and exercise of religious practice. (But that can mean for Christians gathering in underground ‘houses of worship’ as well)"
+	}
 }
