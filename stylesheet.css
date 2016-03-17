@@ -24,14 +24,13 @@ html, body {
 
 .intro-title-container {
   position: fixed;
-  width: 100%;
   transform: translate3d(0, 36vh, 0); }
 
 .intro-title {
   color: #333;
-  width: 80%;
-  padding-left: 10%;
-  text-align: center; }
+  width: 70%;
+  text-align: center;
+  margin: 0 auto; }
 
 .intro-title.article {
   transition: none; }
@@ -44,6 +43,7 @@ html, body {
   -webkit-transition: transform 0.5s ease-in-out; }
 
 #title2.intro-title {
+  width: 70%;
   font-size: 3vh;
   transform: translate3d(0, 10vh, 0);
   transition: transform 0.5s ease-in-out, opacity 0.4s;
@@ -62,7 +62,7 @@ html, body {
   background-color: #FFF;
   padding: 200px 15%;
   transition: 0.5s linear;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.5;
   font-family: "Georgia";
   max-width: 40rem;
