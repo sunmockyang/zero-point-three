@@ -34,13 +34,14 @@ $title1Height: 10vh;
 $title2Height: 3vh;
 
 .intro-title-container {
+	width: 100%;
 	position: fixed;
 	transform: translate3d(0, (100vh - $title1Height - $title2Height - 15vh)/2, 0);
 }
 
 .intro-title {
 	color: #333;
-	width: $article-width;
+	width: $article-width - 10%;
 	text-align: center;
 	margin: 0 auto;
 }
@@ -58,7 +59,6 @@ $title2Height: 3vh;
 }
 
 #title2.intro-title {
-	width: $article-width;
 	font-size: $title2Height;
 	transform: translate3d(0, 10vh, 0);
 	transition: transform 0.5s ease-in-out, opacity 0.4s;
