@@ -1,12 +1,17 @@
 // zeropoint3.css
 
+html {
+	// background-color: #EEE;
+}
+
 html,body {
 	margin: 0;
 	padding: 0;
 }
 
-$article-width: 70%;
-$article-max-width: 40rem;
+$article-width: 90%;
+$article-min-width: 30rem;
+$section-max-width: 40rem;
 
 @import "IntroVideos";
 @import "Article";

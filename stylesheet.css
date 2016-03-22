@@ -25,11 +25,11 @@ html, body {
 .intro-title-container {
   width: 100%;
   position: fixed;
-  transform: translate3d(0, 36vh, 0); }
+  transform: translate3d(0, 30vh, 0); }
 
 .intro-title {
   color: #333;
-  width: 60%;
+  width: 80%;
   text-align: center;
   margin: 0 auto; }
 
@@ -38,13 +38,13 @@ html, body {
 
 #title1.intro-title {
   color: #F55;
-  font-size: 10vh;
-  transform: translate3d(0, 5vh, 0);
+  font-size: 20vh;
+  transform: translate3d(0, 10vh, 0);
   transition: transform 0.5s ease-in-out;
   -webkit-transition: transform 0.5s ease-in-out; }
 
 #title2.intro-title {
-  font-size: 3vh;
+  font-size: 5vh;
   transform: translate3d(0, 10vh, 0);
   transition: transform 0.5s ease-in-out, opacity 0.4s;
   -webkit-transition: transform 0.5s ease-in-out, opacity 0.4s;
@@ -58,23 +58,42 @@ html, body {
   opacity: 1; }
 
 .article-container {
-  width: 70%;
+  width: 90%;
+  min-width: 30rem;
   background-color: #FFF;
-  padding: 200px 15%;
+  padding-top: 50vh;
   transition: 0.5s linear;
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: 1.2rem;
+  line-height: 2;
   font-family: "Georgia";
-  max-width: 40rem;
   margin: 0 auto;
   transform: translate3d(0, 100vh, 0); }
 
+#intro-paragraph {
+  width: 50%;
+  max-width: 35rem;
+  margin: 0 auto;
+  margin-bottom: 50vh; }
+
 .section {
-  margin-top: 8rem; }
+  padding-bottom: 10vh; }
+
+.section-content {
+  max-width: 40rem;
+  width: 70%;
+  margin: 0 auto; }
 
 .section-title {
-  font-size: 2rem;
-  text-align: center; }
+  text-align: center;
+  line-height: 1.2;
+  margin: 1rem; }
+
+.section-title-name {
+  font-size: 2.5rem;
+  text-decoration: underline; }
+
+.section-title-heading {
+  font-size: 1rem; }
 
 .section-subtitle {
   font-weight: bold;
@@ -84,6 +103,9 @@ html, body {
 .section-media {
   width: 90%;
   margin: 0 auto; }
+
+.section-media-video {
+  width: 100%; }
 
 .section-image img {
   width: 100%;
@@ -109,6 +131,9 @@ html, body {
   padding-right: 2rem; }
 
 .section-video {
-  width: 100%; }
+  width: 95%;
+  margin-left: 2.5%;
+  margin-bottom: 5rem;
+  max-height: 92vh; }
 
 /*# sourceMappingURL=stylesheet.css.map */

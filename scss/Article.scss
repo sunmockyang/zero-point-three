@@ -1,31 +1,54 @@
 
 
 .article-container {
-	// position: fixed;
 	width: $article-width;
+	min-width: $article-min-width;
 	background-color: #FFF;
 
-	padding: 200px (100% - $article-width)/2;
+	padding-top: 50vh;
 	transition: 0.5s linear;
 
 	// font: 300 18px/30px Georgia,"Times New Roman",serif;
 
-	font-size: 1rem;
-    line-height: 1.5;
+	font-size: 1.2rem;
+    line-height: 2;
     font-family: "Georgia";
-    max-width: $article-max-width;
     margin: 0 auto;
 
 	transform: translate3d(0, 100vh, 0);
 }
 
-.section {
-	margin-top: 8rem;
+#intro-paragraph {
+	width: 50%;
+	max-width: $section-max-width - 5rem;
+	margin: 0 auto;
+	margin-bottom: 50vh;
+}
+
+.section 
+{
+	padding-bottom: 10vh;
+}
+
+.section-content {
+	max-width: $section-max-width;
+	width: 70%;
+	margin: 0 auto;
 }
 
 .section-title {
-	font-size: 2rem;
 	text-align: center;
+	line-height: 1.2;
+	margin: 1rem;
+}
+
+.section-title-name {
+	font-size: 2.5rem;
+	text-decoration: underline;
+}
+
+.section-title-heading {
+	font-size: 1rem;
 }
 
 .section-subtitle {
@@ -37,6 +60,10 @@
 .section-media {
 	width: 90%;
 	margin: 0 auto;
+}
+
+.section-media-video {
+	width: 100%;
 }
 
 .section-image img{
@@ -55,7 +82,6 @@
 	margin: 0 auto;
 	width: 90%;
 	font-size: 1.25rem;
-	// background-color: #EEE;
 	border-left: 5px solid gray;
 	padding: 0.5rem 0 0.5rem 1.5rem;
 	margin: 1.5rem 0;
@@ -70,6 +96,11 @@
 	padding-right: 2rem;
 }
 
+$section_video_width: 95%;
+
 .section-video {
-	width: 100%;
+	width: $section_video_width;
+	margin-left: (100% - $section_video_width)/2;
+	margin-bottom: 5rem;
+	max-height: 92vh;
 }
