@@ -5,8 +5,8 @@
 	<title>0.3%</title>
 
 	<script type="text/javascript">
-	var dataSrc = "js/data.json";
-	var data = null;
+	var dataSrc = "content/zero_point_three_config.json";
+	var config = null;
 
 	function loadJSON(callback) {   
 		var xobj = new XMLHttpRequest();
@@ -19,7 +19,7 @@
 		};
 		xobj.send(null);  
 	}
-	loadJSON(function(text) {data = JSON.parse(text); onLoad();});
+	loadJSON(function(text) {config = JSON.parse(text); onLoad();});
 	</script>
 
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
@@ -271,7 +271,7 @@ function main() {
 		fullscreenElements: document.getElementsByClassName('fullscreen')
 	};
 
-	app = new ZeroPointThree(data, elements);
+	app = new ZeroPointThree(config, elements);
 }
 
 function onResize() {
@@ -279,7 +279,7 @@ function onResize() {
 }
 
 function onLoad() {
-	if (document.readyState === "complete" && data != null) {
+	if (document.readyState === "complete" && config != null) {
 		main();
 	}
 }
@@ -290,7 +290,6 @@ window.onresize = onResize;
 
 <script type="text/javascript" src="js/ZeroPointThree.js"></script>
 <script type="text/javascript" src="js/IntroVideo.js"></script>
-<script type="text/javascript" src="js/Article.js"></script>
 <script type="text/javascript" src="js/ScrollRange.js"></script>
 </body>
 </html>

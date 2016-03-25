@@ -1,6 +1,6 @@
 // IntroVideo.js
 
-function IntroVideo(elements, introVideoData) {
+function IntroVideo(elements, introConfig) {
 	this.scrollBuffer = elements.scrollBuffer;
 
 	this.title1 = elements.title1;
@@ -9,8 +9,11 @@ function IntroVideo(elements, introVideoData) {
 	this.video1 = elements.video1;
 	this.video2 = elements.video2;
 
-	this.video1Source = introVideoData.video1_url;
-	this.video2Source = introVideoData.video2_url;
+	this.title1.innerHTML = introConfig.title1;
+	this.title2.innerHTML = introConfig.title2;
+
+	this.video1Source = introConfig.video1_url;
+	this.video2Source = introConfig.video2_url;
 
 	this.loadVideo(this.video1, this.video1Source, "video/webm");
 	this.loadVideo(this.video2, this.video2Source, "video/webm");

@@ -2,15 +2,14 @@
 // Main app for PH thesis
 // Contains main logic for the entire article
 
-function ZeroPointThree(data, elements) {
+function ZeroPointThree(config, elements) {
 	this.elements = elements;
-	this.data = data;
+	this.config = config;
 
 	this.scrollRange = {start: 0, end: 0};
 	AddScrollHandler(this.scrollRange, this.onScroll.bind(this));
 
-	this.introVideoController = new IntroVideo(this.elements.intro, data.intro);
-	this.articleController = new Article(this.elements.article, data.article);
+	this.introVideoController = new IntroVideo(this.elements.intro, config.intro);
 
 	this.setContent();
 
@@ -18,8 +17,8 @@ function ZeroPointThree(data, elements) {
 }
 
 ZeroPointThree.prototype.setContent = function() {
-	for (var id in this.data.article) {
-		document.getElementById(id).innerHTML = this.data.article[id];
+	for (var id in this.config.article) {
+		document.getElementById(id).innerHTML = this.config.article[id];
 	}
 };
 
@@ -32,12 +31,10 @@ ZeroPointThree.prototype.onResize = function() {
 	this.scrollRange.end = ( 'scrollMaxY' in window ) ? window.scrollMaxY : (docElem.scrollHeight - docElem.clientHeight);
 
 	this.introVideoController.onResize();
-	this.articleController.onResize();
 };
 
 ZeroPointThree.prototype.onScroll = function(y) {
 	window.requestAnimationFrame(this.introVideoController.onScroll.bind(this.introVideoController, y));
-	this.articleController.onScroll(y);
 };
 
 // Utils
