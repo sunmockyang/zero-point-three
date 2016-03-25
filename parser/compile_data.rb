@@ -1,7 +1,12 @@
 require_relative "section"
 
-input_file_path = ARGV[0]
+ARGV.each { |md_file|
+	output_file = File.dirname(md_file) + "/" + File.basename(md_file,File.extname(md_file)) + ".html"
 
-File.open("Output.html", "w") { |file|
-	file.write(Section.new(input_file_path).to_html)
+	puts "Parsing: #{md_file} -> #{output_file}"
+	File.open(output_file, "w") { |file|
+		file.write(Section.new(md_file).to_html)
+	}
 }
+
+puts "All done...?\n\n"

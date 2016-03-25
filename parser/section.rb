@@ -5,13 +5,16 @@ require_relative "utils"
 
 HandlebarsContext = Handlebars::Context.new
 MarkdownRenderer = Redcarpet::Markdown.new(Redcarpet::Render::HTML, extensions = {})
+TemplatesDirectory = File.dirname(__FILE__) + "/templates/";
+
 
 class Inline
 	def initialize(template_src)
 		@data = {}
 
 		if !template_src.nil?
-			@inline_template = HandlebarsContext.compile(File.read("templates/#{template_src}"))
+			template_path = TemplatesDirectory + "#{template_src}"
+			@inline_template = HandlebarsContext.compile(File.read(template_path))
 		end
 	end
 
@@ -153,7 +156,7 @@ class Section
 			section_content_html += elem.to_html + "\n"
 		end
 
-		section_template = HandlebarsContext.compile(File.read("templates/section.html"))
+		section_template = HandlebarsContext.compile(File.read(TemplatesDirectory + "section.html"))
 		return section_template.call(
 			:chapter_name => @data["chapter_name"],
 			:chapter_title => @data["chapter_title"],
