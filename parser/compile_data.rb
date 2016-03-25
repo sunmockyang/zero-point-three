@@ -1,6 +1,7 @@
 require_relative "section"
-require "pp"
 
 input_file_path = ARGV[0]
 
-puts(Section.new(input_file_path).to_s)
+File.open("Output.html", "w") { |file|
+	file.write(Section.new(input_file_path).to_html)
+}

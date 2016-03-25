@@ -1,13 +1,22 @@
+require "handlebars"
 require "json"
+require "redcarpet"
 require_relative "utils"
 
+HandlebarsContext = Handlebars::Context.new
+MarkdownRenderer = Redcarpet::Markdown.new(Redcarpet::Render::HTML, extensions = {})
+
 class Inline
-	def initialize
+	def initialize(template_src)
 		@data = {}
+
+		if !template_src.nil?
+			@inline_template = HandlebarsContext.compile(File.read("templates/#{template_src}"))
+		end
 	end
 
 	def to_html
-		return ""
+		return @inline_template.call(@data)
 	end
 
 	def to_s
@@ -15,9 +24,19 @@ class Inline
 	end
 end
 
+class PlainText < Inline
+	def initialize(text)
+		@text = text
+	end
+
+	def to_html
+		return MarkdownRenderer.render(@text)
+	end
+end
+
 class InlineImage < Inline
 	def initialize(content)
-		super()
+		super("inline_image.html")
 		caption = extract_from_quotes(content)
 		src = content[0, content.index(" \"")]
 
@@ -28,7 +47,7 @@ end
 
 class InlineVideo < Inline
 	def initialize(content)
-		super()
+		super("inline_video.html")
 		caption = extract_from_quotes(content)
 		src = content[0, content.index(" \"")]
 
@@ -39,7 +58,7 @@ end
 
 class InlineQuote < Inline
 	def initialize(line)
-		super()
+		super("inline_quote.html")
 		line = line[1, line.length - 1]
 		quote = line.rpartition("-").first
 		author = line.rpartition("-").last
@@ -53,15 +72,15 @@ end
 
 class InlineHeader < Inline
 	def initialize(line)
-		super()
+		super("inline_subtitle.html")
 		line = line[3, line.length-3]
 
 		media_type, src = parse_tag(/\!\[(.*)/.match(line).to_s)
 		title = line.split("![").first
 
 		@data[:title] = remove_outer_whitespace(title)
-		@data[:media_type] = remove_outer_whitespace(media_type)
-		@data[:src] = remove_outer_whitespace(src)
+		# @data[:media_type] = remove_outer_whitespace(media_type)
+		@data[media_type] = remove_outer_whitespace(src)
 	end
 end
 
@@ -83,14 +102,15 @@ class Section
 		
 			if line.start_with?("![") or line.start_with?(">") or line.start_with?("##")
 				if plain_text != ""
-					@data[:content].push(plain_text)
+					# @data[:content].push(PlainText.new(plain_text))
 					plain_text = ""
 				end
 
 				parse_special(line)
 
 			elsif line != "\n"
-				plain_text += line
+				# plain_text += line
+				@data[:content].push(PlainText.new(line))
 			end
 		end
 	end
@@ -125,5 +145,20 @@ class Section
 		end
 
 		return str
+	end
+
+	def to_html
+		section_content_html = ""
+		@data[:content].each do |elem|
+			section_content_html += elem.to_html + "\n"
+		end
+
+		section_template = HandlebarsContext.compile(File.read("templates/section.html"))
+		return section_template.call(
+			:chapter_name => @data["chapter_name"],
+			:chapter_title => @data["chapter_title"],
+			:banner_video => extract_from_quotes(@data["banner_video"]),
+			:section_content => proc {Handlebars::SafeString.new(section_content_html)}
+		)
 	end
 end
