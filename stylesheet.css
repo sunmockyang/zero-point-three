@@ -2,6 +2,52 @@ html, body {
   margin: 0;
   padding: 0; }
 
+.index-container {
+  margin-bottom: 20vh;
+  padding: 10vh 0;
+  border-top: 1px solid #CCC;
+  border-bottom: 1px solid #CCC; }
+
+.index-header {
+  font-size: 3rem;
+  text-align: center; }
+
+.headshot-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center; }
+
+.headshot-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 15vw;
+  height: 22.5vw;
+  min-width: 8rem;
+  min-height: 12rem;
+  margin: 1rem 1rem;
+  border: 1px solid #000;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+.headshot-link .headshot-link-text {
+  color: #FFF;
+  text-shadow: 0 0 0.5rem #000, 0 0 0.3rem #000;
+  font-size: 150%;
+  line-height: 100%; }
+
+.headshot-link.Dali {
+  background-image: url("content/index_thumbnails/Dali_thumbnail.jpg"); }
+
+.headshot-link.Safa {
+  background-image: url("content/index_thumbnails/Pzilla_thumnail.jpg"); }
+
+.headshot-link.Lilli {
+  background-image: url("content/index_thumbnails/Lilli_thumbnail.jpg"); }
+
 .background-media-container {
   /*padding-bottom: 56.25%;*/
   width: 100%;
@@ -73,7 +119,7 @@ html, body {
   width: 50%;
   max-width: 35rem;
   margin: 0 auto;
-  margin-bottom: 50vh; }
+  margin-bottom: 20vh; }
 
 .section {
   padding-bottom: 10vh; }
