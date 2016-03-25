@@ -22,7 +22,7 @@ class InlineImage < Inline
 		src = content[0, content.index(" \"")]
 
 		@data[:caption] = caption
-		@data[:src] = src
+		@data[:src] = remove_outer_whitespace(src)
 	end
 end
 
@@ -33,7 +33,7 @@ class InlineVideo < Inline
 		src = content[0, content.index(" \"")]
 
 		@data[:caption] = caption
-		@data[:src] = src
+		@data[:src] = remove_outer_whitespace(src)
 	end
 end
 
@@ -46,8 +46,8 @@ class InlineQuote < Inline
 
 		# Need to remove outer whitespace
 
-		@data[:quote] = quote
-		@data[:author] = author
+		@data[:quote] = remove_outer_whitespace(quote)
+		@data[:author] = remove_outer_whitespace(author)
 	end
 end
 
@@ -59,9 +59,9 @@ class InlineHeader < Inline
 		media_type, src = parse_tag(/\!\[(.*)/.match(line).to_s)
 		title = line.split("![").first
 
-		@data[:title] = title
-		@data[:media_type] = media_type
-		@data[:src] = src
+		@data[:title] = remove_outer_whitespace(title)
+		@data[:media_type] = remove_outer_whitespace(media_type)
+		@data[:src] = remove_outer_whitespace(src)
 	end
 end
 

@@ -15,3 +15,17 @@ def extract_from_quotes(text)
 	str.gsub!("\\\"", "\"")
 	return str
 end
+
+def remove_outer_whitespace(text)
+	if text.nil?
+		return text
+	end
+
+	if /^\s*$/.match(text[0]).to_s.length > 0
+		return remove_outer_whitespace(text[1, text.length-1])
+	elsif /^\s*$/.match(text[text.length - 1]).to_s.length > 0
+		return remove_outer_whitespace(text[0, text.length-1])
+	else
+		return text
+	end
+end
