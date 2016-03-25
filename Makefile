@@ -4,6 +4,10 @@ parse_content:
 clean-content:
 	rm content/sections/*.html
 
+install-parser-dependencies:
+	sudo gem install redcarpet
+	sudo gem install handlebars
+
 watch:
 	sass --watch scss/stylesheet.scss:stylesheet.css
 

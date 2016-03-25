@@ -1,6 +1,6 @@
 def parse_tag(tag)
-	type = /^!\[(.*?)\]/.match(tag).to_s
-	type = type[2, type.length-3]
+	type = /^\[(.*?)\]/.match(tag).to_s
+	type = type[1, type.length-2]
 
 
 	content = /\((.*?)\)/.match(tag).to_s

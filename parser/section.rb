@@ -78,8 +78,8 @@ class InlineHeader < Inline
 		super("inline_subtitle.html")
 		line = line[3, line.length-3]
 
-		media_type, src = parse_tag(/\!\[(.*)/.match(line).to_s)
-		title = line.split("![").first
+		media_type, src = parse_tag(/\[(.*)/.match(line).to_s)
+		title = line.split("[").first
 
 		@data[:title] = remove_outer_whitespace(title)
 		# @data[:media_type] = remove_outer_whitespace(media_type)
@@ -103,7 +103,7 @@ class Section
 
 		File.readlines(input_file_path).each do |line|
 		
-			if line.start_with?("![") or line.start_with?(">") or line.start_with?("##")
+			if line.start_with?("[") or line.start_with?(">") or line.start_with?("##")
 				if plain_text != ""
 					# @data[:content].push(PlainText.new(plain_text))
 					plain_text = ""
@@ -160,7 +160,7 @@ class Section
 		return section_template.call(
 			:chapter_name => @data["chapter_name"],
 			:chapter_title => @data["chapter_title"],
-			:banner_video => extract_from_quotes(@data["banner_video"]),
+			:banner_video => @data["banner_video"],
 			:section_content => proc {Handlebars::SafeString.new(section_content_html)}
 		)
 	end

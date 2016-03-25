@@ -1,6 +1,6 @@
-![chapter_title](Prologue)
-![chapter_name](Marwan)
-![banner_video]("https://s3.amazonaws.com/sunnymock/a/1409173216797.webm")
+[chapter_title](Prologue)
+[chapter_name](Marwan)
+[banner_video](https://s3.amazonaws.com/sunnymock/a/1409173216797.webm)
 
 It’s a large, airy room. It’s dark.
 
@@ -37,7 +37,7 @@ Wolf shakes his head. "La, la, la." No, no, no, he says in Arabic. 
 
 And that’s how the conversation ends. It’s all too familiar for the photographer: he’s unnatural; he’s mocked; he’s misunderstood. 
 
-![image](content/IMG_8375.JPG "I’m drunk in the photography. I’m drunk in the dancing.")
+[image](content/IMG_8375.JPG "I’m drunk in the photography. I’m drunk in the dancing.")
 
 He’s a stranger in his own nation. 
 
@@ -89,7 +89,7 @@ Meanwhile the growing Tunisian Christian community is forced in to a difficult c
 
 Both of these choices lead to inevitable hardships and forms of persecution in this predominantly Muslim society. 
 
-## The Tunisian Christian Population ![sold/version 0/img/bridge.jpg]
+## The Tunisian Christian Population [sold/version 0/img/bridge.jpg]
 
 The modern-day Christian phenomenon in Tunisia is relatively new, seemingly emerging since the revolution according to Christian religious leaders working in Tunisia. 
 
@@ -130,7 +130,7 @@ Firstly, it’s because many of his Christian brothers and sisters face far more
 
 *“Why should I call it persecution?”* he asks. _“With that mindset, I will be easily depressed and maybe not be able to stand up on my feet again.”_
 
-![video](https://s3.amazonaws.com/sunnymock/a/1409173216797.webm "“I want to say it loudly. Don’t consider everything persecution, even if it’s true. Even if they kick you out of work, even if they punch you, even if you starve to death because you don’t have family or place to crash, even if you sleep in the garden, even if someone beats you to death. Because if you accept everything as persecution, between you and yourself, how the heck are you tomorrow morning look to yourself and say I still have a better day, I still have hope for myself?”")
+[video](https://s3.amazonaws.com/sunnymock/a/1409173216797.webm "“I want to say it loudly. Don’t consider everything persecution, even if it’s true. Even if they kick you out of work, even if they punch you, even if you starve to death because you don’t have family or place to crash, even if you sleep in the garden, even if someone beats you to death. Because if you accept everything as persecution, between you and yourself, how the heck are you tomorrow morning look to yourself and say I still have a better day, I still have hope for myself?”")
 
 But this is the choice he made. And in that choice, he found his freedom. In his matrix-like society, he found the red pill, says Dali. 
 
