@@ -1,6 +1,6 @@
-// IntroVideo.js
+// BackgroundMedia.js
 
-function IntroVideo(elements, introConfig) {
+function BackgroundMedia(elements, introConfig) {
 	this.scrollBuffer = elements.scrollBuffer;
 
 	this.title1 = elements.title1;
@@ -23,43 +23,65 @@ function IntroVideo(elements, introConfig) {
 	this.onResize();
 }
 
-IntroVideo.scrollRange = 999; // Gets adjusted to screen height
-IntroVideo.prototype.transitionPercentage = 0.3;
-IntroVideo.prototype.fadeRange = 0.15;
+BackgroundMedia.scrollRange = 999; // Gets adjusted to screen height
+BackgroundMedia.prototype.transitionPercentage = 0.3;
+BackgroundMedia.prototype.articlePercentage = 2.0;
+BackgroundMedia.prototype.fadeRange = 0.15;
 
-IntroVideo.prototype.loadVideo = function(video, src, type) {
+BackgroundMedia.prototype.loadVideo = function(video, src, type) {
 	var source = document.createElement('source');
     source.src = src;
     source.type = type;
     video.appendChild(source);
 }
 
-IntroVideo.prototype.onResize = function() {
-	IntroVideo.scrollRange = document.documentElement.clientHeight;
-	this.scrollBuffer.style.height = IntroVideo.scrollRange + "px";
+BackgroundMedia.prototype.onResize = function() {
+	BackgroundMedia.scrollRange = document.documentElement.clientHeight;
+	// this.scrollBuffer.style.height = BackgroundMedia.scrollRange + "px";
 
 	this.onScroll();
 };
 
-IntroVideo.prototype.onScroll = function(y) {
+BackgroundMedia.prototype.onScroll = function(y) {
 	var currentY = window.scrollY;
 
-	if (this.lastY / IntroVideo.scrollRange < this.transitionPercentage &&
-		currentY / IntroVideo.scrollRange >= this.transitionPercentage) {
+	// Transition between two videos
+	if (this.lastY / BackgroundMedia.scrollRange < this.transitionPercentage &&
+		currentY / BackgroundMedia.scrollRange >= this.transitionPercentage) {
+		// From first to second video
 		this.title1.classList.add("second-video");
 		this.title2.classList.add("second-video");
 		this.video1.classList.add("second-video");
 	}
-	else if (this.lastY / IntroVideo.scrollRange > this.transitionPercentage &&
-		currentY / IntroVideo.scrollRange <= this.transitionPercentage) {
+	else if (this.lastY / BackgroundMedia.scrollRange > this.transitionPercentage &&
+		currentY / BackgroundMedia.scrollRange <= this.transitionPercentage) {
+		// From second to first video
 		this.title1.classList.remove("second-video");
 		this.title2.classList.remove("second-video");
 		this.video1.classList.remove("second-video");
 	}
 
-	var fadePercentage = (currentY + this.fadeRange * IntroVideo.scrollRange - IntroVideo.scrollRange) / IntroVideo.scrollRange;
+	// Transition to article
+	if (this.lastY / BackgroundMedia.scrollRange < this.articlePercentage &&
+		currentY / BackgroundMedia.scrollRange >= this.articlePercentage) {
+		// From first to second video
+		this.title1.classList.add("hidden");
+		this.title2.classList.add("hidden");
+		this.video1.classList.add("hidden");
+		this.video2.classList.add("hidden");
+	}
+	else if (this.lastY / BackgroundMedia.scrollRange > this.articlePercentage &&
+		currentY / BackgroundMedia.scrollRange <= this.articlePercentage) {
+		// From second to first video
+		this.title1.classList.remove("hidden");
+		this.title2.classList.remove("hidden");
+		this.video1.classList.remove("hidden");
+		this.video2.classList.remove("hidden");
+	}
+
+	var fadePercentage = (currentY + this.fadeRange * BackgroundMedia.scrollRange - BackgroundMedia.scrollRange) / BackgroundMedia.scrollRange;
 	if (fadePercentage > 0) {
-		this.video2.style.opacity = 1 - fadePercentage;
+		this.video2.style.opacity = Math.min(1 - fadePercentage, 1);
 		this.video2.style.transform = translate3dY(-fadePercentage * 100);
 	}
 	else if (this.video2.style.opacity != 1) {
@@ -70,7 +92,7 @@ IntroVideo.prototype.onScroll = function(y) {
 	this.lastY = currentY;
 };
 
-IntroVideo.prototype.playVideo = function(play) {
+BackgroundMedia.prototype.playVideo = function(play) {
 	if (play && !this.playing) {
 		this.playing = true;
 		this.video1.play();

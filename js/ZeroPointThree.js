@@ -9,7 +9,7 @@ function ZeroPointThree(config, elements) {
 	this.scrollRange = {start: 0, end: 0};
 	AddScrollHandler(this.scrollRange, this.onScroll.bind(this));
 
-	this.introVideoController = new IntroVideo(this.elements.intro, config.intro);
+	this.backgroundMediaController = new BackgroundMedia(this.elements.intro, config.intro);
 
 	this.setContent();
 
@@ -30,11 +30,11 @@ ZeroPointThree.prototype.onResize = function() {
 	var docElem = document.documentElement;
 	this.scrollRange.end = ( 'scrollMaxY' in window ) ? window.scrollMaxY : (docElem.scrollHeight - docElem.clientHeight);
 
-	this.introVideoController.onResize();
+	this.backgroundMediaController.onResize();
 };
 
 ZeroPointThree.prototype.onScroll = function(y) {
-	window.requestAnimationFrame(this.introVideoController.onScroll.bind(this.introVideoController, y));
+	window.requestAnimationFrame(this.backgroundMediaController.onScroll.bind(this.backgroundMediaController, y));
 };
 
 // Utils
