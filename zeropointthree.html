@@ -4,6 +4,9 @@
 <head>
 	<title>0.3%</title>
 
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+
 	<script type="text/javascript">
 	var dataSrc = "content/zero_point_three_config.json";
 	var config = null;
@@ -21,16 +24,14 @@
 	}
 	loadJSON(function(text) {config = JSON.parse(text); onLoad();});
 	</script>
-
-	<link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 <body>
 <!-- Background media -->
 <div class="background-media-container">
 <!--  autoplay="autoplay" -->
-	<video class="fullscreen video" id="video1" data-aspect-ratio="1.7778" muted="true" loop>
+	<video class="fullscreen video" id="video1" data-aspect-ratio="1.7778" muted="true" loop autoplay="autoplay">
 	</video>
-	<video class="fullscreen video" id="video2" data-aspect-ratio="1.7778" data-scale="1.2" muted="true" loop>
+	<video class="fullscreen video" id="video2" data-aspect-ratio="1.7778" data-scale="1.2" muted="true" loop autoplay="autoplay">
 	</video>
 	<!-- add a down arrow here. Look up middle eastern street sign -->
 </div>
@@ -58,12 +59,45 @@
 	<div class="index-container">
 		<div class="index-header">Our Heroes</div>
 		<div class="headshot-container">
-			<div class="headshot-link Dali"><div class="headshot-link-text">Dali</div></div>
-			<div class="headshot-link Ali"><div class="headshot-link-text">Mohammed Ali</div></div>
-			<div class="headshot-link Manel"><div class="headshot-link-text">Manel</div></div>
-			<div class="headshot-link Safa"><div class="headshot-link-text">Safa</div></div>
-			<div class="headshot-link Lilli"><div class="headshot-link-text">Lilli</div></div>
+			<div class="headshot-link Dali">
+				<div class="headshot-link-text">
+					<div class="link-name">Dali</div>
+					<hr/>
+					<div class="link-section">Prologue</div>
+				</div>
+				<div class="overlay"></div>
+			</div>
+			<div class="headshot-link Ali">
+				<div class="headshot-link-text">
+					<div class="link-name">Mohammed Ali</div>
+					<div class="link-section">Chapter 1</div>
+				</div>
+				<div class="overlay"></div>
+			</div>
+			<div class="headshot-link Manel">
+				<div class="headshot-link-text">
+					<div class="link-name">Manel</div>
+					<div class="link-section">Chapter 2</div>
+				</div>
+				<div class="overlay"></div>
+			</div>
+			<div class="headshot-link Safa">
+				<div class="headshot-link-text">
+					<div class="link-name">Safa</div>
+					<div class="link-section">Chapter 3</div>
+				</div>
+				<div class="overlay"></div>
+			</div>
+			<div class="headshot-link Lilli">
+				<div class="headshot-link-text">
+					<div class="link-name">Lilli</div>
+					<div class="link-section">Chapter 4</div>
+				</div>
+				<div class="overlay"></div>
+			</div>
 		</div>
+
+		<div class="index-header">Analysis</div>
 	</div>
 
 	<div class="section">
@@ -302,5 +336,6 @@ window.onresize = onResize;
 <script type="text/javascript" src="js/ZeroPointThree.js"></script>
 <script type="text/javascript" src="js/IntroVideo.js"></script>
 <script type="text/javascript" src="js/ScrollRange.js"></script>
+<script type="text/javascript" src="js/Utils.js"></script>
 </body>
 </html>

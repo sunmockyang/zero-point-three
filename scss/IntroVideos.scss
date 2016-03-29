@@ -40,10 +40,13 @@ $title2Height: 5vh;
 }
 
 .intro-title {
-	color: #333;
+	color: #FFF;
+	text-shadow: 0 0 1rem #333;
 	width: $article-width - 10%;
 	text-align: center;
 	margin: 0 auto;
+	font-family: "Lato";
+	font-weight: 300;
 }
 
 .intro-title.article {
@@ -51,7 +54,7 @@ $title2Height: 5vh;
 }
 
 #title1.intro-title {
-	color: #F55;
+	color: $highlight-colour;
 	font-size: $title1Height;
 	transform: translate3d(0, $title1Height/2, 0);
 	transition: transform 0.5s ease-in-out;
@@ -60,6 +63,7 @@ $title2Height: 5vh;
 
 #title2.intro-title {
 	font-size: $title2Height;
+	font-weight: 400;
 	transform: translate3d(0, 10vh, 0);
 	transition: transform 0.5s ease-in-out, opacity 0.4s;
 	-webkit-transition: transform 0.5s ease-in-out, opacity 0.4s;
