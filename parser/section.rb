@@ -132,6 +132,8 @@ class Section
 			@data[:content].push(InlineHeader.new(raw_line))
 		elsif raw_line.start_with?(">")
 			@data[:content].push(InlineQuote.new(raw_line))
+		else
+			@data[:content].push(PlainText.new(raw_line))
 		end
 	end
 

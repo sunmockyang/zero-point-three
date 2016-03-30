@@ -10,6 +10,8 @@ There are three bodies inside. Two of them are jerking to a rhythm, sweat drops 
 
 [image](content/IMG_8375.JPG "I’m drunk in the photography. I’m drunk in the dancing.")
 
+[Hi this is a link](http://google.com)
+
 > This is a quote - Sunmock
 
 ## The Tunisian Christian Population [image](old/version 0/img/bridge.jpg)
