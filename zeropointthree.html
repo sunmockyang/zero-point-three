@@ -2,6 +2,7 @@
 <meta charset="utf-8" />
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=0.65">
 	<title>0.3%</title>
 
 	<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
@@ -29,11 +30,17 @@
 <!-- Background media -->
 <div class="background-media-container">
 <!--  autoplay="autoplay" -->
-	<video class="fullscreen video" id="video1" data-aspect-ratio="1.7778" muted="true" loop autoplay="autoplay">
-	</video>
-	<video class="fullscreen video" id="video2" data-aspect-ratio="1.7778" data-scale="1.2" muted="true" loop autoplay="autoplay">
-	</video>
-	<!-- add a down arrow here. Look up middle eastern street sign -->
+	<div class="intro-video-container">
+		<video class="fullscreen video" id="video1" data-aspect-ratio="1.7778" muted="true" loop>
+		</video>
+		<video class="fullscreen video" id="video2" data-aspect-ratio="1.7778" data-scale="1.2" muted="true" loop>
+		</video>
+		<!-- add a down arrow here. Look up middle eastern street sign -->
+	</div>
+
+	<div id="index-background" class="index-background-container hidden">
+		<div class="index-background-image" id="mohammed_ali"></div>
+	</div>
 </div>
 
 <!-- Title -->
@@ -56,48 +63,47 @@
 		<p>This multimedia investigation takes a rare glance into the lives of Tunisian Christians, living as the 0.3 per cent among the 99.</p>
 	</div>
 
-	<div class="index-container">
-		<div class="index-header">Our Heroes</div>
-		<div class="headshot-container">
-			<div class="headshot-link Dali">
-				<div class="headshot-link-text">
-					<div class="link-name">Dali</div>
-					<hr/>
-					<div class="link-section">Prologue</div>
-				</div>
-				<div class="overlay"></div>
+	<div class="index-wrapper">
+		<div class="index-box">
+
+			<div class="index-title">Table of Contents</div>
+			<hr class="index-hr" />
+
+			<div class="index-header">Part 1: Stories</div>
+
+			<div class="index-item">
+				<div class="item-link">Dali</div>
 			</div>
-			<div class="headshot-link Ali">
-				<div class="headshot-link-text">
-					<div class="link-name">Mohammed Ali</div>
-					<div class="link-section">Chapter 1</div>
-				</div>
-				<div class="overlay"></div>
+			<div class="index-item">
+				<div class="item-link">Manel</div>
 			</div>
-			<div class="headshot-link Manel">
-				<div class="headshot-link-text">
-					<div class="link-name">Manel</div>
-					<div class="link-section">Chapter 2</div>
-				</div>
-				<div class="overlay"></div>
+			<div class="index-item">
+				<div class="item-link">Mohammed Ali</div>
 			</div>
-			<div class="headshot-link Safa">
-				<div class="headshot-link-text">
-					<div class="link-name">Safa</div>
-					<div class="link-section">Chapter 3</div>
-				</div>
-				<div class="overlay"></div>
+			<div class="index-item">
+				<div class="item-link">Safa</div>
 			</div>
-			<div class="headshot-link Lilli">
-				<div class="headshot-link-text">
-					<div class="link-name">Lilli</div>
-					<div class="link-section">Chapter 4</div>
-				</div>
-				<div class="overlay"></div>
+			<div class="index-item">
+				<div class="item-link">Lilli</div>
+			</div>
+
+			<hr class="index-hr" />
+			<div class="index-header">Part 2: Stories</div>
+
+			<div class="index-item">
+				<div class="item-link">The Underground Church</div>
+			</div>
+			<div class="index-item">
+				<div class="item-link">The Church of Tunisia &amp; Islam's Response</div>
+			</div>
+			<div class="index-item">
+				<div class="item-link">The Tunisian Society</div>
+			</div>
+			<hr class="index-hr" />
+			<div class="index-item">
+				<div class="item-link">Conclusion</div>
 			</div>
 		</div>
-
-		<div class="index-header">Analysis</div>
 	</div>
 
 	<div class="section">
@@ -301,12 +307,13 @@ var elements = null;
 
 function main() {
 	elements = {
-		intro: {
+		background: {
 			scrollBuffer: document.getElementById('intro-buffer'),
 			video1: document.getElementById('video1'),
 			video2: document.getElementById('video2'),
 			title1: document.getElementById('title1'),
-			title2: document.getElementById('title2')
+			title2: document.getElementById('title2'),
+			indexBackground: document.getElementById('index-background')
 		},
 
 		article: {

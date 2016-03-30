@@ -9,6 +9,10 @@ html,body {
 	padding: 0;
 }
 
+.hidden {
+	visibility: hidden;
+}
+
 $article-width: 90%;
 $article-min-width: 30rem;
 $section-max-width: 40rem;

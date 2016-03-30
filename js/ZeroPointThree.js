@@ -9,7 +9,7 @@ function ZeroPointThree(config, elements) {
 	this.scrollRange = {start: 0, end: 0};
 	AddScrollHandler(this.scrollRange, this.onScroll.bind(this));
 
-	this.backgroundMediaController = new BackgroundMedia(this.elements.intro, config.intro);
+	this.backgroundMediaController = new BackgroundMedia(this.elements.background, config.intro);
 
 	this.setContent();
 

@@ -1,89 +1,71 @@
 // Index.scss
 
-.index-container {
-	margin-bottom: 20vh;
-	padding: 10vh 0;
-	border-top: 1px solid #CCC;
-	border-bottom: 1px solid #CCC;
+$box-size: 40vh;
+
+.index-wrapper {
+	text-align: center;
+}
+
+.index-box {
+	border-radius: 0.3rem;
+	border: 2px solid gray;
+	margin: (100vh - $box-size)/2 0;
+	// text-align: center;
+	display: inline-block;
+	padding: 1rem 3rem;
+	background-color: rgba(255, 255, 255, 0.05);
+}
+
+// Contents
+
+.index-title {
+	color: #FFF;
+	font-size: 4vh;
 }
 
 .index-header {
-	font-size: 3rem;
-	text-align: center;
+	color: #FFF;
+	font-size: 3vh;
 }
 
-.headshot-container {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
-	align-items: center;
+hr.index-hr{
+	border: 0;
+	height: 1px;
+	background-image: linear-gradient(to right,
+		rgba(255, 255, 255, 0),
+		rgba(255, 255, 255, 1),
+		rgba(255, 255, 255, 0));
 }
 
-.headshot-link {
-	$link-width: 15vw;
-	$min-link-width: 8rem;
-
-	text-align: center;
-	width: $link-width;
-	height: $link-width * 3/2;
-	min-width: $min-link-width;
-	min-height: $min-link-width * 3/2;
-	margin: 1rem 1rem;
-
-	border: 1px solid #000;
-
-	// background-image: url("content/index_thumbnails/Dali_thumbnail.jpg");
-	background-size:     cover;
-    background-repeat:   no-repeat;
-    background-position: center center;
-
-    cursor: pointer;
+.index-item {
 }
 
-.headshot-link .overlay {
-	margin-top: -150%;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, 0.1);
-	box-shadow: inset 0 0 5vw rgba(0,0,0,0.25);
-	transition: 0.2s opacity linear;
+.index-item .item-link {
+	display: inline-block;
+	color: #DDD;
+	font-style: italic;
+	transition: color 0.2s ease-in-out;
+	cursor: pointer;
+	font-size: 2.2vh;
 }
 
-.headshot-link .overlay:hover {
-	opacity: 0;
-}
-
-.headshot-link-text {
-	width: 100%;
-	height: 100%;
-	display:flex;
-	flex-flow: column wrap;
-	justify-content: center;
-	align-items: center;
+.index-item .item-link:hover{
 	color: #FFF;
 }
 
-.headshot-link-text .link-name {
-	text-shadow: 0 0 0.5rem #000;
-	font-size: 2rem;
-	line-height: 100%;
+// Background Images
+
+.index-background-container {
 }
 
-.headshot-link-text .link-section {
-	text-shadow: 0 0 0.3rem #000, 0 0 0.1rem #000;
-	color: $highlight-colour;
-	margin-top: 2px;
-	font-size: 75%;
+.index-background-image {
+	width: 100vw;
+	height: 100vh;
+
+	background: #333 no-repeat center center fixed;
+	background-size: cover;
 }
 
-.headshot-link.Dali {
-	background-image: url("content/index_thumbnails/Dali_thumbnail.jpg");
-}
-
-.headshot-link.Safa {
-	background-image: url("content/index_thumbnails/Pzilla_thumnail.jpg");
-}
-
-.headshot-link.Lilli {
-	background-image: url("content/index_thumbnails/Lilli_thumbnail.jpg");
+#mohammed_ali.index-background-image {
+	background-image: url(content/images/MohammedAli_bg.jpg)
 }

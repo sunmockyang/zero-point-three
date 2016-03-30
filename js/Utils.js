@@ -10,3 +10,13 @@ function addHover(elem) {
 function removeHover(elem) {
 	elem.classList.remove("hover");
 }
+
+var Mathx = {};
+
+Mathx.clamp = function(t, min, max) {
+	return Math.min(max, Math.max(min, t));
+};
+
+Mathx.Lerp = function(frm, to, t) {
+    return (to - frm) * t + frm;
+};

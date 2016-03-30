@@ -9,6 +9,8 @@ function BackgroundMedia(elements, introConfig) {
 	this.video1 = elements.video1;
 	this.video2 = elements.video2;
 
+	this.indexBackground = elements.indexBackground;
+
 	this.title1.innerHTML = introConfig.title1;
 	this.title2.innerHTML = introConfig.title2;
 
@@ -69,6 +71,8 @@ BackgroundMedia.prototype.onScroll = function(y) {
 		this.title2.classList.add("hidden");
 		this.video1.classList.add("hidden");
 		this.video2.classList.add("hidden");
+		this.indexBackground.classList.remove("hidden");
+
 	}
 	else if (this.lastY / BackgroundMedia.scrollRange > this.articlePercentage &&
 		currentY / BackgroundMedia.scrollRange <= this.articlePercentage) {
@@ -77,6 +81,7 @@ BackgroundMedia.prototype.onScroll = function(y) {
 		this.title2.classList.remove("hidden");
 		this.video1.classList.remove("hidden");
 		this.video2.classList.remove("hidden");
+		this.indexBackground.classList.add("hidden");
 	}
 
 	var fadePercentage = (currentY + this.fadeRange * BackgroundMedia.scrollRange - BackgroundMedia.scrollRange) / BackgroundMedia.scrollRange;

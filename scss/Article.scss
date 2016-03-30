@@ -1,33 +1,34 @@
 
 
 .article-container {
-	width: $article-width;
 	min-width: $article-min-width;
-	background-color: #FFF;
-
-	padding-top: 50vh;
-	transition: 0.5s linear;
 
 	// font: 300 18px/30px Georgia,"Times New Roman",serif;
 
 	font-size: 1.2rem;
     line-height: 2;
     font-family: "Georgia";
-    margin: 0 auto;
-
-	transform: translate3d(0, 100vh, 0);
+    margin: 100vh auto;
+    z-index: 1;
 }
 
 #intro-paragraph {
+	padding-top: 50vh;
+	padding-bottom: 30vh;
+	background-color: #FFF;
+}
+
+#intro-paragraph p{
 	width: 50%;
 	max-width: $section-max-width - 5rem;
 	margin: 0 auto;
-	margin-bottom: 20vh;
 }
 
-.section 
-{
-	padding-bottom: 10vh;
+.section {
+	margin: 0 auto;
+	width: $article-width;
+	padding: 10vh 0;
+	background-color: #FFF;
 }
 
 .section-content p{

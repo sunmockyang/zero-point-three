@@ -5,7 +5,7 @@
 	width:100%;
 	height:100%;
 	position: fixed;
-	z-index: -1;
+	z-index: -2;
 
 	video {
 		position: absolute;
@@ -30,13 +30,19 @@
 	// opacity: 0;
 }
 
+#intro-buffer {
+	height: 100vh;
+}
+
 $title1Height: 20vh;
 $title2Height: 5vh;
 
 .intro-title-container {
 	width: 100%;
 	position: fixed;
-	transform: translate3d(0, (100vh - $title1Height - $title2Height - 15vh)/2, 0);
+	// transform: translate3d(0, (100vh - $title1Height - $title2Height - 15vh)/2, 0);
+	margin-top:(100vh - $title1Height - $title2Height - 15vh)/2;
+	z-index: -1;
 }
 
 .intro-title {
