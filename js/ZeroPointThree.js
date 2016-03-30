@@ -28,14 +28,21 @@ ZeroPointThree.prototype.onResize = function() {
 		window.requestAnimationFrame(resizeFullscreen.bind(this, this.elements.fullscreenElements[i]));
 	};
 
+	// Overall scroll range
 	var docElem = document.documentElement;
 	this.scrollRange.end = ( 'scrollMaxY' in window ) ? window.scrollMaxY : (docElem.scrollHeight - docElem.clientHeight);
+
+	// Index scroll range
+	this.indexController.scrollRange.start = this.elements.article.introParagraph.getBoundingClientRect().bottom + window.scrollY;
+	this.indexController.scrollRange.end = this.elements.index.indexWrapper.getBoundingClientRect().height + this.indexController.scrollRange.start;
+	this.indexController.onScroll();
 
 	this.backgroundMediaController.onResize();
 };
 
 ZeroPointThree.prototype.onScroll = function(y) {
 	window.requestAnimationFrame(this.backgroundMediaController.onScroll.bind(this.backgroundMediaController, y));
+	window.requestAnimationFrame(this.indexController.onScroll.bind(this.indexController));
 };
 
 // Utils
