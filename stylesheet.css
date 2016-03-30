@@ -113,24 +113,25 @@ hr.index-hr {
 
 .intro-title {
   color: #FFF;
-  text-shadow: 0 0 1rem #333;
   width: 80%;
   text-align: center;
   margin: 0 auto;
-  font-family: "Lato";
   font-weight: 300; }
 
 .intro-title.article {
   transition: none; }
 
 #title1.intro-title {
-  color: #F9FC6A;
+  color: #FFF;
+  text-shadow: 0 0 1rem #000;
   font-size: 20vh;
   transform: translate3d(0, 10vh, 0);
   transition: transform 0.5s ease-in-out;
   -webkit-transition: transform 0.5s ease-in-out; }
 
 #title2.intro-title {
+  color: #999;
+  text-shadow: 0 0 0.4rem #333;
   font-size: 5vh;
   font-weight: 400;
   transform: translate3d(0, 10vh, 0);

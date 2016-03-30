@@ -64,9 +64,7 @@ IndexController.prototype.onAnimateOut = function() {
 	var menuElements = this.indexBoxElem.children;
 
 	for (var i = menuElements.length - 1; i > 0; i--) {
-		setTimeout((function (index) {
-			menuElements[index].classList.remove("animate-in");
-		}).bind(this, i), i * 50)
+		menuElements[i].classList.remove("animate-in");
 	}
 };
 
