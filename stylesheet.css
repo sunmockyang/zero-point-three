@@ -14,7 +14,7 @@ html, body {
   margin: 30vh 0;
   display: inline-block;
   padding: 1rem 3rem;
-  background-color: rgba(255, 255, 255, 0.05); }
+  background-color: rgba(255, 255, 255, 0.1); }
 
 .index-title {
   color: #FFF;
@@ -40,11 +40,28 @@ hr.index-hr {
 .index-item .item-link:hover {
   color: #FFF; }
 
+.index-background-container {
+  background-color: #333;
+  width: 100vw;
+  height: 100vh; }
+
 .index-background-image {
   width: 100vw;
   height: 100vh;
+  position: absolute;
   background: #333 no-repeat center center fixed;
-  background-size: cover; }
+  background-size: cover;
+  transition: opacity 0.75s linear;
+  opacity: 0; }
+
+.index-background-image.show {
+  opacity: 1; }
+
+#dali.index-background-image {
+  background-image: url(content/images/index_bg/Dali_bg.jpg); }
+
+#manel.index-background-image {
+  background-image: url(content/images/index_bg/Manel_bg.jpg); }
 
 #mohammed_ali.index-background-image {
   background-image: url(content/images/index_bg/MohammedAli_bg.jpg); }
