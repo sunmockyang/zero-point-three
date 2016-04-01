@@ -1,3 +1,13 @@
+parse_content:
+	@ruby parser/compile_data.rb content/sections/*.md
+
+clean-content:
+	rm content/sections/*.html
+
+install-parser-dependencies:
+	sudo gem install redcarpet
+	sudo gem install handlebars
+
 watch:
 	sass --watch scss/stylesheet.scss:stylesheet.css
 
