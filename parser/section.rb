@@ -93,7 +93,7 @@ end
 
 class Section
 	def initialize(input_file_path)
-		@section_wide_keys = ["chapter_title", "chapter_name", "banner_video"]
+		@section_wide_keys = ["chapter_title", "chapter_name", "banner_video", "section_id"]
 
 		@data = {
 			content: []
@@ -162,12 +162,9 @@ class Section
 			section_content_html += elem.to_html + "\n"
 		end
 
+		@data["section_content"] = proc {Handlebars::SafeString.new(section_content_html)}
+
 		section_template = HandlebarsContext.compile(File.read(TemplatesDirectory + "section.html"))
-		return section_template.call(
-			:chapter_name => @data["chapter_name"],
-			:chapter_title => @data["chapter_title"],
-			:banner_video => @data["banner_video"],
-			:section_content => proc {Handlebars::SafeString.new(section_content_html)}
-		)
+		return section_template.call(@data)
 	end
 end

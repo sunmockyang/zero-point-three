@@ -73,13 +73,13 @@ hr.index-hr {
 .index-background-image.show {
   opacity: 1; }
 
-#dali.index-background-image {
+#dali_bg.index-background-image {
   background-image: url(content/images/index_bg/Dali_bg.jpg); }
 
-#manel.index-background-image {
+#manel_bg.index-background-image {
   background-image: url(content/images/index_bg/Manel_bg.jpg); }
 
-#mohammed_ali.index-background-image {
+#mohammed_ali_bg.index-background-image {
   background-image: url(content/images/index_bg/MohammedAli_bg.jpg); }
 
 .background-media-container {

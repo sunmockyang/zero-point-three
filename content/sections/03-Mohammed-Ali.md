@@ -1,6 +1,6 @@
-[section_id](manel)
-[chapter_title](Chapter 1)
-[chapter_name](Manel)
+[section_id](mohammed_ali)
+[chapter_title](Chapter 2)
+[chapter_name](Mohammed Ali)
 [banner_video](https://s3.amazonaws.com/sunnymock/a/1409173216797.webm)
 
 It’s a large, airy room. It’s dark.

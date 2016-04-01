@@ -1,6 +1,6 @@
-[section_id](manel)
-[chapter_title](Chapter 1)
-[chapter_name](Manel)
+[section_id](tunisian_society)
+[chapter_title](Chapter 7)
+[chapter_name](The Tunisian Society)
 [banner_video](https://s3.amazonaws.com/sunnymock/a/1409173216797.webm)
 
 It’s a large, airy room. It’s dark.
