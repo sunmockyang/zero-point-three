@@ -1,5 +1,5 @@
 [chapter_title](Prologue)
-[chapter_name](Marwan)
+[chapter_name](Dali)
 [banner_video](https://s3.amazonaws.com/sunnymock/a/1409173216797.webm)
 
 It’s a large, airy room. It’s dark.
@@ -37,7 +37,7 @@ Wolf shakes his head. "La, la, la." No, no, no, he says in Arabic. 
 
 And that’s how the conversation ends. It’s all too familiar for the photographer: he’s unnatural; he’s mocked; he’s misunderstood. 
 
-[image](content/IMG_8375.JPG "I’m drunk in the photography. I’m drunk in the dancing.")
+[image](content/images/IMG_8375.JPG "I’m drunk in the photography. I’m drunk in the dancing.")
 
 He’s a stranger in his own nation. 
 

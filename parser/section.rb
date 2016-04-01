@@ -33,7 +33,11 @@ class PlainText < Inline
 	end
 
 	def to_html
-		return MarkdownRenderer.render(@text)
+		html_output = MarkdownRenderer.render(@text)
+
+		# Seems to be a limitation of redcarpet that it doesn't output closed hr tags
+		html_output.gsub!("<hr>", "<hr/>")
+		return html_output
 	end
 end
 

@@ -9,16 +9,13 @@ function BackgroundMedia(elements, introConfig) {
 	this.video1 = elements.video1;
 	this.video2 = elements.video2;
 
+	elements.videoContainer.classList.remove("hidden");
+	this.playVideo(true);
+
 	this.indexBackground = elements.indexBackground;
 
 	this.title1.innerHTML = introConfig.title1;
 	this.title2.innerHTML = introConfig.title2;
-
-	this.video1Source = introConfig.video1_url;
-	this.video2Source = introConfig.video2_url;
-
-	this.loadVideo(this.video1, this.video1Source, "video/webm");
-	this.loadVideo(this.video2, this.video2Source, "video/webm");
 
 	this.lastY = 0;
 
@@ -29,13 +26,6 @@ BackgroundMedia.scrollRange = 999; // Gets adjusted to screen height
 BackgroundMedia.prototype.transitionPercentage = 0.3;
 BackgroundMedia.prototype.articlePercentage = 2.0;
 BackgroundMedia.prototype.fadeRange = 0.15;
-
-BackgroundMedia.prototype.loadVideo = function(video, src, type) {
-	var source = document.createElement('source');
-    source.src = src;
-    source.type = type;
-    video.appendChild(source);
-}
 
 BackgroundMedia.prototype.onResize = function() {
 	BackgroundMedia.scrollRange = document.documentElement.clientHeight;

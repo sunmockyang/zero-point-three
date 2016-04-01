@@ -12,16 +12,8 @@ function ZeroPointThree(config, elements) {
 	this.backgroundMediaController = new BackgroundMedia(this.elements.background, config.intro);
 	this.indexController = new IndexController(this.elements.index);
 
-	this.setContent();
-
-	this.onResize();
+	window.requestAnimationFrame(this.onResize.bind(this));
 }
-
-ZeroPointThree.prototype.setContent = function() {
-	for (var id in this.config.article) {
-		document.getElementById(id).innerHTML = this.config.article[id];
-	}
-};
 
 ZeroPointThree.prototype.onResize = function() {
 	for (var i = 0; i < this.elements.fullscreenElements.length; i++) {
