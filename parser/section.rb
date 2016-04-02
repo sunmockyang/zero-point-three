@@ -105,7 +105,7 @@ class Section
 	def parse_lines(input_file_path)
 		plain_text = ""
 
-		File.readlines(input_file_path).each do |line|
+		File.readlines(input_file_path, :encoding => 'UTF-8').each do |line|
 		
 			if line.start_with?("[") or line.start_with?(">") or line.start_with?("##")
 				if plain_text != ""
