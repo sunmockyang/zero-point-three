@@ -45,10 +45,16 @@ class InlineImage < Inline
 	def initialize(content)
 		super("inline_image.html")
 		caption = extract_from_quotes(content)
-		src = content[0, content.index(" \"")]
+		sources = content[0, content.index(" \"")]
+
+		src = [];
+
+		sources.split(",").each { |s| 
+			src.push(remove_outer_whitespace(s))
+		}
 
 		@data[:caption] = caption
-		@data[:src] = remove_outer_whitespace(src)
+		@data[:src] = src
 	end
 end
 

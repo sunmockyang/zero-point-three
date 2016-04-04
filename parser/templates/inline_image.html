@@ -1,6 +1,9 @@
 		<div class="section-media">
 			<div class="section-image">
-				<img src="{{src}}"/>
+				{{#each src}}
+				<div class="section-image-wrapper" style="background-image: url('{{this}}');">
+				</div>
+				{{/each}}
 			</div>
 			<div class="section-media-caption">
 				{{caption}}

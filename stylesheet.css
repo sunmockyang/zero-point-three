@@ -208,15 +208,33 @@ hr.index-hr {
 .section-media {
   width: 90%;
   max-width: 48rem;
-  margin: 0 auto; }
+  margin: 2rem auto; }
 
 .section-media-video {
   width: 100%; }
 
 .section-image {
-  text-align: center; }
+  display: flex;
+  flex-flow: row nowrap; }
 
-.section-image img {
+.section-image-wrapper:first-child {
+  margin-left: 0; }
+
+.section-image-wrapper:last-child {
+  margin-right: 0; }
+
+.section-image-wrapper {
+  flex-grow: 1;
+  margin: 0 0.5%;
+  background: #FFF no-repeat center center;
+  background-size: cover; }
+
+.section-image-wrapper:before {
+  content: "";
+  display: block;
+  padding-top: 66.66667%; }
+
+.section-image-wrapper img {
   width: 100%; }
 
 .section-media-caption {

@@ -4,6 +4,9 @@ clean: clean-content clean-css
 
 parse_content:
 	@ruby parser/compile_data.rb content/sections/*.md
+	
+parse-test:
+	@ruby parser/compile_data.rb parser/Test.md
 
 clean-content:
 	rm content/sections/*.html
