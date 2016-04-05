@@ -9,7 +9,7 @@ function ZeroPointThree(config, elements) {
 	this.scrollRange = {start: 0, end: 0};
 	AddScrollHandler(this.scrollRange, this.onScroll.bind(this));
 
-	this.backgroundMediaController = new BackgroundMedia(this.elements.background, config.intro);
+	this.backgroundMediaController = new BackgroundMedia(this.elements.background);
 	this.indexController = new IndexController(this.elements.index);
 
 	window.requestAnimationFrame(this.onResize.bind(this));
@@ -69,10 +69,9 @@ function resizeFullscreen (elem) {
 
 	if (scale != 1) {
 		elem.style.left = - (width - document.documentElement.clientWidth) / 2 + "px";
-		elem.style.top = - (height - document.documentElement.clientHeight) / 2 + "px";
 	}
 };
 
 function translate3dY(y) {
-	return "translate3d(0," + y + "px, 0)"
+	return "translate3d(0," + y + "vh, 0)"
 }

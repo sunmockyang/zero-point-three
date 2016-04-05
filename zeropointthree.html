@@ -62,10 +62,10 @@
 <div class="background-media-container">
 <!--  -->
 	<div class="intro-video-container hidden">
-		<video class="fullscreen video" id="video1" data-aspect-ratio="1.7778" loop muted="true">
+		<video class="fullscreen video" id="video1" data-aspect-ratio="1.7778" data-scale="1.1" loop muted="true">
 			<source src="https://s3.amazonaws.com/sunnymock/zeropointthree/content/ZeroPointThree_Islam.mp4" type="video/mp4">
 		</video>
-		<video class="fullscreen video" id="video2" data-aspect-ratio="1.7778" data-scale="1.2" loop muted="true">
+		<video class="fullscreen video" id="video2" data-aspect-ratio="1.7778" loop muted="true">
 			<source src="https://s3.amazonaws.com/sunnymock/zeropointthree/content/ZeroPointThree_Christian.mp4" type="video/mp4">
 		</video>
 		<!-- add a down arrow here. Look up middle eastern street sign -->
@@ -86,8 +86,12 @@
 
 <!-- Title -->
 <div class="intro-title-container">
-	<div id="title1" class="intro-title"></div>
-	<div id="title2" class="intro-title"></div>
+	<div id="title1" class="intro-title">
+		<span id="title1_text">Underground.</span>
+	</div>
+	<div id="title2" class="intro-title">
+		<span id="title2_text">Divergent, Underground and Undetected: The Plight of a religious minority living in a Muslim world</span>
+	</div>
 </div>
 
 <div id="intro-buffer"></div>
@@ -166,6 +170,7 @@ function main() {
 			video2: document.getElementById('video2'),
 			title1: document.getElementById('title1'),
 			title2: document.getElementById('title2'),
+			titleContainer: document.getElementsByClassName("intro-title-container")[0],
 			indexBackground: document.getElementById('index-background')
 		},
 
