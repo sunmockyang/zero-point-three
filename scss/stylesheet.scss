@@ -1,7 +1,7 @@
 // zeropoint3.css
 
 html {
-	// background-color: #EEE;
+	background-color: #EEE;
 }
 
 html,body {
@@ -11,6 +11,10 @@ html,body {
 
 .hidden {
 	visibility: hidden;
+}
+
+.fadeOut {
+	opacity: 0;
 }
 
 $article-width: 70%;

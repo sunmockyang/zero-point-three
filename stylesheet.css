@@ -1,3 +1,6 @@
+html {
+  background-color: #EEE; }
+
 html, body {
   margin: 0;
   padding: 0; }
@@ -5,13 +8,16 @@ html, body {
 .hidden {
   visibility: hidden; }
 
+.fadeOut {
+  opacity: 0; }
+
 .index-wrapper {
   text-align: center; }
 
 .index-box {
   border-radius: 0.3rem;
   border: 2px solid gray;
-  margin: 40vh 0;
+  margin: 30vh 0;
   transform: translate3d(0, 10vh, 0);
   display: inline-block;
   padding: 1rem 3rem;
@@ -59,7 +65,8 @@ hr.index-hr {
 .index-background-container {
   background-color: #333;
   width: 100vw;
-  height: 100vh; }
+  height: 100vh;
+  transition: opacity 0.2s ease-in-out; }
 
 .index-background-image {
   width: 100vw;
