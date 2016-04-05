@@ -30,6 +30,7 @@ IndexController.prototype.startArticleMark = 0.8;
 IndexController.prototype.setupButtons = function() {
 	for (var id in this.buttonElems) {
 		this.buttonElems[id].onmouseover = this.buttonOnMouseOver.bind(this, this.buttonElems[id]);
+		this.buttonElems[id].onclick = this.buttonOnClick.bind(this, this.buttonElems[id]);
 	};
 };
 
@@ -74,12 +75,17 @@ IndexController.prototype.onAnimateOut = function() {
 };
 
 IndexController.prototype.buttonOnMouseOver = function(button) {
-	if (this.lastImage != this.backgroundImageElems[button.dataset.linkId]) {
-		this.AnimateBGImageIn(this.backgroundImageElems[button.dataset.linkId]);
+	var linkBGID = button.dataset.linkId + "_bg";
+	if (this.lastImage != this.backgroundImageElems[linkBGID]) {
+		this.AnimateBGImageIn(this.backgroundImageElems[linkBGID]);
 		this.AnimateBGImageOut(this.lastImage);
 
-		this.lastImage = this.backgroundImageElems[button.dataset.linkId];
+		this.lastImage = this.backgroundImageElems[linkBGID];
 	}
+};
+
+IndexController.prototype.buttonOnClick = function(button) {
+	animateScroll(document.getElementById(button.dataset.linkId), 1000, "easeInOutQuint", 0, "top");
 };
 
 IndexController.prototype.AnimateBGImageIn = function(elem) {
