@@ -1,5 +1,12 @@
+all: parse_content css
+
+clean: clean-content clean-css
+
 parse_content:
 	@ruby parser/compile_data.rb content/sections/*.md
+	
+parse-test:
+	@ruby parser/compile_data.rb parser/Test.md
 
 clean-content:
 	rm content/sections/*.html
@@ -14,5 +21,5 @@ watch:
 css:
 	sass scss/stylesheet.scss stylesheet.css
 
-clean:
+clean-css:
 	rm -r stylesheet.css stylesheet.css.map .sass-cache

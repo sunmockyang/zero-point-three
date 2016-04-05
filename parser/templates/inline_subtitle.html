@@ -4,7 +4,8 @@
 				<img src="{{image}}" class="subtitle-media" />
 			{{/if}}
 			{{#if video}}
-				<video class="section-media-video" data-src="{{video}}">
+				<video class="subtitle-media" data-src="{{video}}">
+					<source src="{{video}}" type="video/webm"></source>
 				</video>
 			{{/if}}
 			<div class="subtitle-text">

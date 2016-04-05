@@ -2,6 +2,7 @@ function IndexController(elements) {
 	this.buttonElems = elements.indexButtons;
 	this.indexWrapperElem = elements.indexWrapper;
 	this.indexBoxElem = elements.indexBox;
+	this.indexBackground = elements.indexBackground;
 	this.backgroundImageElems = {};
 
 	this.lastImage = elements.backgroundImages[0];
@@ -21,9 +22,10 @@ function IndexController(elements) {
 };
 
 IndexController.prototype.scrollRange = {start: 0, end: 0};
-IndexController.prototype.animateInMark = -0.2;
+IndexController.prototype.animateInMark = -0.3;
 IndexController.prototype.animateOutStartMark = 0.5;
 IndexController.prototype.animateOutEndMark = 0.7;
+IndexController.prototype.startArticleMark = 0.8;
 
 IndexController.prototype.setupButtons = function() {
 	for (var id in this.buttonElems) {
@@ -35,13 +37,16 @@ IndexController.prototype.onScroll = function() {
 	var rangePercentage = (window.scrollY - this.scrollRange.start)/(this.scrollRange.end - this.scrollRange.start);
 
 	// Animate in
-	var isMarkerCrossed = OnMarkerCrossed(this.animateInMark, this.lastRange, rangePercentage, this.onAnimateIn.bind(this), this.onAnimateOut.bind(this));
+	OnMarkerCrossed(this.animateInMark, this.lastRange, rangePercentage, this.onAnimateIn.bind(this), this.onAnimateOut.bind(this));
 
 	// Animate out
 	var transparency = 1 -(rangePercentage - this.animateOutStartMark) / (this.animateOutEndMark - this.animateOutStartMark);
 	transparency = Mathx.normalize(transparency);
 
 	this.indexWrapperElem.style.opacity = transparency;
+
+	// Start Article
+	OnMarkerCrossed(this.startArticleMark, this.lastRange, rangePercentage, fadeOut.bind(this, this.indexBackground), fadeIn.bind(this, this.indexBackground));
 
 	this.lastRange = rangePercentage;
 };

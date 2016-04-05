@@ -1,7 +1,7 @@
 // zeropoint3.css
 
 html {
-	// background-color: #EEE;
+	background-color: #EEE;
 }
 
 html,body {
@@ -13,11 +13,15 @@ html,body {
 	visibility: hidden;
 }
 
-$article-width: 90%;
+.fadeOut {
+	opacity: 0;
+}
+
+$article-width: 70%;
 $article-min-width: 30rem;
 $section-max-width: 40rem;
 
-$highlight-colour: #F9FC6A;
+$highlight-colour: #FFA500;
 
 @import "Index";
 @import "IntroVideos";

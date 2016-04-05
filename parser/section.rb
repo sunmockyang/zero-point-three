@@ -33,7 +33,11 @@ class PlainText < Inline
 	end
 
 	def to_html
-		return MarkdownRenderer.render(@text)
+		html_output = MarkdownRenderer.render(@text)
+
+		# Seems to be a limitation of redcarpet that it doesn't output closed hr tags
+		html_output.gsub!("<hr>", "<hr/>")
+		return html_output
 	end
 end
 
@@ -41,10 +45,16 @@ class InlineImage < Inline
 	def initialize(content)
 		super("inline_image.html")
 		caption = extract_from_quotes(content)
-		src = content[0, content.index(" \"")]
+		sources = content[0, content.index(" \"")]
+
+		src = [];
+
+		sources.split(",").each { |s| 
+			src.push(remove_outer_whitespace(s))
+		}
 
 		@data[:caption] = caption
-		@data[:src] = remove_outer_whitespace(src)
+		@data[:src] = src
 	end
 end
 
@@ -89,7 +99,7 @@ end
 
 class Section
 	def initialize(input_file_path)
-		@section_wide_keys = ["chapter_title", "chapter_name", "banner_video"]
+		@section_wide_keys = ["chapter_title", "chapter_name", "banner_video", "section_id"]
 
 		@data = {
 			content: []
@@ -101,7 +111,7 @@ class Section
 	def parse_lines(input_file_path)
 		plain_text = ""
 
-		File.readlines(input_file_path).each do |line|
+		File.readlines(input_file_path, :encoding => 'UTF-8').each do |line|
 		
 			if line.start_with?("[") or line.start_with?(">") or line.start_with?("##")
 				if plain_text != ""
@@ -158,12 +168,9 @@ class Section
 			section_content_html += elem.to_html + "\n"
 		end
 
+		@data["section_content"] = proc {Handlebars::SafeString.new(section_content_html)}
+
 		section_template = HandlebarsContext.compile(File.read(TemplatesDirectory + "section.html"))
-		return section_template.call(
-			:chapter_name => @data["chapter_name"],
-			:chapter_title => @data["chapter_title"],
-			:banner_video => @data["banner_video"],
-			:section_content => proc {Handlebars::SafeString.new(section_content_html)}
-		)
+		return section_template.call(@data)
 	end
 end

@@ -7,7 +7,7 @@
 .index-box {
 	border-radius: 0.3rem;
 	border: 2px solid gray;
-	margin: 40vh 0;
+	margin: 30vh 0;
 	transform: translate3d(0, 10vh, 0);
 	// text-align: center;
 	display: inline-block;
@@ -76,6 +76,7 @@ hr.index-hr{
 	background-color: #333;
 	width: 100vw;
 	height: 100vh;
+	transition: opacity 0.2s ease-in-out;
 }
 
 .index-background-image {
@@ -94,14 +95,14 @@ hr.index-hr{
 	opacity: 1;
 }
 
-#dali.index-background-image {
+#dali_bg.index-background-image {
 	background-image: url(content/images/index_bg/Dali_bg.jpg);
 }
 
-#manel.index-background-image {
+#manel_bg.index-background-image {
 	background-image: url(content/images/index_bg/Manel_bg.jpg);
 }
 
-#mohammed_ali.index-background-image {
+#mohammed_ali_bg.index-background-image {
 	background-image: url(content/images/index_bg/MohammedAli_bg.jpg);
 }

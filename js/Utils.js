@@ -11,6 +11,14 @@ function removeHover(elem) {
 	elem.classList.remove("hover");
 }
 
+function fadeOut(elem) {
+	elem.classList.add("fadeOut");
+}
+
+function fadeIn(elem) {
+	elem.classList.remove("fadeOut");
+}
+
 function OnMarkerCrossed(marker, last, current, onforward, onbackward) {
 	if (onforward && last < marker && current > marker) {
 		onforward();

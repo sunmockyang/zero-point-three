@@ -1,4 +1,5 @@
-[chapter_title](Prologue)
+[section_id](conclusion)
+[chapter_title](Conclusion)
 [chapter_name](Marwan)
 [banner_video](https://s3.amazonaws.com/sunnymock/zeropointthree/content/ZeroPointThree_Christian.mp4)
 
@@ -8,9 +9,7 @@ There are three bodies inside. Two of them are jerking to a rhythm, sweat drops 
 
 [video](https://s3.amazonaws.com/sunnymock/zeropointthree/content/ZeroPointThree_Christian.mp4 "\"I want to say it loudly.\"")
 
-[image](content/IMG_8375.JPG "I’m drunk in the photography. I’m drunk in the dancing.")
-
-[image](content/IMG_8375.JPG, content/IMG_8375.JPG "I’m drunk in the photography. I’m drunk in the dancing.")
+[image](content/images/IMG_8375.JPG "I’m drunk in the photography. I’m drunk in the dancing.")
 
 [Hi this is a link](http://google.com)
 
@@ -21,3 +20,11 @@ There are three bodies inside. Two of them are jerking to a rhythm, sweat drops 
 ## Video Header [video](https://s3.amazonaws.com/sunnymock/zeropointthree/content/ZeroPointThree_Christian.mp4)
 
 ## Text only header with no image/media
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+## Epilogue

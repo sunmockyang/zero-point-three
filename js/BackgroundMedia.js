@@ -1,24 +1,19 @@
 // BackgroundMedia.js
 
-function BackgroundMedia(elements, introConfig) {
+function BackgroundMedia(elements) {
 	this.scrollBuffer = elements.scrollBuffer;
 
 	this.title1 = elements.title1;
 	this.title2 = elements.title2;
+	this.titleContainer = elements.titleContainer;
 
 	this.video1 = elements.video1;
 	this.video2 = elements.video2;
 
+	elements.videoContainer.classList.remove("hidden");
+	this.playVideo(true);
+
 	this.indexBackground = elements.indexBackground;
-
-	this.title1.innerHTML = introConfig.title1;
-	this.title2.innerHTML = introConfig.title2;
-
-	this.video1Source = introConfig.video1_url;
-	this.video2Source = introConfig.video2_url;
-
-	this.loadVideo(this.video1, this.video1Source, "video/webm");
-	this.loadVideo(this.video2, this.video2Source, "video/webm");
 
 	this.lastY = 0;
 
@@ -26,16 +21,9 @@ function BackgroundMedia(elements, introConfig) {
 }
 
 BackgroundMedia.scrollRange = 999; // Gets adjusted to screen height
-BackgroundMedia.prototype.transitionPercentage = 0.3;
+BackgroundMedia.prototype.transitionPercentage = 0.2;
 BackgroundMedia.prototype.articlePercentage = 2.0;
 BackgroundMedia.prototype.fadeRange = 0.15;
-
-BackgroundMedia.prototype.loadVideo = function(video, src, type) {
-	var source = document.createElement('source');
-    source.src = src;
-    source.type = type;
-    video.appendChild(source);
-}
 
 BackgroundMedia.prototype.onResize = function() {
 	BackgroundMedia.scrollRange = document.documentElement.clientHeight;
@@ -54,12 +42,26 @@ BackgroundMedia.prototype.onScroll = function(y) {
 	OnMarkerCrossed(this.transitionPercentage, lastYPercentage, currentYPercentage, this.animateSecondVideoIn.bind(this), this.animateSecondVideoOut.bind(this));
 	OnMarkerCrossed(this.articlePercentage, lastYPercentage, currentYPercentage, this.animateArticleIn.bind(this), this.animateArticleOut.bind(this));
 
+	// Container
+	if (currentYPercentage < 2) {
+		this.titleContainer.style.transform = translate3dY(-currentYPercentage * 15);
+	}
+
+	// Video1
+	var video1Parallax = currentYPercentage / this.transitionPercentage;
+	if (video1Parallax < 2) {
+		this.video1.style.transform = translate3dY(-video1Parallax * 5);
+	}
+
+	// Video2
 	var fadePercentage = (currentY + this.fadeRange * BackgroundMedia.scrollRange - BackgroundMedia.scrollRange) / BackgroundMedia.scrollRange;
 	if (fadePercentage > 0) {
-		this.video2.style.opacity = Math.min(1 - fadePercentage, 1);
-		this.video2.style.transform = translate3dY(-fadePercentage * 100);
+		this.titleContainer.style.opacity = Math.min(1 - Math.pow(fadePercentage, 2), 1);
+		this.video2.style.opacity = Math.min(1 - Math.pow(fadePercentage, 2), 1);
+		this.video2.style.transform = translate3dY(-fadePercentage * 30);
 	}
 	else if (this.video2.style.opacity != 1) {
+		this.titleContainer.style.opacity = 1;
 		this.video2.style.opacity = 1;
 		this.video2.style.transform = translate3dY(0);
 	}
