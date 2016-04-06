@@ -9,8 +9,9 @@ function BackgroundMedia(elements) {
 
 	this.video1 = elements.video1;
 	this.video2 = elements.video2;
+	this.videoContainer = elements.videoContainer;
 
-	elements.videoContainer.classList.remove("hidden");
+	this.videoContainer.classList.remove("hidden");
 	this.playVideo(true);
 
 	this.indexBackground = elements.indexBackground;
@@ -87,6 +88,7 @@ BackgroundMedia.prototype.animateArticleIn = function() {
 	this.title2.classList.add("hidden");
 	this.video1.classList.add("hidden");
 	this.video2.classList.add("hidden");
+	this.videoContainer.classList.add("hidden");
 	this.indexBackground.classList.remove("hidden");
 };
 
@@ -96,6 +98,7 @@ BackgroundMedia.prototype.animateArticleOut = function() {
 	this.title2.classList.remove("hidden");
 	this.video1.classList.remove("hidden");
 	this.video2.classList.remove("hidden");
+	this.videoContainer.classList.remove("hidden");
 	this.indexBackground.classList.add("hidden");
 };
 
