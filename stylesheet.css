@@ -8,6 +8,11 @@ html, body {
 .hidden {
   visibility: hidden; }
 
+.no-size {
+  position: absolute;
+  width: 0;
+  height: 0; }
+
 .fadeOut {
   opacity: 0; }
 
@@ -136,7 +141,7 @@ hr.index-hr {
   background-color: #111;
   padding: 0 1vw 0.75vw 1vw;
   font-size: 10vw;
-  border-bottom: solid #FFA500 0.2rem; }
+  border-bottom: solid #003355 0.2rem; }
 
 #title2.intro-title {
   transform: translate3d(0, 10vh, 0);
@@ -273,5 +278,51 @@ hr.index-hr {
   margin-left: 2.5%;
   margin-bottom: 5rem;
   max-height: 92vh; }
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  margin-top: -150px;
+  opacity: 0;
+  transition: margin-top 0.5s ease-in-out, opacity 0.5s ease; }
+
+.navbar.show {
+  opacity: 1;
+  margin-top: 0; }
+
+.navbar-first-level, .navbar-second-level {
+  position: relative;
+  width: 100%; }
+
+.navbar-first-level {
+  background-color: #EFEFEF;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  z-index: 2; }
+
+.navbar-title {
+  float: left;
+  font-size: 2rem;
+  padding: 0.5rem 1rem; }
+
+.navbar-item-container {
+  padding: 0.5rem 1rem;
+  display: flex; }
+
+.navbar-item {
+  margin: 0 1rem; }
+
+.navbar-second-level {
+  display: flex;
+  background-color: #DDD;
+  margin-top: 0;
+  z-index: 1; }
+  .navbar-second-level .navbar-item-container {
+    margin-left: auto; }
+
+#stories_container, #analysis_container {
+  display: flex;
+  margin-left: auto; }
 
 /*# sourceMappingURL=stylesheet.css.map */

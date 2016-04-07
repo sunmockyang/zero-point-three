@@ -63,10 +63,10 @@
 <!--  -->
 	<div class="intro-video-container hidden">
 		<video class="fullscreen video" id="video1" data-aspect-ratio="1.7778" data-scale="1.1" loop muted="true">
-			<source src="https://s3.amazonaws.com/sunnymock/zeropointthree/content/ZeroPointThree_Islam.mp4" type="video/mp4">
+			<source src="content/intro_videos/F_Intro_Muslim2.mp4" type="video/mp4">
 		</video>
 		<video class="fullscreen video" id="video2" data-aspect-ratio="1.7778" loop muted="true">
-			<source src="https://s3.amazonaws.com/sunnymock/zeropointthree/content/ZeroPointThree_Christian.mp4" type="video/mp4">
+			<source src="content/intro_videos/F_Intro_Christian1.mp4" type="video/mp4">
 		</video>
 		<!-- add a down arrow here. Look up middle eastern street sign -->
 	</div>
@@ -81,6 +81,34 @@
 		<div class="index-background-image" id="church_of_tunisia_bg"></div>
 		<div class="index-background-image" id="tunisian_society_bg"></div>
 		<div class="index-background-image" id="conclusion_bg"></div>
+	</div>
+</div>
+
+<!-- Nav Bar -->
+<div class="navbar">
+	<div class="navbar-first-level">
+		<div class="navbar-title">Underground.</div>
+		<div class="navbar-item-container">
+			<div class="navbar-item">Stories</div>
+			<div class="navbar-item">Analysis</div>
+			<div class="navbar-item">Conclusion</div>
+		</div>
+	</div>
+	<div class="navbar-second-level">
+		<div class="navbar-item-container">
+			<div id="stories_container" class="hidden no-size">
+				<div class="navbar-item">Dali</div>
+				<div class="navbar-item">Manel</div>
+				<div class="navbar-item">Mohammed Ali</div>
+				<div class="navbar-item">Safa</div>
+				<div class="navbar-item">Lilli</div>
+			</div>
+			<div id="analysis_container">
+				<div class="navbar-item">The Underground Church</div>
+				<div class="navbar-item">The Church of Tunisia</div>
+				<div class="navbar-item">The Tunisian Society</div>
+			</div>
+		</div>
 	</div>
 </div>
 
@@ -179,7 +207,8 @@ function main() {
 			backgroundImages: document.getElementsByClassName('index-background-image'),
 			indexWrapper: document.getElementsByClassName("index-wrapper")[0],
 			indexBox: document.getElementsByClassName("index-box")[0],
-			indexBackground: document.getElementById('index-background')
+			indexBackground: document.getElementById('index-background'),
+			navbar: document.getElementsByClassName('navbar')[0]
 		},
 
 		article: {

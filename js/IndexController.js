@@ -3,6 +3,7 @@ function IndexController(elements) {
 	this.indexWrapperElem = elements.indexWrapper;
 	this.indexBoxElem = elements.indexBox;
 	this.indexBackground = elements.indexBackground;
+	this.navbar = elements.navbar;
 	this.backgroundImageElems = {};
 
 	this.lastImage = elements.backgroundImages[0];
@@ -47,7 +48,7 @@ IndexController.prototype.onScroll = function() {
 	this.indexWrapperElem.style.opacity = transparency;
 
 	// Start Article
-	OnMarkerCrossed(this.startArticleMark, this.lastRange, rangePercentage, fadeOut.bind(this, this.indexBackground), fadeIn.bind(this, this.indexBackground));
+	OnMarkerCrossed(this.startArticleMark, this.lastRange, rangePercentage, this.startArticle.bind(this), this.unstartArticle.bind(this));
 
 	this.lastRange = rangePercentage;
 };
@@ -94,4 +95,14 @@ IndexController.prototype.AnimateBGImageIn = function(elem) {
 
 IndexController.prototype.AnimateBGImageOut = function(elem) {
 	elem.classList.remove("show");
+};
+
+IndexController.prototype.startArticle = function() {
+	fadeOut(this.indexBackground);
+	this.navbar.classList.add("show");
+};
+
+IndexController.prototype.unstartArticle = function() {
+	fadeIn(this.indexBackground);
+	this.navbar.classList.remove("show");
 };

@@ -13,6 +13,12 @@ html,body {
 	visibility: hidden;
 }
 
+.no-size {
+	position: absolute;
+	width: 0;
+	height: 0;
+}
+
 .fadeOut {
 	opacity: 0;
 }
@@ -21,8 +27,9 @@ $article-width: 70%;
 $article-min-width: 30rem;
 $section-max-width: 40rem;
 
-$highlight-colour: #FFA500;
+$highlight-colour: #003355;
 
 @import "Index";
 @import "IntroVideos";
 @import "Article";
+@import "NavBar";
