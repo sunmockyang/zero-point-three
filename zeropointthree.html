@@ -3,7 +3,7 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=0.65">
-	<title>0.3%</title>
+	<title>Underground | Priscilla Hwang</title>
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
 
 	<script type="text/javascript">
@@ -89,24 +89,25 @@
 	<div class="navbar-first-level">
 		<div class="navbar-title">Underground.</div>
 		<div class="navbar-item-container">
-			<div class="navbar-item">Stories</div>
-			<div class="navbar-item">Analysis</div>
-			<div class="navbar-item">Conclusion</div>
+			<div class="navbar-item" data-link-id="index-box">Index</div>
+			<div class="navbar-item" data-second-layer="stories_container">Stories</div>
+			<div class="navbar-item" data-second-layer="analysis_container">Analysis</div>
+			<div class="navbar-item" data-link-id="conclusion">Conclusion</div>
 		</div>
 	</div>
 	<div class="navbar-second-level">
 		<div class="navbar-item-container">
-			<div id="stories_container" class="hidden no-size">
-				<div class="navbar-item">Dali</div>
-				<div class="navbar-item">Manel</div>
-				<div class="navbar-item">Mohammed Ali</div>
-				<div class="navbar-item">Safa</div>
-				<div class="navbar-item">Lilli</div>
+			<div id="stories_container" class="item-box hidden no-size">
+				<div class="navbar-item" data-link-id="dali">Dali</div>
+				<div class="navbar-item" data-link-id="manel">Manel</div>
+				<div class="navbar-item" data-link-id="mohammed_ali">Mohammed Ali</div>
+				<div class="navbar-item" data-link-id="safa">Safa</div>
+				<div class="navbar-item" data-link-id="lilli">Lilli</div>
 			</div>
-			<div id="analysis_container">
-				<div class="navbar-item">The Underground Church</div>
-				<div class="navbar-item">The Church of Tunisia</div>
-				<div class="navbar-item">The Tunisian Society</div>
+			<div id="analysis_container" class="item-box hidden no-size">
+				<div class="navbar-item" data-link-id="underground_church">The Underground Church</div>
+				<div class="navbar-item" data-link-id="church_of_tunisia">The Church of Tunisia</div>
+				<div class="navbar-item" data-link-id="tunisian_society">The Tunisian Society</div>
 			</div>
 		</div>
 	</div>
@@ -137,7 +138,7 @@
 	</div>
 
 	<div class="index-wrapper">
-		<div class="index-box">
+		<div id="index-box" class="index-box">
 
 			<div class="index-title">Table of Contents</div>
 			<hr class="index-hr" />
@@ -190,6 +191,9 @@ var elements = null;
 function main() {
 	injectSections();
 
+	var navFirstLevel = document.getElementsByClassName("navbar-first-level")[0];
+	var navSecondLevel = document.getElementsByClassName("navbar-second-level")[0];
+
 	elements = {
 		background: {
 			scrollBuffer: document.getElementById('intro-buffer'),
@@ -209,6 +213,16 @@ function main() {
 			indexBox: document.getElementsByClassName("index-box")[0],
 			indexBackground: document.getElementById('index-background'),
 			navbar: document.getElementsByClassName('navbar')[0]
+		},
+
+		navbar: {
+			container: document.getElementsByClassName('navbar')[0],
+			firstLevel: navFirstLevel,
+			secondLevel: navSecondLevel,
+			firstLevelItems: navFirstLevel.getElementsByClassName('navbar-item'),
+			secondLevelItems: navSecondLevel.getElementsByClassName('navbar-item'),
+			storyItems: document.getElementById('stories_container'),
+			analysisItems: document.getElementById('analysis_container')
 		},
 
 		article: {
@@ -256,6 +270,7 @@ window.onresize = onResize;
 <script type="text/javascript" src="js/ZeroPointThree.js"></script>
 <script type="text/javascript" src="js/BackgroundMedia.js"></script>
 <script type="text/javascript" src="js/IndexController.js"></script>
+<script type="text/javascript" src="js/NavigationBar.js"></script>
 <script type="text/javascript" src="js/ScrollRange.js"></script>
 <script type="text/javascript" src="js/Utils.js"></script>
 <script type="text/javascript" src="js/libs/AnimateScroll.min.js"></script>
