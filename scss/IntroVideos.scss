@@ -97,4 +97,11 @@ $title1BorderWidth: 0.2rem;
 	height: 100%;
 	background-color: rgba(11, 11, 11, 0.5);
 	z-index: 3;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+
+	.down-caret {
+		width: 10%;
+	}
 }
