@@ -1,9 +1,11 @@
-function IndexController(elements) {
+function IndexController(elements, onArticleStartCB, onArticleUnstartCB) {
 	this.buttonElems = elements.indexButtons;
 	this.indexWrapperElem = elements.indexWrapper;
 	this.indexBoxElem = elements.indexBox;
 	this.indexBackground = elements.indexBackground;
 	this.backgroundImageElems = {};
+	this.onArticleStartCB = onArticleStartCB;
+	this.onArticleUnstartCB = onArticleUnstartCB;
 
 	this.lastImage = elements.backgroundImages[0];
 
@@ -47,7 +49,7 @@ IndexController.prototype.onScroll = function() {
 	this.indexWrapperElem.style.opacity = transparency;
 
 	// Start Article
-	OnMarkerCrossed(this.startArticleMark, this.lastRange, rangePercentage, fadeOut.bind(this, this.indexBackground), fadeIn.bind(this, this.indexBackground));
+	OnMarkerCrossed(this.startArticleMark, this.lastRange, rangePercentage, this.startArticle.bind(this), this.unstartArticle.bind(this));
 
 	this.lastRange = rangePercentage;
 };
@@ -85,7 +87,7 @@ IndexController.prototype.buttonOnMouseOver = function(button) {
 };
 
 IndexController.prototype.buttonOnClick = function(button) {
-	animateScroll(document.getElementById(button.dataset.linkId), 1000, "easeInOutQuint", 0, "top");
+	ScrollToSection(button.dataset.linkId);
 };
 
 IndexController.prototype.AnimateBGImageIn = function(elem) {
@@ -94,4 +96,14 @@ IndexController.prototype.AnimateBGImageIn = function(elem) {
 
 IndexController.prototype.AnimateBGImageOut = function(elem) {
 	elem.classList.remove("show");
+};
+
+IndexController.prototype.startArticle = function() {
+	fadeOut(this.indexBackground);
+	this.onArticleStartCB();
+};
+
+IndexController.prototype.unstartArticle = function() {
+	fadeIn(this.indexBackground);
+	this.onArticleUnstartCB();
 };

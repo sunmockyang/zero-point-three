@@ -19,6 +19,14 @@ function fadeIn(elem) {
 	elem.classList.remove("fadeOut");
 }
 
+function show(elem) {
+	elem.classList.add("show");
+}
+
+function unshow(elem) {
+	elem.classList.remove("show");
+}
+
 function OnMarkerCrossed(marker, last, current, onforward, onbackward) {
 	if (onforward && last < marker && current > marker) {
 		onforward();
@@ -30,6 +38,10 @@ function OnMarkerCrossed(marker, last, current, onforward, onbackward) {
 	}
 	return false;
 };
+
+function ScrollToSection(id) {
+	animateScroll(document.getElementById(id), 1000, "easeInOutQuint", 50, "top");
+}
 
 var Mathx = {};
 

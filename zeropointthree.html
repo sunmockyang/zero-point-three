@@ -3,7 +3,7 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=0.65">
-	<title>0.3%</title>
+	<title>Underground | Priscilla Hwang</title>
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
 
 	<script type="text/javascript">
@@ -62,10 +62,10 @@
 <div class="background-media-container">
 	<div class="intro-video-container hidden">
 		<video class="fullscreen video" id="video1" data-aspect-ratio="1.7778" data-scale="1.1" loop muted="true">
-			<source src="https://s3.amazonaws.com/sunnymock/zeropointthree/content/ZeroPointThree_Islam.mp4" type="video/mp4">
+			<source src="content/intro_videos/F_Intro_Muslim2.mp4" type="video/mp4">
 		</video>
 		<video class="fullscreen video" id="video2" data-aspect-ratio="1.7778" loop muted="true">
-			<source src="https://s3.amazonaws.com/sunnymock/zeropointthree/content/ZeroPointThree_Christian.mp4" type="video/mp4">
+			<source src="content/intro_videos/F_Intro_Christian1.mp4" type="video/mp4">
 		</video>
 		<div class="video-overlay"></div>
 		<!-- add a down arrow here. Look up middle eastern street sign -->
@@ -81,6 +81,35 @@
 		<div class="index-background-image" id="church_of_tunisia_bg"></div>
 		<div class="index-background-image" id="tunisian_society_bg"></div>
 		<div class="index-background-image" id="conclusion_bg"></div>
+	</div>
+</div>
+
+<!-- Nav Bar -->
+<div class="navbar">
+	<div class="navbar-first-level">
+		<div class="navbar-title">Underground.</div>
+		<div class="navbar-item-container">
+			<div class="navbar-item" data-link-id="index-box">Index</div>
+			<div class="navbar-item" data-second-layer="stories_container">Stories</div>
+			<div class="navbar-item" data-second-layer="analysis_container">Analysis</div>
+			<div class="navbar-item" data-link-id="conclusion">Conclusion</div>
+		</div>
+	</div>
+	<div class="navbar-second-level">
+		<div class="navbar-item-container">
+			<div id="stories_container" class="item-box hidden no-size">
+				<div class="navbar-item" data-link-id="dali">Dali</div>
+				<div class="navbar-item" data-link-id="manel">Manel</div>
+				<div class="navbar-item" data-link-id="mohammed_ali">Mohammed Ali</div>
+				<div class="navbar-item" data-link-id="safa">Safa</div>
+				<div class="navbar-item" data-link-id="lilli">Lilli</div>
+			</div>
+			<div id="analysis_container" class="item-box hidden no-size">
+				<div class="navbar-item" data-link-id="underground_church">The Underground Church</div>
+				<div class="navbar-item" data-link-id="church_of_tunisia">The Church of Tunisia</div>
+				<div class="navbar-item" data-link-id="tunisian_society">The Tunisian Society</div>
+			</div>
+		</div>
 	</div>
 </div>
 
@@ -111,7 +140,7 @@
 	</div>
 
 	<div class="index-wrapper">
-		<div class="index-box">
+		<div id="index-box" class="index-box">
 
 			<div class="index-title">Table of Contents</div>
 			<hr class="index-hr" />
@@ -164,6 +193,9 @@ var elements = null;
 function main() {
 	injectSections();
 
+	var navFirstLevel = document.getElementsByClassName("navbar-first-level")[0];
+	var navSecondLevel = document.getElementsByClassName("navbar-second-level")[0];
+
 	elements = {
 		background: {
 			scrollBuffer: document.getElementById('intro-buffer'),
@@ -181,7 +213,18 @@ function main() {
 			backgroundImages: document.getElementsByClassName('index-background-image'),
 			indexWrapper: document.getElementsByClassName("index-wrapper")[0],
 			indexBox: document.getElementsByClassName("index-box")[0],
-			indexBackground: document.getElementById('index-background')
+			indexBackground: document.getElementById('index-background'),
+			navbar: document.getElementsByClassName('navbar')[0]
+		},
+
+		navbar: {
+			container: document.getElementsByClassName('navbar')[0],
+			firstLevel: navFirstLevel,
+			secondLevel: navSecondLevel,
+			firstLevelItems: navFirstLevel.getElementsByClassName('navbar-item'),
+			secondLevelItems: navSecondLevel.getElementsByClassName('navbar-item'),
+			storyItems: document.getElementById('stories_container'),
+			analysisItems: document.getElementById('analysis_container')
 		},
 
 		article: {
@@ -229,6 +272,7 @@ window.onresize = onResize;
 <script type="text/javascript" src="js/ZeroPointThree.js"></script>
 <script type="text/javascript" src="js/BackgroundMedia.js"></script>
 <script type="text/javascript" src="js/IndexController.js"></script>
+<script type="text/javascript" src="js/NavigationBar.js"></script>
 <script type="text/javascript" src="js/ScrollRange.js"></script>
 <script type="text/javascript" src="js/Utils.js"></script>
 <script type="text/javascript" src="js/libs/AnimateScroll.min.js"></script>

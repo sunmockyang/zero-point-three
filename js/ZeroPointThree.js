@@ -10,7 +10,8 @@ function ZeroPointThree(config, elements) {
 	AddScrollHandler(this.scrollRange, this.onScroll.bind(this));
 
 	this.backgroundMediaController = new BackgroundMedia(this.elements.background);
-	this.indexController = new IndexController(this.elements.index);
+	this.indexController = new IndexController(this.elements.index, this.onArticleStart.bind(this), this.onArticleUnstart.bind(this));
+	this.navBarController = new NavigationBar(this.elements.navbar);
 
 	window.requestAnimationFrame(this.onResize.bind(this));
 }
@@ -35,6 +36,14 @@ ZeroPointThree.prototype.onResize = function() {
 ZeroPointThree.prototype.onScroll = function(y) {
 	window.requestAnimationFrame(this.backgroundMediaController.onScroll.bind(this.backgroundMediaController, y));
 	window.requestAnimationFrame(this.indexController.onScroll.bind(this.indexController));
+};
+
+ZeroPointThree.prototype.onArticleStart = function() {
+	this.navBarController.showContainer();
+};
+
+ZeroPointThree.prototype.onArticleUnstart = function() {
+	this.navBarController.hideContainer();
 };
 
 // Utils
