@@ -1,0 +1,27 @@
+footer {
+	background-color: #955293;
+	color: #FFF;
+	text-align: center;
+
+	padding: 1rem;
+
+	@include box-shadow(0px, 0px, 15px, rgba(0,0,0,0.5));
+
+	hr {
+		border: solid white 1px;
+		max-width: 10rem;
+	}
+
+	.text {
+		font-size: 1rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.special-thanks {
+
+	}
+
+	.title {
+		font-size: 1rem;
+	}
+}
