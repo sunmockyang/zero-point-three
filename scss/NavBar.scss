@@ -21,7 +21,6 @@ $title-height: 2rem;
 
 .navbar-first-level {
 	background-color: #222;
-	color: #EEE;
 	display: flex;
 	align-items: flex-end;
 	justify-content: space-between;
@@ -29,6 +28,7 @@ $title-height: 2rem;
 }
 
 .navbar-title {
+	color: #EEE;
 	float: left;
 	font-size: $title-height;
 	padding: 0.5rem 1rem;
@@ -42,7 +42,23 @@ $title-height: 2rem;
 .navbar-item {
 	margin: 0 1rem;
 	cursor: pointer;
+	color: #DDD;
+	transition: color 0.1s ease-in-out;
+
+	.down-caret {
+		height: 20px;
+		vertical-align: text-top;
+	}
 }
+
+.navbar-item:hover {
+	color: #FFF;
+}
+
+.navbar-item.active, .navbar-item:active {
+	color: $highlight-colour;
+}
+
 
 .navbar-second-level {
 	display: flex;
@@ -53,6 +69,10 @@ $title-height: 2rem;
 
 	.navbar-item-container {
 		margin-left:auto;
+	}
+
+	.navbar-item {
+		color: #333;
 	}
 }
 

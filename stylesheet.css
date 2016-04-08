@@ -139,7 +139,7 @@ hr.index-hr {
   color: #EEE;
   padding: 0 0 0.75vw 0;
   font-size: 10vw;
-  border-bottom: solid #003355 0.2rem; }
+  border-bottom: solid #E67A64 0.2rem; }
 
 #title2.intro-title {
   transform: translate3d(0, 10vh, 0);
@@ -306,13 +306,13 @@ hr.index-hr {
 
 .navbar-first-level {
   background-color: #222;
-  color: #EEE;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   z-index: 2; }
 
 .navbar-title {
+  color: #EEE;
   float: left;
   font-size: 2rem;
   padding: 0.5rem 1rem; }
@@ -323,7 +323,18 @@ hr.index-hr {
 
 .navbar-item {
   margin: 0 1rem;
-  cursor: pointer; }
+  cursor: pointer;
+  color: #DDD;
+  transition: color 0.1s ease-in-out; }
+  .navbar-item .down-caret {
+    height: 20px;
+    vertical-align: text-top; }
+
+.navbar-item:hover {
+  color: #FFF; }
+
+.navbar-item.active, .navbar-item:active {
+  color: #E67A64; }
 
 .navbar-second-level {
   display: flex;
@@ -333,6 +344,8 @@ hr.index-hr {
   transition: margin-top 0.2s ease-out; }
   .navbar-second-level .navbar-item-container {
     margin-left: auto; }
+  .navbar-second-level .navbar-item {
+    color: #333; }
 
 .navbar-second-level.show {
   margin-top: 0; }

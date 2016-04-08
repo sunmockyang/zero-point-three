@@ -13,6 +13,8 @@ function NavigationBar(elements) {
 	this.container.onmouseover = this.onMouseOver.bind(this);
 	this.container.onmouseout = this.onMouseOut.bind(this);
 
+	this.activeButton = null;
+
 	this.setupFirstLevelButtons();
 	this.setupLinkButtons();
 }
@@ -23,7 +25,7 @@ NavigationBar.prototype.setupFirstLevelButtons = function() {
 	for (var i = 0; i < this.firstLevelItems.length; i++) {
 		var secondLayer = this.firstLevelItems[i].dataset.secondLayer;
 		if (secondLayer) {
-			this.firstLevelItems[i].onclick = this.showSecondLevel.bind(this, secondLayer);
+			this.firstLevelItems[i].onclick = this.showSecondLevel.bind(this, secondLayer, this.firstLevelItems[i]);
 		}
 	}
 };
@@ -60,10 +62,18 @@ NavigationBar.prototype.onLinkClicked = function(linkID) {
 	}
 };
 
-NavigationBar.prototype.showSecondLevel = function(id) {
+NavigationBar.prototype.showSecondLevel = function(id, button) {
+	if (button != this.activeButton) {
+		if (this.activeButton) {
+			this.activeButton.classList.remove("active");
+		}
+		button.classList.add("active");
+		this.activeButton = button;
+	}
+
 	if (this.isSecondLevelShowing() && this.lastShownSecondLevel != id) {
 		this.hideSecondLevel();
-		setTimeout(this.showSecondLevel.bind(this, id), 200);
+		setTimeout(this.showSecondLevel.bind(this, id, button), 200);
 		return;
 	}
 
@@ -90,6 +100,10 @@ NavigationBar.prototype.hideSecondLevel = function() {
 	this.stories_container.classList.add("no-size");
 	this.analysis_container.classList.add("hidden");
 	this.analysis_container.classList.add("no-size");
+	if (this.activeButton) {
+		this.activeButton.classList.remove("active");
+		this.activeButton = null;
+	}
 	this.lastShownSecondLevel = "";
 	unshow(this.secondLevel);
 };
