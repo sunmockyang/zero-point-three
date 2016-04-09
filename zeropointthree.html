@@ -22,11 +22,6 @@
 		xobj.send(null);  
 	};
 
-	// Load configuration file
-	var dataSrc = "content/zero_point_three_config.json";
-	var config = null;
-	LoadFile(dataSrc, "application/json", function(text) {config = JSON.parse(text); onLoad();});
-
 	// Load sections
 	var sectionPaths = ["01-Prologue.html",
 						"02-Manel.html",
@@ -264,7 +259,7 @@ function main() {
 		fullscreenElements: document.getElementsByClassName('fullscreen')
 	};
 
-	app = new ZeroPointThree(config, elements);
+	app = new ZeroPointThree(elements);
 }
 
 function injectSections() {
@@ -313,11 +308,9 @@ function onResize() {
 
 function onLoad() {
 	console.log(document.readyState === "complete",
-		config != null,
 		sectionsLoaded == true);
 
 	if (document.readyState === "complete" &&
-		config != null &&
 		sectionsLoaded) {
 		main();
 	}

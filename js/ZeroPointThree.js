@@ -2,9 +2,8 @@
 // Main app for PH thesis
 // Contains main logic for the entire article
 
-function ZeroPointThree(config, elements) {
+function ZeroPointThree(elements) {
 	this.elements = elements;
-	this.config = config;
 
 	this.scrollRange = {start: 0, end: 0};
 	AddScrollHandler(this.scrollRange, this.onScroll.bind(this));
