@@ -6,6 +6,8 @@
 	height:100%;
 	position: fixed;
 	z-index: -2;
+	background-color: #FFF;
+	transition: opacity 0.2s ease-in-out;
 
 	video {
 		position: absolute;
@@ -31,7 +33,7 @@
 }
 
 #intro-buffer {
-	height: 100vh;
+	height: 250vh;
 }
 
 $title1Height: 10vw;
@@ -102,6 +104,6 @@ $title1BorderWidth: 0.2rem;
 	align-items: flex-end;
 
 	.down-caret {
-		width: 10%;
+		height: 10%;
 	}
 }

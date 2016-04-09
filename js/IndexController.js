@@ -2,7 +2,7 @@ function IndexController(elements, onArticleStartCB, onArticleUnstartCB) {
 	this.buttonElems = elements.indexButtons;
 	this.indexWrapperElem = elements.indexWrapper;
 	this.indexBoxElem = elements.indexBox;
-	this.indexBackground = elements.indexBackground;
+	this.backgroundContainer = elements.backgroundContainer;
 	this.backgroundImageElems = {};
 	this.onArticleStartCB = onArticleStartCB;
 	this.onArticleUnstartCB = onArticleUnstartCB;
@@ -99,11 +99,11 @@ IndexController.prototype.AnimateBGImageOut = function(elem) {
 };
 
 IndexController.prototype.startArticle = function() {
-	fadeOut(this.indexBackground);
+	fadeOut(this.backgroundContainer);
 	this.onArticleStartCB();
 };
 
 IndexController.prototype.unstartArticle = function() {
-	fadeIn(this.indexBackground);
+	fadeIn(this.backgroundContainer);
 	this.onArticleUnstartCB();
 };
