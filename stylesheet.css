@@ -186,14 +186,14 @@ hr.index-hr {
     max-width: 58rem;
     margin: 0 auto;
     opacity: 0;
-    transition: opacity 0.5s ease-in-out 3.5s; }
+    transition: opacity 0.5s ease-in-out 1.5s; }
   #intro-paragraph .divergent {
     opacity: 1; }
   #intro-paragraph .underground {
-    transition-delay: 1s; }
+    transition-delay: 0s; }
   #intro-paragraph .undetected {
     margin-bottom: 5rem;
-    transition-delay: 2s; }
+    transition-delay: 1s; }
   #intro-paragraph hr {
     width: 10%;
     margin: 7rem auto; }
