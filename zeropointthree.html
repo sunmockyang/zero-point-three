@@ -2,7 +2,7 @@
 <meta charset="utf-8" />
 <html>
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=0.65">
+	<meta name="viewport" content="width=device-width, initial-scale=0.65, maximum-scale=1.0, user-scalable=no">
 	<title>Underground | Priscilla Hwang</title>
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
 	<link href="http://vjs.zencdn.net/5.8.7/video-js.css" rel="stylesheet">
@@ -55,6 +55,18 @@
 	</script>
 </head>
 <body>
+
+<!-- Preloader -->
+
+<div id="preloader">
+	<div class="content">
+		<div id="preloaderButton" data-text="- Click to Enter -">
+			<img src="img/loading.svg"/>
+		</div>
+		<div class="title">Underground.</div>
+	</div>
+</div>
+
 <!-- Background media -->
 <div class="background-media-container">
 	<div class="intro-video-container hidden">
@@ -215,6 +227,30 @@
 var app = null;
 var elements = null;
 
+document.documentElement.classList.add("disable-scroll");
+
+// Preload
+function onLoad() {
+	console.log(document.readyState === "complete",
+		sectionsLoaded == true);
+
+	if (document.readyState === "complete" &&
+		sectionsLoaded) {
+		main();
+
+		var preloaderButton = document.getElementById("preloaderButton");
+		preloaderButton.classList.add("button");
+		preloaderButton.innerHTML = preloaderButton.dataset.text;
+		preloaderButton.onclick = (function () {
+			document.getElementById("preloader").classList.add("hide");
+			document.documentElement.classList.remove("disable-scroll");
+			onAppEnter();
+		}).bind(this);
+	}
+}
+
+// Start main app
+
 function main() {
 	injectSections();
 
@@ -261,8 +297,11 @@ function main() {
 
 		fullscreenElements: document.getElementsByClassName('fullscreen')
 	};
+}
 
+function onAppEnter() {
 	app = new ZeroPointThree(elements);
+	window.onresize = app.onResize;
 }
 
 function injectSections() {
@@ -305,22 +344,7 @@ function injectSections() {
 	});
 }
 
-function onResize() {
-	app.onResize();
-}
-
-function onLoad() {
-	console.log(document.readyState === "complete",
-		sectionsLoaded == true);
-
-	if (document.readyState === "complete" &&
-		sectionsLoaded) {
-		main();
-	}
-}
-
 window.onload = onLoad;
-window.onresize = onResize;
 </script>
 
 <script src="http://vjs.zencdn.net/5.8.7/video.js"></script>

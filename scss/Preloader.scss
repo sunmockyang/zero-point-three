@@ -1,0 +1,66 @@
+#preloader {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+	background: #333 url('content/preloader_bg.jpg') no-repeat left center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	transition: opacity 4s ease-in-out, visibility 1s linear 5s;
+
+	.content {
+		display: inline-block;
+		position: absolute;
+		right: 5%;
+		top: 40%;
+		text-align: center;
+	}
+
+	.title {
+		font-family: $title-font;
+		font-size: 7vw;
+		color: #EFEFEF;
+		margin-top: 1.25rem;
+		transition: opacity 0.5s ease-in-out;
+	}
+
+	#preloaderButton {
+		color: #BBB;
+		font-size: 2rem;
+		display: inline-block;
+		padding: 0.5vw 1.5vw;
+		margin-top: 1.5rem;
+		border-radius: 2px;
+		img {
+			opacity: 1;
+		}
+	}
+
+	#preloaderButton.button {
+		transition: 0.2s ease-in-out;
+		cursor: pointer;
+	}
+
+	#preloaderButton.button:hover {
+		color: #FFF;
+		background-color: rgba(255, 255, 255, 0.1);
+	}
+}
+
+#preloader.hide {
+	opacity: 0;
+	visibility: hidden;
+
+	.title {
+		opacity: 0;
+	}
+
+	.button {
+		opacity: 0;
+	}
+}
