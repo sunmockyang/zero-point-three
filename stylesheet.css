@@ -33,7 +33,7 @@ html, body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  transition: opacity 4s ease-in-out, visibility 1s linear 5s; }
+  transition: opacity 0.5s ease-in-out, visibility 1s linear 0.5s; }
   #preloader .content {
     display: inline-block;
     position: absolute;
@@ -226,28 +226,32 @@ hr.index-hr {
   min-width: 30rem;
   font-size: 1.2rem;
   line-height: 2;
-  font-family: "Georgia";
+  font-family: "Georgia,Times,Times New Roman,serif";
   margin: 0 auto;
   z-index: 1; }
 
 #intro-paragraph {
   padding: 20vh 0 30vh 0;
   background-color: #FFF;
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  line-height: 1.15; }
   #intro-paragraph p {
     width: 80%;
     min-width: 25rem;
     max-width: 58rem;
     margin: 0 auto;
+    margin-bottom: 1.5rem;
     opacity: 0;
     transition: opacity 0.5s ease-in-out 1.5s; }
   #intro-paragraph .divergent {
-    opacity: 1; }
+    opacity: 1;
+    margin-bottom: 2.5rem; }
   #intro-paragraph .underground {
-    transition-delay: 0s; }
+    transition-delay: 0s;
+    margin-bottom: 2.5rem; }
   #intro-paragraph .undetected {
-    margin-bottom: 5rem;
-    transition-delay: 1s; }
+    transition-delay: 1s;
+    margin-bottom: 2.5rem; }
   #intro-paragraph hr {
     width: 10%;
     margin: 7rem auto; }
@@ -258,16 +262,14 @@ hr.index-hr {
 .section {
   margin: 0 auto;
   margin-bottom: 10rem;
-  width: 90%;
-  max-width: 60rem;
-  padding: 10vh 5rem;
+  width: 80%;
+  padding: 3rem 2vw 10vw 2vw;
   background-color: #FFF; }
 
 .section-content p {
-  max-width: 58rem;
-  width: 70%;
+  max-width: 38rem;
+  width: 85%;
   margin: 1.5rem auto; }
-
 .section-content hr {
   width: 5rem;
   margin: 3rem auto; }
@@ -302,13 +304,13 @@ hr.index-hr {
   width: 90%;
   max-width: 69.6rem;
   margin: 2rem auto; }
-
-.section-media-video {
-  width: 100%; }
+  .section-media .section-video {
+    margin-bottom: 0; }
 
 .section-image {
   display: flex;
-  flex-flow: row nowrap; }
+  flex-flow: row nowrap;
+  justify-content: center; }
 
 .section-image-wrapper:first-child {
   margin-left: 0; }
@@ -320,7 +322,8 @@ hr.index-hr {
   flex-grow: 1;
   margin: 0 0.5%;
   background: #FFF no-repeat center center;
-  background-size: cover; }
+  background-size: cover;
+  max-width: 50vw; }
 
 .section-image-wrapper:before {
   content: "";

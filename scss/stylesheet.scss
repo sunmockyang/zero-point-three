@@ -30,11 +30,13 @@ html,body {
 
 $article-width: 70%;
 $article-min-width: 30rem;
-$section-max-width: 58rem;
+$section-text-max-width: 38rem;
+$section-content-max-width: 58rem;
 
 $highlight-colour: #E67A64;
 
 $title-font: "Georgia";
+$article-font: "Georgia,Times,Times New Roman,serif";
 
 @mixin box-shadow($top, $left, $blur, $color, $inset: false) {
 	@if $inset {

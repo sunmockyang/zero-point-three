@@ -7,7 +7,7 @@
 
 	font-size: 1.2rem;
     line-height: 2;
-    font-family: "Georgia";
+    font-family: $article-font;
     margin: 0 auto;
     z-index: 1;
 }
@@ -18,12 +18,14 @@ $delay-amounts: 1s;
 	padding: 20vh 0 30vh 0;
 	background-color: #FFF;
 	font-size: 1.5rem;
+	line-height: 1.15;
 
 	p {
 		width: 80%;
 		min-width: 25rem;
-		max-width: $section-max-width;
+		max-width: $section-content-max-width;
 		margin: 0 auto;
+		margin-bottom: 1.5rem;
 		opacity: 0;
 		transition: opacity 0.5s ease-in-out $delay-amounts * 1.5;
 	}
@@ -31,15 +33,17 @@ $delay-amounts: 1s;
 	.divergent {
 		opacity: 1;
 		// transition-delay: 0s;
+		margin-bottom: 2.5rem;
 	}
 
 	.underground {
 		transition-delay: 0s;
+		margin-bottom: 2.5rem;
 	}
 
 	.undetected {
-		margin-bottom: 5rem;
 		transition-delay: $delay-amounts;
+		margin-bottom: 2.5rem;
 	}
 
 	hr {
@@ -57,21 +61,22 @@ $delay-amounts: 1s;
 .section {
 	margin: 0 auto;
 	margin-bottom: 10rem;
-	width: 90%;
-	max-width: 60rem;
-	padding: 10vh 5rem;
+	width: 80%;
+	padding: 3rem 2vw 10vw 2vw;
 	background-color: #FFF;
 }
 
-.section-content p{
-	max-width: $section-max-width;
-	width: 70%;
-	margin: 1.5rem auto;
-}
+.section-content {
+	p{
+		max-width: $section-text-max-width;
+		width: 85%;
+		margin: 1.5rem auto;
+	}
 
-.section-content hr {
-	width: 5rem;
-	margin: 3rem auto;
+	hr {
+		width: 5rem;
+		margin: 3rem auto;
+	}
 }
 
 .section-title {
@@ -101,24 +106,25 @@ $delay-amounts: 1s;
 }
 
 .section-subtitle .subtitle-media {
-	max-width: $section-max-width * 1.2;
+	max-width: $section-content-max-width * 1.2;
 	width: 90%;
 	margin: 0 auto;
 }
 
 .section-media {
 	width: 90%;
-	max-width: $section-max-width * 1.2;
+	max-width: $section-content-max-width * 1.2;
 	margin: 2rem auto;
-}
 
-.section-media-video {
-	width: 100%;
+	.section-video {
+		margin-bottom: 0;
+	}
 }
 
 .section-image {
 	display: flex;
 	flex-flow: row nowrap;
+	justify-content: center;
 }
 
 .section-image-wrapper:first-child {
@@ -134,6 +140,7 @@ $delay-amounts: 1s;
 	margin: 0 0.5%;
 	background: #FFF no-repeat center center;
 	background-size: cover;
+	max-width: 50vw;
 }
 
 // Keep aspect ratio to 4:3
