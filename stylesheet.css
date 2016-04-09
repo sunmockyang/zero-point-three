@@ -225,7 +225,8 @@ hr.index-hr {
 
 .section-subtitle .subtitle-media {
   max-width: 48rem;
-  width: 90%; }
+  width: 90%;
+  margin: 0 auto; }
 
 .section-media {
   width: 90%;

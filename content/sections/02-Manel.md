@@ -13,7 +13,7 @@ There are three bodies inside. Two of them are jerking to a rhythm, sweat drops 
 
 [Hi this is a link](http://google.com)
 
-> This is a quote - Sunmock
+> This is a quote
 
 ## The Tunisian Christian Population [image](old/version 0/img/bridge.jpg)
 

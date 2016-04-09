@@ -4,9 +4,15 @@
 				<img src="{{image}}" class="subtitle-media" />
 			{{/if}}
 			{{#if video}}
-				<video class="subtitle-media" data-src="{{video}}">
-					<source src="{{video}}" type="video/webm"></source>
-				</video>
+				<div class="subtitle-media">
+					<video class="video-js vjs-default-skin"
+							preload="none"
+							poster='{{poster}}'
+							data-setup='{ "aspectRatio":"16:9" }'
+							controls>
+						<source src="{{video}}" type="video/webm"></source>
+					</video>
+				</div>
 			{{/if}}
 			<div class="subtitle-text">
 				{{title}}

@@ -66,6 +66,7 @@ class InlineVideo < Inline
 
 		@data[:caption] = caption
 		@data[:src] = remove_outer_whitespace(src)
+		@data[:poster] = parse_poster_from_video_path(src)
 	end
 end
 
@@ -73,8 +74,13 @@ class InlineQuote < Inline
 	def initialize(line)
 		super("inline_quote.html")
 		line = line[1, line.length - 1]
-		quote = line.rpartition("-").first
-		author = line.rpartition("-").last
+
+		if line.include?("-")
+			quote = line.rpartition("-").first
+			author = line.rpartition("-").last
+		else
+			quote = line
+		end
 
 		# Need to remove outer whitespace
 
@@ -94,6 +100,10 @@ class InlineHeader < Inline
 		@data[:title] = remove_outer_whitespace(title)
 		# @data[:media_type] = remove_outer_whitespace(media_type)
 		@data[media_type] = remove_outer_whitespace(src)
+
+		if media_type == "video"
+			@data[:poster] = parse_poster_from_video_path(src)
+		end
 	end
 end
 
@@ -134,6 +144,10 @@ class Section
 		# Get section-wide keys
 		if @section_wide_keys.include?(type)
 			@data[type] = content
+
+			if type == "banner_video"
+				@data["banner_poster"] = parse_poster_from_video_path(content)
+			end
 		elsif type == "image"
 			@data[:content].push(InlineImage.new(content))
 		elsif type == "video"

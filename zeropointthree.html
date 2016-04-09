@@ -5,6 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=0.65">
 	<title>Underground | Priscilla Hwang</title>
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<link href="http://vjs.zencdn.net/5.8.7/video-js.css" rel="stylesheet">
+	<link href="libs/videojs/videojs_stylesheet.css" rel="stylesheet">
 
 	<script type="text/javascript">
 
@@ -272,6 +274,12 @@ function injectSections() {
 	};
 	document.getElementById('articleContainer').innerHTML += sectionsRawText;
 
+	var videos = document.getElementsByClassName('video-js');
+
+	for (var i = 0; i < videos.length; i++) {
+		videojs(videos[i]);
+	}
+
 	// Clear up some memory
 	loadedSections = null;
 }
@@ -296,6 +304,7 @@ window.onload = onLoad;
 window.onresize = onResize;
 </script>
 
+<script src="http://vjs.zencdn.net/5.8.7/video.js"></script>
 <script type="text/javascript" src="js/ZeroPointThree.js"></script>
 <script type="text/javascript" src="js/BackgroundMedia.js"></script>
 <script type="text/javascript" src="js/IndexController.js"></script>

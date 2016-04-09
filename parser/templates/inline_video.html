@@ -1,8 +1,14 @@
 		<div class="section-media">
-			<video class="section-media-video" data-src="{{src}}">
-				<source src="{{src}}" type="video/webm"></source>
-			</video>
+			<div class="section-video">
+				<video class="video-js vjs-default-skin"
+						preload="none"
+						poster='{{poster}}'
+						data-setup='{ "aspectRatio":"16:9" }'
+						controls>
+					<source src="{{src}}" type="video/webm"></source>
+				</video>
+			</div>
 			<div class="section-media-caption">
-				{{caption}}
+				{{{caption}}}
 			</div>
 		</div>

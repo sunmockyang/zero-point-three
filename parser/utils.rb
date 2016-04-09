@@ -29,3 +29,7 @@ def remove_outer_whitespace(text)
 		return text
 	end
 end
+
+def parse_poster_from_video_path(path)
+	return File.dirname(path) + "/" + File.basename(path,File.extname(path)) + ".jpg"
+end
