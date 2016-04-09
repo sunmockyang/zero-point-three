@@ -177,13 +177,29 @@ hr.index-hr {
   z-index: 1; }
 
 #intro-paragraph {
-  padding: 40vh 0;
-  background-color: #FFF; }
+  padding: 20vh 0 30vh 0;
+  background-color: #FFF;
+  font-size: 1.5rem; }
+  #intro-paragraph p {
+    width: 80%;
+    min-width: 25rem;
+    max-width: 58rem;
+    margin: 0 auto;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out 3.5s; }
+  #intro-paragraph .divergent {
+    opacity: 1; }
+  #intro-paragraph .underground {
+    transition-delay: 1s; }
+  #intro-paragraph .undetected {
+    margin-bottom: 5rem;
+    transition-delay: 2s; }
+  #intro-paragraph hr {
+    width: 10%;
+    margin: 7rem auto; }
 
-#intro-paragraph p {
-  width: 50%;
-  max-width: 35rem;
-  margin: 0 auto; }
+#intro-paragraph.show p {
+  opacity: 1; }
 
 .section {
   margin: 0 auto;
@@ -194,7 +210,7 @@ hr.index-hr {
   background-color: #FFF; }
 
 .section-content p {
-  max-width: 40rem;
+  max-width: 58rem;
   width: 70%;
   margin: 1.5rem auto; }
 
@@ -224,13 +240,13 @@ hr.index-hr {
   margin: 2rem 0; }
 
 .section-subtitle .subtitle-media {
-  max-width: 48rem;
+  max-width: 69.6rem;
   width: 90%;
   margin: 0 auto; }
 
 .section-media {
   width: 90%;
-  max-width: 48rem;
+  max-width: 69.6rem;
   margin: 2rem auto; }
 
 .section-media-video {

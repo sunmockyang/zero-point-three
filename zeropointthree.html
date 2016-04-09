@@ -129,13 +129,15 @@
 
 <div id="articleContainer" class="article-container">
 	<div id="intro-paragraph">
-		<p>Divergent. </p>
-		<p>Underground.</p>
-		<p>Undetected. </p>
+		<hr/>
+		<p class="divergent">Divergent. </p>
+		<p class="underground">Underground.</p>
+		<p class="undetected">Undetected. </p>
 		<p>They chose a life that deviates from the norm. </p>
 		<p>Some chose a life of hiding; some chose to expose themselves. Many of them don&#39;t even know if others like them exist. </p>
 		<p>What is life like for this almost invisible group in the periphery of Muslim society?  </p>
 		<p>This multimedia investigation takes a rare glance into the lives of Tunisian Christians, living as the 0.3 per cent among the 99.</p>
+		<hr/>
 	</div>
 
 	<div class="index-wrapper">
@@ -229,7 +231,8 @@ function main() {
 			title2: document.getElementById('title2'),
 			titleContainer: document.getElementsByClassName("intro-title-container")[0],
 			indexBackground: document.getElementById('index-background'),
-			videoOverlay: document.getElementsByClassName('video-overlay')[0]
+			videoOverlay: document.getElementsByClassName('video-overlay')[0],
+			introParagraph: document.getElementById("intro-paragraph")
 		},
 
 		index: {
@@ -238,7 +241,7 @@ function main() {
 			indexWrapper: document.getElementsByClassName("index-wrapper")[0],
 			indexBox: document.getElementsByClassName("index-box")[0],
 			backgroundContainer: document.getElementsByClassName('background-media-container')[0],
-			navbar: document.getElementsByClassName('navbar')[0],
+			navbar: document.getElementsByClassName('navbar')[0]
 		},
 
 		navbar: {

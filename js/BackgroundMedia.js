@@ -13,6 +13,8 @@ function BackgroundMedia(elements) {
 	this.videoOverlay = elements.videoOverlay;
 	this.currentVideo = this.video1;
 
+	this.introParagraph = elements.introParagraph;
+
 	this.video1TargetVolume = this.maxVolume;
 	this.video2TargetVolume = 0;
 	this.video1.volume = this.video2.volume = 0;
@@ -34,7 +36,7 @@ BackgroundMedia.prototype.articlePercentage = 1.1;
 BackgroundMedia.prototype.fadeRange = 0.25;
 BackgroundMedia.prototype.fadeEnd = 0.9;
 BackgroundMedia.prototype.volumeLerp = 0.05;
-BackgroundMedia.prototype.maxVolume = 0.5;
+BackgroundMedia.prototype.maxVolume = 0.1;
 BackgroundMedia.prototype.volumeRequestID = 0;
 
 BackgroundMedia.prototype.onResize = function() {
@@ -54,8 +56,8 @@ BackgroundMedia.prototype.onScroll = function(y) {
 	OnMarkerCrossed(this.articlePercentage, lastYPercentage, currentYPercentage, this.animateArticleIn.bind(this), this.animateArticleOut.bind(this));
 
 	// Container
-	if (currentYPercentage < 2) {
-		this.titleContainer.style.transform = translate3dY(-currentYPercentage * 15);
+	if (currentYPercentage < 1) {
+		this.titleContainer.style.transform = translate3dY(-currentYPercentage * 30);
 	}
 
 	// Video1
@@ -124,6 +126,8 @@ BackgroundMedia.prototype.animateArticleIn = function() {
 	this.video2.classList.add("hidden");
 	this.videoContainer.classList.add("hidden");
 	this.indexBackground.classList.remove("hidden");
+
+	show(this.introParagraph);
 };
 
 BackgroundMedia.prototype.animateArticleOut = function() {
