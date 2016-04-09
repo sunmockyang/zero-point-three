@@ -277,7 +277,14 @@ function injectSections() {
 	var videos = document.getElementsByClassName('video-js');
 
 	for (var i = 0; i < videos.length; i++) {
-		videojs(videos[i]);
+		var vid = videojs(videos[i])
+
+		if (videos[i].classList.contains("banner_video")) {
+			vid.on("play",
+				function() {
+						ScrollCenteredElem(this.el_);
+			});
+		}
 	}
 
 	// Clear up some memory

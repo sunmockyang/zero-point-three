@@ -55,7 +55,7 @@ NavigationBar.prototype.isSecondLevelShowing = function() {
 NavigationBar.prototype.onLinkClicked = function(linkID) {
 	this.hideSecondLevel();
 	if (linkID == "index-box") {
-		animateScroll(document.getElementById(linkID), 1000, "easeInOutQuint", 0, "center");
+		ScrollCenteredElem(document.getElementById(linkID));
 	}
 	else {
 		ScrollToSection(linkID);

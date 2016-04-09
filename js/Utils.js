@@ -43,6 +43,10 @@ function ScrollToSection(id) {
 	animateScroll(document.getElementById(id), 1000, "easeInOutQuint", 50, "top");
 }
 
+function ScrollCenteredElem(elem, duration) {
+	animateScroll(elem, (duration) ? duration : 1000, "easeInOutQuint", 0, "center");
+}
+
 var Mathx = {};
 
 Mathx.clamp = function(t, min, max) {
