@@ -274,6 +274,10 @@ function injectSections() {
 	};
 	document.getElementById('articleContainer').innerHTML += sectionsRawText;
 
+	// Clear up some memory
+	loadedSections = null;
+
+	// Build video players
 	var videos = document.getElementsByClassName('video-js');
 
 	for (var i = 0; i < videos.length; i++) {
@@ -287,8 +291,20 @@ function injectSections() {
 		}
 	}
 
-	// Clear up some memory
-	loadedSections = null;
+	// Build lightboxes
+	$(".section-image").each(function() {
+	    $(this).magnificPopup({
+	        delegate: 'a',
+	        type: 'image',
+	        cursor: null,
+			image: {
+				titleSrc: (function() {return this.title}).bind(this)
+			},
+	        gallery: {
+	          enabled:true
+	        }
+	    });
+	});
 }
 
 function onResize() {
@@ -312,6 +328,8 @@ window.onresize = onResize;
 </script>
 
 <script src="http://vjs.zencdn.net/5.8.7/video.js"></script>
+<script type="text/javascript" src="js/libs/zepto.min.js"></script>
+<script type="text/javascript" src="js/libs/magnific.min.js"></script>
 <script type="text/javascript" src="js/ZeroPointThree.js"></script>
 <script type="text/javascript" src="js/BackgroundMedia.js"></script>
 <script type="text/javascript" src="js/IndexController.js"></script>
