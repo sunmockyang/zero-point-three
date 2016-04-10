@@ -338,7 +338,8 @@ hr.index-hr {
   max-width: 69.6rem;
   margin: 2rem auto; }
   .section-media .section-video {
-    margin-bottom: 0; }
+    margin: 0 auto;
+    max-width: 45.6rem; }
 
 .section-image {
   display: flex;
