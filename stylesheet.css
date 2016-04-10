@@ -410,6 +410,7 @@ hr.index-hr {
 .navbar-first-level, .navbar-second-level {
   position: relative;
   width: 100%;
+  min-width: 30rem;
   padding: 0.5rem 0;
   display: flex;
   align-items: center;
@@ -473,9 +474,12 @@ hr.index-hr {
   display: flex;
   margin-left: auto; }
 
-@media only screen and (max-width: 640px), only screen and (max-device-width: 640px) {
+@media only screen and (max-width: 750px), only screen and (max-device-width: 750px) {
   .navbar-first-level, .navbar-second-level {
-    justify-content: space-around; } }
+    justify-content: space-around; }
+
+  .navbar-first-level {
+    flex-direction: column; } }
 footer {
   background-color: #955293;
   color: #FFF;

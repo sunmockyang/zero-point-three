@@ -302,7 +302,7 @@ function main() {
 
 function onAppEnter() {
 	app = new ZeroPointThree(elements);
-	window.onresize = app.onResize;
+	window.onresize = app.onResize.bind(app);
 }
 
 function injectSections() {
