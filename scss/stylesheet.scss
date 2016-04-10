@@ -35,8 +35,8 @@ $section-content-max-width: 58rem;
 
 $highlight-colour: #E67A64;
 
-$title-font: "Georgia";
-$article-font: "Georgia,Times,Times New Roman,serif";
+$title-font: normal normal 100 1rem/normal "Alegreya Sans SC";
+$article-font: Georgia,Times,"Times New Roman",serif;
 
 @mixin box-shadow($top, $left, $blur, $color, $inset: false) {
 	@if $inset {

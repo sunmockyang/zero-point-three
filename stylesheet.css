@@ -41,13 +41,14 @@ html, body {
     top: 40%;
     text-align: center; }
   #preloader .title {
-    font-family: "Georgia";
+    font: normal normal 100 1rem/normal "Alegreya Sans SC";
     font-size: 7vw;
     color: #EFEFEF;
     margin-top: 1.25rem;
     transition: opacity 0.5s ease-in-out; }
   #preloader #preloaderButton {
     color: #BBB;
+    font: normal normal 100 1rem/normal "Alegreya Sans SC";
     font-size: 2rem;
     display: inline-block;
     padding: 0.5vw 1.5vw;
@@ -76,13 +77,16 @@ html, body {
 .index-box {
   border-radius: 0.3rem;
   border: 2px solid gray;
-  margin: 30vh 0;
+  margin: 30vh auto;
   transform: translate3d(0, 10vh, 0);
   display: inline-block;
-  padding: 1rem 3rem;
+  padding: 2%;
   background-color: rgba(255, 255, 255, 0.1);
   opacity: 0;
-  transition: opacity 0.3s ease-in-out, transform 0.5s ease-in-out; }
+  transition: opacity 0.3s ease-in-out, transform 0.5s ease-in-out;
+  width: 50%;
+  min-width: 26rem;
+  max-width: 30rem; }
 
 .index-box.animate-in {
   opacity: 1;
@@ -99,11 +103,15 @@ html, body {
 
 .index-title {
   color: #FFF;
-  font-size: 4vh; }
+  font: normal normal 100 1rem/normal "Alegreya Sans SC";
+  font-size: 3rem; }
 
 .index-header {
   color: #FFF;
-  font-size: 3vh; }
+  font: normal normal 100 1rem/normal "Alegreya Sans SC";
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2; }
 
 hr.index-hr {
   border: 0;
@@ -116,7 +124,9 @@ hr.index-hr {
   font-style: italic;
   transition: color 0.2s ease-in-out;
   cursor: pointer;
-  font-size: 2.2vh; }
+  font-size: 1.5rem;
+  line-height: 1.15;
+  margin-bottom: 1rem; }
 
 .index-item .item-link:hover {
   color: #FFF; }
@@ -179,8 +189,8 @@ hr.index-hr {
   z-index: -1; }
 
 .intro-title {
-  color: #FFF;
-  font-weight: 300; }
+  font: normal normal 100 1rem/normal "Alegreya Sans SC";
+  color: #FFF; }
 
 .intro-title.article {
   transition: none; }
@@ -204,7 +214,8 @@ hr.index-hr {
 
 #title2_text {
   color: #FFF;
-  font-size: 3vh; }
+  font-size: 3vh;
+  font-weight: 300; }
 
 #title2.second-video {
   transform: translate3d(0, 0, 0);
@@ -222,11 +233,14 @@ hr.index-hr {
   .video-overlay .down-caret {
     height: 10%; }
 
+@media only screen and (max-width: 640px), only screen and (max-device-width: 640px) {
+  .intro-title-container {
+    text-align: center; } }
 .article-container {
   min-width: 30rem;
   font-size: 1.2rem;
   line-height: 2;
-  font-family: "Georgia,Times,Times New Roman,serif";
+  font-family: Georgia, Times, "Times New Roman", serif;
   margin: 0 auto;
   z-index: 1; }
 
@@ -234,7 +248,7 @@ hr.index-hr {
   padding: 20vh 0 30vh 0;
   background-color: #FFF;
   font-size: 1.5rem;
-  line-height: 1.15; }
+  line-height: 1.3; }
   #intro-paragraph p {
     width: 80%;
     min-width: 25rem;
@@ -275,18 +289,20 @@ hr.index-hr {
   margin: 3rem auto; }
 
 .section-title {
-  text-align: center;
-  line-height: 1.2;
-  margin: 1rem; }
+  font: normal normal 100 1rem/normal "Alegreya Sans SC";
+  font-weight: 300;
+  margin: 1rem;
+  line-height: 1.5;
+  margin-left: 2.5%; }
 
 .section-title-name {
-  font-size: 2.5rem;
-  text-decoration: underline; }
+  font-size: 4.5rem; }
 
 .section-title-heading {
   font-size: 1rem; }
 
 .section-subtitle {
+  font: normal normal 100 1rem/normal "Alegreya Sans SC";
   font-weight: bold;
   font-size: 1.75rem;
   line-height: 1.5;
@@ -376,33 +392,46 @@ hr.index-hr {
 
 .navbar-first-level, .navbar-second-level {
   position: relative;
-  width: 100%; }
+  width: 100%;
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between; }
 
 .navbar-first-level {
   background-color: #222;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
   z-index: 2; }
 
 .navbar-title {
   color: #EEE;
   float: left;
+  font: normal normal 100 1rem/normal "Alegreya Sans SC";
   font-size: 2rem;
-  padding: 0.5rem 1rem; }
+  font-weight: 300;
+  margin: 0 1rem; }
 
 .navbar-item-container {
-  padding: 0.5rem 1.5rem;
   display: flex; }
 
 .navbar-item {
   margin: 0 1rem;
   cursor: pointer;
   color: #DDD;
-  transition: color 0.1s ease-in-out; }
+  transition: color 0.1s ease-in-out;
+  font: normal normal 100 1rem/normal "Alegreya Sans SC";
+  font-weight: 300;
+  font-size: 1.25rem;
+  text-align: center; }
   .navbar-item .down-caret {
-    height: 20px;
+    height: 24px;
     vertical-align: text-top; }
+
+.navbar-item:first-child {
+  margin-left: 1.5rem; }
+
+.navbar-item:last-child {
+  margin-right: 1.5rem; }
 
 .navbar-item:hover {
   color: #FFF; }
@@ -412,12 +441,11 @@ hr.index-hr {
 
 .navbar-second-level {
   display: flex;
+  flex-direction: row-reverse;
   background-color: #DDD;
   margin-top: -2.5rem;
   z-index: 1;
   transition: margin-top 0.2s ease-out; }
-  .navbar-second-level .navbar-item-container {
-    margin-left: auto; }
   .navbar-second-level .navbar-item {
     color: #333; }
 
@@ -428,6 +456,9 @@ hr.index-hr {
   display: flex;
   margin-left: auto; }
 
+@media only screen and (max-width: 640px), only screen and (max-device-width: 640px) {
+  .navbar-first-level, .navbar-second-level {
+    justify-content: space-around; } }
 footer {
   background-color: #955293;
   color: #FFF;

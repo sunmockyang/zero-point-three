@@ -11,7 +11,7 @@
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	transition: opacity 4s ease-in-out, visibility 1s linear 5s;
+	transition: opacity 0.5s ease-in-out, visibility 1s linear 0.5s;
 
 	.content {
 		display: inline-block;
@@ -22,7 +22,7 @@
 	}
 
 	.title {
-		font-family: $title-font;
+		font: $title-font;
 		font-size: 7vw;
 		color: #EFEFEF;
 		margin-top: 1.25rem;
@@ -31,6 +31,7 @@
 
 	#preloaderButton {
 		color: #BBB;
+		font: $title-font;
 		font-size: 2rem;
 		display: inline-block;
 		padding: 0.5vw 1.5vw;

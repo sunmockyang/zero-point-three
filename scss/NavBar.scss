@@ -17,25 +17,29 @@ $title-height: 2rem;
 .navbar-first-level, .navbar-second-level {
 	position: relative;
 	width: 100%;
+	padding: 0.5rem 0;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 
 .navbar-first-level {
 	background-color: #222;
-	display: flex;
-	align-items: flex-end;
-	justify-content: space-between;
 	z-index: 2;
 }
 
 .navbar-title {
 	color: #EEE;
 	float: left;
+	font: $title-font;
 	font-size: $title-height;
-	padding: 0.5rem 1rem;
+	font-weight: 300;
+	margin: 0 1rem;
 }
 
 .navbar-item-container {
-	padding: 0.5rem 1.5rem;
+	// padding-right: 1.5rem;
 	display:flex;
 }
 
@@ -44,11 +48,23 @@ $title-height: 2rem;
 	cursor: pointer;
 	color: #DDD;
 	transition: color 0.1s ease-in-out;
+	font: $title-font;
+	font-weight:300;
+	font-size: 1.25rem;
+	text-align: center;
 
 	.down-caret {
-		height: 20px;
+		height: 24px;
 		vertical-align: text-top;
 	}
+}
+
+.navbar-item:first-child {
+	margin-left: 1.5rem;
+}
+
+.navbar-item:last-child {
+	margin-right: 1.5rem;
 }
 
 .navbar-item:hover {
@@ -62,13 +78,13 @@ $title-height: 2rem;
 
 .navbar-second-level {
 	display: flex;
+	flex-direction: row-reverse;
 	background-color: #DDD;
 	margin-top: -2.5rem;
 	z-index: 1;
 	transition: margin-top 0.2s ease-out;
 
 	.navbar-item-container {
-		margin-left:auto;
 	}
 
 	.navbar-item {
@@ -83,4 +99,10 @@ $title-height: 2rem;
 #stories_container, #analysis_container {
 	display:flex;
 	margin-left:auto;
+}
+
+@media only screen and (max-width: 640px), only screen and (max-device-width: 640px) {
+	.navbar-first-level, .navbar-second-level {
+		justify-content: space-around;
+	}
 }

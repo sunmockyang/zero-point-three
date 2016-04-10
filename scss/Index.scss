@@ -7,14 +7,17 @@
 .index-box {
 	border-radius: 0.3rem;
 	border: 2px solid gray;
-	margin: 30vh 0;
+	margin: 30vh auto;
 	transform: translate3d(0, 10vh, 0);
 	// text-align: center;
 	display: inline-block;
-	padding: 1rem 3rem;
+	padding: 2%;
 	background-color: rgba(255, 255, 255, 0.1);
 	opacity: 0;
 	transition: opacity 0.3s ease-in-out, transform 0.5s ease-in-out;
+	width: 50%;
+	min-width: 26rem;
+	max-width: 30rem;
 }
 
 .index-box.animate-in {
@@ -37,12 +40,16 @@
 
 .index-title {
 	color: #FFF;
-	font-size: 4vh;
+	font: $title-font;
+	font-size: 3rem;
 }
 
 .index-header {
 	color: #FFF;
-	font-size: 3vh;
+	font: $title-font;
+	font-size: 1.5rem;
+	font-weight: 400;
+	line-height: 2;
 }
 
 hr.index-hr{
@@ -63,7 +70,9 @@ hr.index-hr{
 	font-style: italic;
 	transition: color 0.2s ease-in-out;
 	cursor: pointer;
-	font-size: 2.2vh;
+	font-size: 1.5rem;
+	line-height: 1.15;
+	margin-bottom: 1rem;
 }
 
 .index-item .item-link:hover{

@@ -47,8 +47,8 @@ $title2Height: 3vh;
 }
 
 .intro-title {
+	font: $title-font;
 	color: #FFF;
-	font-weight: 300;
 }
 
 .intro-title.article {
@@ -80,6 +80,7 @@ $title1BorderWidth: 0.2rem;
 #title2_text {
 	color: #FFF;
 	font-size: $title2Height;
+	font-weight:300;
 }
 
 #title1.second-video {
@@ -105,5 +106,11 @@ $title1BorderWidth: 0.2rem;
 
 	.down-caret {
 		height: 10%;
+	}
+}
+
+@media only screen and (max-width: 640px), only screen and (max-device-width: 640px) {
+	.intro-title-container {
+		text-align: center;
 	}
 }

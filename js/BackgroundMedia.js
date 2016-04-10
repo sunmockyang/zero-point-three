@@ -36,7 +36,7 @@ BackgroundMedia.prototype.articlePercentage = 1.1;
 BackgroundMedia.prototype.fadeRange = 0.25;
 BackgroundMedia.prototype.fadeEnd = 0.9;
 BackgroundMedia.prototype.volumeLerp = 0.05;
-BackgroundMedia.prototype.maxVolume = 0.1;
+BackgroundMedia.prototype.maxVolume = 0.2;
 BackgroundMedia.prototype.volumeRequestID = 0;
 
 BackgroundMedia.prototype.onResize = function() {
