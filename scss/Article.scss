@@ -147,7 +147,8 @@ $delay-amounts: 1s;
 	margin: 2rem auto;
 
 	.section-video {
-		margin-bottom: 0;
+		margin: 0 auto;
+		max-width: $section-text-max-width * 1.2;
 	}
 }
 
