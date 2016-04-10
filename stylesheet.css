@@ -129,7 +129,7 @@ hr.index-hr {
   margin-bottom: 1rem; }
 
 .index-item .item-link:hover {
-  color: #FFF; }
+  color: #eda090; }
 
 .index-background-container {
   background-color: #333;
@@ -436,7 +436,7 @@ hr.index-hr {
   margin: 0 1rem;
   cursor: pointer;
   color: #DDD;
-  transition: color 0.1s ease-in-out;
+  transition: color 0.2s ease-in-out;
   font: normal normal 100 1rem/normal "Alegreya Sans SC";
   font-weight: 300;
   font-size: 1.25rem;
@@ -466,6 +466,10 @@ hr.index-hr {
   transition: margin-top 0.2s ease-out; }
   .navbar-second-level .navbar-item {
     color: #333; }
+  .navbar-second-level .navbar-item:hover {
+    color: #999; }
+  .navbar-second-level .navbar-item:active {
+    color: #E67A64; }
 
 .navbar-second-level.show {
   margin-top: 0; }

@@ -76,7 +76,7 @@ hr.index-hr{
 }
 
 .index-item .item-link:hover{
-	color: #FFF;
+	color: lighten($highlight-colour, 10%);
 }
 
 // Background Images

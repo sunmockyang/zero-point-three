@@ -48,7 +48,7 @@ $title-height: 2rem;
 	margin: 0 1rem;
 	cursor: pointer;
 	color: #DDD;
-	transition: color 0.1s ease-in-out;
+	transition: color 0.2s ease-in-out;
 	font: $title-font;
 	font-weight:300;
 	font-size: 1.25rem;
@@ -90,6 +90,14 @@ $title-height: 2rem;
 
 	.navbar-item {
 		color: #333;
+	}
+
+	.navbar-item:hover {
+		color: #999;
+	}
+
+	.navbar-item:active {
+		color: $highlight-colour;
 	}
 }
 
