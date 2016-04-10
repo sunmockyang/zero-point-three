@@ -64,9 +64,11 @@ $delay-amounts: 1s;
 	width: 80%;
 	padding: 3rem 2vw 10vw 2vw;
 	background-color: #FFF;
+	text-align: center;
 }
 
 .section-content {
+	text-align: left;
 	p{
 		max-width: $section-text-max-width;
 		width: 85%;
@@ -80,19 +82,45 @@ $delay-amounts: 1s;
 }
 
 .section-title {
+	display: inline-block;
 	font: $title-font;
-	font-weight: 300;
+	font-weight: 400;
 	margin: 1rem;
 	line-height: 1.5;
 	margin-left: 2.5%;
+
+	hr {
+		border: 0;
+		height: 1px;
+		background-image: linear-gradient(to right,
+			rgba(0, 0, 0, 0),
+			rgba(0, 0, 0, 1),
+			rgba(0, 0, 0, 0));
+	}
 }
 
 .section-title-name {
 	font-size: 4.5rem;
+	display: flex;
+	align-items: flex-end;
+
+	div {
+		padding: 0 1rem;
+	}
+
+	.arabic {
+		font-size: 3.5rem;
+		color: #999;
+		border-right:2px solid gray;
+	}
+
+	.english {
+	}
 }
 
 .section-title-heading {
-	font-size: 1rem;
+	font-size: 1.5rem;
+	font-weight: 400;
 }
 
 .section-subtitle {

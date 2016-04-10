@@ -1,6 +1,7 @@
 [section_id](dali)
 [chapter_title](Prologue)
 [chapter_name](Dali)
+[chapter_name_arabic](دالي)
 [banner_video](content/Dali/videos/Dali_CapHeader1.mp4)
 
 It’s a large, airy room. It’s dark.

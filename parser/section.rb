@@ -109,7 +109,7 @@ end
 
 class Section
 	def initialize(input_file_path)
-		@section_wide_keys = ["chapter_title", "chapter_name", "banner_video", "section_id"]
+		@section_wide_keys = ["chapter_title", "chapter_name", "chapter_name_arabic", "banner_video", "section_id"]
 
 		@data = {
 			content: []

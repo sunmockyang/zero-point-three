@@ -278,28 +278,45 @@ hr.index-hr {
   margin-bottom: 10rem;
   width: 80%;
   padding: 3rem 2vw 10vw 2vw;
-  background-color: #FFF; }
+  background-color: #FFF;
+  text-align: center; }
 
-.section-content p {
-  max-width: 38rem;
-  width: 85%;
-  margin: 1.5rem auto; }
-.section-content hr {
-  width: 5rem;
-  margin: 3rem auto; }
+.section-content {
+  text-align: left; }
+  .section-content p {
+    max-width: 38rem;
+    width: 85%;
+    margin: 1.5rem auto; }
+  .section-content hr {
+    width: 5rem;
+    margin: 3rem auto; }
 
 .section-title {
+  display: inline-block;
   font: normal normal 100 1rem/normal "Alegreya Sans SC";
-  font-weight: 300;
+  font-weight: 400;
   margin: 1rem;
   line-height: 1.5;
   margin-left: 2.5%; }
+  .section-title hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, transparent, black, transparent); }
 
 .section-title-name {
-  font-size: 4.5rem; }
+  font-size: 4.5rem;
+  display: flex;
+  align-items: flex-end; }
+  .section-title-name div {
+    padding: 0 1rem; }
+  .section-title-name .arabic {
+    font-size: 3.5rem;
+    color: #999;
+    border-right: 2px solid gray; }
 
 .section-title-heading {
-  font-size: 1rem; }
+  font-size: 1.5rem;
+  font-weight: 400; }
 
 .section-subtitle {
   font: normal normal 100 1rem/normal "Alegreya Sans SC";

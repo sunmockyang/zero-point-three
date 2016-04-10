@@ -1,6 +1,12 @@
 <div id="{{section_id}}" class="section">
 	<div class="section-title">
-		<div class="section-title-name">{{chapter_name}}</div>
+		<div class="section-title-name">
+			{{#if chapter_name_arabic}}
+			<div class="arabic">{{chapter_name_arabic}}</div> 
+			{{/if}}
+			<div class="english">{{chapter_name}}</div>
+		</div>
+		<hr/>
 		<div class="section-title-heading">{{chapter_title}}</div>
 	</div>
 	<div class="section-video">
