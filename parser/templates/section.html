@@ -9,6 +9,7 @@
 		<hr/>
 		<div class="section-title-heading">{{chapter_title}}</div>
 	</div>
+	{{#if banner_video}}
 	<div class="section-video">
 		<video class="video-js vjs-default-skin banner_video" data-src="{{banner_video}}"
 				controls="true" 
@@ -18,6 +19,7 @@
 			<source src="{{banner_video}}" type="video/webm"></source>
 		</video>
 	</div>
+	{{/if}}	
 		<div class="section-content">
 {{section_content}}
 		</div>

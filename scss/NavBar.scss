@@ -26,16 +26,17 @@ $title-height: 2rem;
 }
 
 .navbar-first-level {
-	background-color: #222;
+	background: #333 url('content/images/preloader_bg.jpg') no-repeat left 24%;
+	background-size: cover;
 	z-index: 2;
 }
 
 .navbar-title {
-	color: #EEE;
+	color: #444;
 	float: left;
 	font: $title-font;
 	font-size: $title-height;
-	font-weight: 300;
+	font-weight: 400;
 	margin: 0 1rem;
 }
 
