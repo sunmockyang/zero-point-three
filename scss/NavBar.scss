@@ -1,15 +1,15 @@
 .navbar {
 	position: fixed;
 	width: 100%;
-	margin-top: -150px;
+	top: -150px;
 	opacity: 0;
-	transition: margin-top 0.5s ease-out 0.1s, opacity 0.5s ease 0.1s;
+	transition: top 0.5s ease-out 0.1s, opacity 0.5s ease 0.1s;
 	z-index: 3;
 }
 
 .navbar.show {
 	opacity: 1;
-	margin-top: 0;
+	top: 0;
 }
 
 $title-height: 2rem;
@@ -38,6 +38,7 @@ $title-height: 2rem;
 	font-size: $title-height;
 	font-weight: 400;
 	margin: 0 1rem;
+	cursor: pointer;
 }
 
 .navbar-item-container {
@@ -118,5 +119,9 @@ $title-height: 2rem;
 
 	.navbar-first-level {
 		flex-direction: column;
+
+		.navbar-title {
+			color: #FFF;
+		}
 	}
 }

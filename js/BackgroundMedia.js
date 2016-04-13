@@ -14,6 +14,14 @@ function BackgroundMedia(elements) {
 	this.currentVideo = this.video1;
 
 	this.introParagraph = elements.introParagraph;
+	elements.introDownCaret.onclick = (function () {
+		if (window.pageYOffset < this.transitionPercentage * BackgroundMedia.scrollRange) {
+			animateScroll(this.transitionPercentage * BackgroundMedia.scrollRange, 1500, "easeInOutQuad", -10, "top");
+		}
+		else {
+			animateScroll(document.getElementById('introStart'), 3000, "easeInOutQuint", document.documentElement.clientHeight * 0.075, "top");
+		}
+	}).bind(this);
 
 	this.video1TargetVolume = this.maxVolume;
 	this.video2TargetVolume = 0;
@@ -26,16 +34,18 @@ function BackgroundMedia(elements) {
 	this.indexBackground = elements.indexBackground;
 
 	this.lastY = 0;
+	this.lastYPercentage = 0;
 
 	this.onResize();
 }
 
 BackgroundMedia.scrollRange = 999; // Gets adjusted to screen height
 BackgroundMedia.prototype.transitionPercentage = 0.3;
-BackgroundMedia.prototype.articlePercentage = 1.1;
+BackgroundMedia.prototype.videoEndPercentage = 1.1;
+BackgroundMedia.prototype.introParagraphStart = -0.2;
 BackgroundMedia.prototype.fadeRange = 0.25;
 BackgroundMedia.prototype.fadeEnd = 0.9;
-BackgroundMedia.prototype.volumeLerp = 0.05;
+BackgroundMedia.prototype.volumeLerp = 0.02;
 BackgroundMedia.prototype.maxVolume = 0.2;
 BackgroundMedia.prototype.volumeRequestID = 0;
 
@@ -46,25 +56,25 @@ BackgroundMedia.prototype.onResize = function() {
 };
 
 BackgroundMedia.prototype.onScroll = function(y) {
-	var currentY = window.scrollY;
+	var currentY = window.pageYOffset;
 
-	var lastYPercentage = this.lastY / BackgroundMedia.scrollRange;
 	var currentYPercentage = currentY / BackgroundMedia.scrollRange;
 
 	// Transition between two videos
-	OnMarkerCrossed(this.transitionPercentage, lastYPercentage, currentYPercentage, this.animateSecondVideoIn.bind(this), this.animateSecondVideoOut.bind(this));
-	OnMarkerCrossed(this.articlePercentage, lastYPercentage, currentYPercentage, this.animateArticleIn.bind(this), this.animateArticleOut.bind(this));
+	OnMarkerCrossed(this.transitionPercentage, this.lastYPercentage, currentYPercentage, this.animateSecondVideoIn.bind(this), this.animateSecondVideoOut.bind(this));
+	OnMarkerCrossed(this.videoEndPercentage, this.lastYPercentage, currentYPercentage, this.animateVideoOut.bind(this), this.animateVideoIn.bind(this));
+	OnMarkerCrossed(BackgroundMedia.scrollRange + (this.introParagraphStart * document.documentElement.clientHeight), this.lastY, currentY, show.bind(window, this.introParagraph));
 
 	// Container
 	if (currentYPercentage < 1) {
-		this.titleContainer.style.transform = translate3dY(-currentYPercentage * 30);
+		this.titleContainer.style.transform = translate3dY(-currentYPercentage * 50);
 	}
 
 	// Video1
-	var video1Parallax = currentYPercentage / this.transitionPercentage;
-	if (video1Parallax < 2) {
-		this.video1.style.transform = translate3dY(-video1Parallax * 5);
-	}
+	// var video1Parallax = currentYPercentage / this.transitionPercentage;
+	// if (video1Parallax < 2) {
+	// 	this.video1.style.transform = translate3dY(-video1Parallax * 5);
+	// }
 
 	// Video2
 	var fadePercentage = 1 - (this.fadeEnd - currentYPercentage) / this.fadeRange;
@@ -74,7 +84,7 @@ BackgroundMedia.prototype.onScroll = function(y) {
 		this.video2.style.opacity = percentage;
 		this.video2.style.transform = translate3dY(-fadePercentage * 30);
 		this.videoOverlay.style.opacity = percentage;
-		this.volumeLerp = 0.5;
+		this.volumeLerp = 0.02;
 		this.video2TargetVolume = percentage * this.maxVolume;
 	}
 	else if (this.video2.style.opacity != 1) {
@@ -85,6 +95,7 @@ BackgroundMedia.prototype.onScroll = function(y) {
 	}
 
 	this.lastY = currentY;
+	this.lastYPercentage = this.lastY / BackgroundMedia.scrollRange;
 };
 
 BackgroundMedia.prototype.animateSecondVideoIn = function() {
@@ -118,7 +129,7 @@ BackgroundMedia.prototype.updateVideoVolume = function() {
 	window.requestAnimationFrame(this.updateVideoVolume.bind(this));
 };
 
-BackgroundMedia.prototype.animateArticleIn = function() {
+BackgroundMedia.prototype.animateVideoOut = function() {
 	this.playVideo(false);
 	this.title1.classList.add("hidden");
 	this.title2.classList.add("hidden");
@@ -126,11 +137,9 @@ BackgroundMedia.prototype.animateArticleIn = function() {
 	this.video2.classList.add("hidden");
 	this.videoContainer.classList.add("hidden");
 	this.indexBackground.classList.remove("hidden");
-
-	show(this.introParagraph);
 };
 
-BackgroundMedia.prototype.animateArticleOut = function() {
+BackgroundMedia.prototype.animateVideoIn = function() {
 	this.playVideo(true);
 	this.title1.classList.remove("hidden");
 	this.title2.classList.remove("hidden");

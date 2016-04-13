@@ -37,7 +37,7 @@ IndexController.prototype.setupButtons = function() {
 };
 
 IndexController.prototype.onScroll = function() {
-	var rangePercentage = (window.scrollY - this.scrollRange.start)/(this.scrollRange.end - this.scrollRange.start);
+	var rangePercentage = (window.pageYOffset - this.scrollRange.start)/(this.scrollRange.end - this.scrollRange.start);
 
 	// Animate in
 	OnMarkerCrossed(this.animateInMark, this.lastRange, rangePercentage, this.onAnimateIn.bind(this), this.onAnimateOut.bind(this));

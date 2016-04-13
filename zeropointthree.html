@@ -8,6 +8,7 @@
 	<link href="http://vjs.zencdn.net/5.8.7/video-js.css" rel="stylesheet">
 	<link href="libs/videojs/videojs_stylesheet.css" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,300,100' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
 
 	<script type="text/javascript">
 
@@ -56,39 +57,40 @@
 		LoadFile("content/sections/" + sectionPaths[i], null, onSectionLoad.bind(window, sectionPaths[i]));
 	};
 	</script>
+
+	<div id="preloader">
+		<div class="content">
+			<div id="preloaderButton" data-text="- Enter -">
+				<img src="img/loading.svg"/>
+			</div>
+			<div class="title">Underground.</div>
+		</div>
+	</div>
 </head>
 <body>
 
 <!-- Preloader -->
 
-<div id="preloader">
-	<div class="content">
-		<div id="preloaderButton" data-text="- Enter -">
-			<img src="img/loading.svg"/>
-		</div>
-		<div class="title">Underground.</div>
-	</div>
-</div>
-
 <!-- Background media -->
 <div class="background-media-container">
 	<div class="intro-video-container hidden">
-		<video class="fullscreen video" id="video1" data-aspect-ratio="1.7778" data-scale="1.1" poster="content/intro_videos/F_Intro_Muslim_fallback.jpg" loop>
-			<source src="https://s3-us-west-2.amazonaws.com/zero-point-three/content/intro_videos/F_Intro_Muslim2.mp4" type="video/mp4">
+		<video class="fullscreen video" id="video1" data-aspect-ratio="1.7778" poster="content/intro_videos/F_Intro_Muslim_fallback.jpg" loop="">
+			<source src="content/intro_videos/F_Intro_Muslim2.webm" type="video/webm">
+			<source src="content/intro_videos/F_Intro_Muslim2.mp4" type="video/mp4">
 		</video>
 		<video class="fullscreen video" id="video2" data-aspect-ratio="1.7778" data-scale="1.1" volume="0" poster="content/intro_videos/F_Intro_Christian_fallback.jpg" loop>
-			<source src="https://s3-us-west-2.amazonaws.com/zero-point-three/content/intro_videos/F_Intro_Christian1.mp4" type="video/mp4">
+			<source src="content/intro_videos/F_Intro_Christian1.webm" type="video/webm">
+			<source src="content/intro_videos/F_Intro_Christian1.mp4" type="video/mp4">
 		</video>
 		<div class="video-overlay">
-			<img class="down-caret" src="img/down_caret.svg" />
+			<img id="introDownCaret"class="down-caret" src="img/down_caret_white.svg" />
 		</div>
-		<!-- add a down arrow here. Look up middle eastern street sign -->
 	</div>
 
 	<div id="index-background" class="index-background-container hidden">
 		<div class="index-background-image show" id="dali_bg"></div>
-		<div class="index-background-image" id="manel_bg"></div>
 		<div class="index-background-image" id="mohammed_ali_bg"></div>
+		<div class="index-background-image" id="manel_bg"></div>
 		<div class="index-background-image" id="safa_bg"></div>
 		<div class="index-background-image" id="lilli_bg"></div>
 		<div class="index-background-image" id="underground_church_bg"></div>
@@ -104,8 +106,8 @@
 		<div class="navbar-title">Underground.</div>
 		<div class="navbar-item-container">
 			<div class="navbar-item" data-link-id="index-box">Index</div>
-			<div class="navbar-item" data-second-layer="stories_container">Stories<img class="down-caret" src="img/down_caret.svg" /></div>
-			<div class="navbar-item" data-second-layer="analysis_container">Analysis<img class="down-caret" src="img/down_caret.svg" /></div>
+			<div class="navbar-item" data-second-layer="stories_container">Stories<img class="down-caret" src="img/down_caret_white.svg" /></div>
+			<div class="navbar-item" data-second-layer="analysis_container">Analysis<img class="down-caret" src="img/down_caret_white.svg" /></div>
 			<div class="navbar-item" data-link-id="conclusion">Conclusion</div>
 		</div>
 	</div>
@@ -113,8 +115,8 @@
 		<div class="navbar-item-container">
 			<div id="stories_container" class="item-box hidden no-size">
 				<div class="navbar-item" data-link-id="dali">Dali</div>
-				<div class="navbar-item" data-link-id="manel">Manel</div>
 				<div class="navbar-item" data-link-id="mohammed_ali">Mohamed Ali</div>
+				<div class="navbar-item" data-link-id="manel">Manel</div>
 				<div class="navbar-item" data-link-id="safa">Safa</div>
 				<div class="navbar-item" data-link-id="lilli">Lili</div>
 			</div>
@@ -139,20 +141,21 @@
 	</div>
 </div>
 
-<div id="intro-buffer"></div>
+<div id="intro-buffer">
+</div>
 <!-- Article -->
 
 <div id="articleContainer" class="article-container">
 	<div id="intro-paragraph">
-		<hr/>
+		<hr id="introStart"/>
 		<p class="divergent">Divergent. </p>
 		<p class="underground">Underground.</p>
 		<p class="undetected">Undetected. </p>
 		<p>They chose a life that deviates from the norm. </p>
-		<p>Some chose a life of hiding; some chose to expose themselves. Many of them don&#39;t even know if others like them exist. </p>
-		<p>What is life like for this almost invisible group in the periphery of Muslim society?  </p>
-		<p>This multimedia investigation takes a rare glance into the lives of Tunisian Christians, living as the 0.3 per cent among the 99.</p>
-		<hr/>
+		<p>Some chose a life of hiding; some chose to expose themselves. Many of them don't even know if others like them exist.</p>
+		<p>What is life like for this almost invisible group in the periphery of Muslim society?</p>
+		<p>This multimedia investigation gives a rare glimpse into the lives of Tunisian Christians, living as the estimated 0.2 per cent among the Muslim 99 per cent.</p>
+		<img class="down-caret" onclick="ScrollCenteredElem(document.getElementById('index-box'), 3000, 100);" src="img/down_caret_black.svg" />
 	</div>
 
 	<div class="index-wrapper">
@@ -167,10 +170,10 @@
 				<div class="item-link" data-link-id="dali">Dali</div>
 			</div>
 			<div class="index-item">
-				<div class="item-link" data-link-id="manel">Manel</div>
+				<div class="item-link" data-link-id="mohammed_ali">Mohamed Ali</div>
 			</div>
 			<div class="index-item">
-				<div class="item-link" data-link-id="mohammed_ali">Mohamed Ali</div>
+				<div class="item-link" data-link-id="manel">Manel</div>
 			</div>
 			<div class="index-item">
 				<div class="item-link" data-link-id="safa">Safa</div>
@@ -251,17 +254,22 @@ function onLoad() {
 
 	if (document.readyState === "complete" &&
 		sectionsLoaded) {
-		main();
-
-		var preloaderButton = document.getElementById("preloaderButton");
-		preloaderButton.classList.add("button");
-		preloaderButton.innerHTML = preloaderButton.dataset.text;
-		preloaderButton.onclick = (function () {
-			document.getElementById("preloader").classList.add("hide");
-			document.documentElement.classList.remove("disable-scroll");
-			onAppEnter();
-		}).bind(this);
+		setTimeout(startApp, 2000);
 	}
+}
+
+function startApp() {
+	// After waiting a couple seconds more...
+	main();
+
+	var preloaderButton = document.getElementById("preloaderButton");
+	preloaderButton.classList.add("button");
+	preloaderButton.innerHTML = preloaderButton.dataset.text;
+	preloaderButton.onclick = (function () {
+		document.getElementById("preloader").classList.add("hide");
+		document.documentElement.classList.remove("disable-scroll");
+		onAppEnter();
+	}).bind(this);
 }
 
 // Start main app
@@ -283,6 +291,7 @@ function main() {
 			titleContainer: document.getElementsByClassName("intro-title-container")[0],
 			indexBackground: document.getElementById('index-background'),
 			videoOverlay: document.getElementsByClassName('video-overlay')[0],
+			introDownCaret: document.getElementById('introDownCaret'),
 			introParagraph: document.getElementById("intro-paragraph")
 		},
 
@@ -296,6 +305,7 @@ function main() {
 		},
 
 		navbar: {
+			title: document.getElementsByClassName('navbar-title')[0],
 			container: document.getElementsByClassName('navbar')[0],
 			firstLevel: navFirstLevel,
 			secondLevel: navSecondLevel,

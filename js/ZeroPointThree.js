@@ -25,7 +25,7 @@ ZeroPointThree.prototype.onResize = function() {
 	this.scrollRange.end = ( 'scrollMaxY' in window ) ? window.scrollMaxY : (docElem.scrollHeight - docElem.clientHeight);
 
 	// Index scroll range
-	this.indexController.scrollRange.start = this.elements.article.introParagraph.getBoundingClientRect().bottom + window.scrollY;
+	this.indexController.scrollRange.start = this.elements.article.introParagraph.getBoundingClientRect().bottom + window.pageYOffset;
 	this.indexController.scrollRange.end = this.elements.index.indexWrapper.getBoundingClientRect().height + this.indexController.scrollRange.start;
 	this.indexController.onScroll();
 

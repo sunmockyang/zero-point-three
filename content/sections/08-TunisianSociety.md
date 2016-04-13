@@ -95,8 +95,7 @@ But changes in democracy are difficult to enact if the people aren’t challengi
 
 <br/>
 
-<div class="align-center italics"> "It’s a minority. That’s why we don’t hear these stories." - Imam Sbabti </div>
-
-<div class="align-center italics">“Persecution is quasi-absent. We’re almost invisible.” - Dali</div>
+<div class="align-center italics"> "It’s a minority. That’s why we don’t hear these stories."<br/>- Imam Sbabti </div>
+<div class="align-center italics" style="margin-top: 1rem;">“Persecution is quasi-absent. We’re almost invisible.”<br/>- Dali</div>
 
 

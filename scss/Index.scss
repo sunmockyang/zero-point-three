@@ -8,7 +8,7 @@
 	border-radius: 0.3rem;
 	border: 2px solid gray;
 	margin: 30vh auto;
-	transform: translate3d(0, 10vh, 0);
+	transform: translate3d(0, 100px, 0);
 	// text-align: center;
 	display: inline-block;
 	padding: 2%;
@@ -104,13 +104,37 @@ hr.index-hr{
 }
 
 #dali_bg.index-background-image {
-	background-image: url(content/images/index_bg/Dali_bg.jpg);
-}
-
-#manel_bg.index-background-image {
-	background-image: url(content/images/index_bg/Manel_bg.jpg);
+	background-image: url(content/images/index_bg/Dali_TBC.jpg);
 }
 
 #mohammed_ali_bg.index-background-image {
-	background-image: url(content/images/index_bg/MohammedAli_bg.jpg);
+	background-image: url(content/images/index_bg/MohamadAli_TBC.jpg);
+}
+
+#manel_bg.index-background-image {
+	background-image: url(content/images/index_bg/Manel_TBC.jpg);
+}
+
+#safa_bg.index-background-image {
+	background-image: url(content/images/index_bg/Safa_TBC.jpg);
+}
+
+#lilli_bg.index-background-image {
+	background-image: url(content/images/index_bg/Lili_TBC.jpg);
+}
+
+#underground_church_bg.index-background-image {
+	background-image: url(content/images/index_bg/Underground_TBC.jpg);
+}
+
+#islams_response_bg.index-background-image {
+	background-image: url(content/images/index_bg/IslamsResponse_TBC.jpg);
+}
+
+#tunisian_society_bg.index-background-image {
+	background-image: url(content/images/index_bg/TunisiasSoc_TBC.jpg);
+}
+
+#conclusion_bg.index-background-image {
+	background-image: url(content/images/index_bg/Marwan_TBC.jpg);
 }

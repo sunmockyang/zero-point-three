@@ -38,14 +38,14 @@ html, body {
     display: inline-block;
     position: absolute;
     right: 5%;
-    top: 40%;
+    top: 50%;
     text-align: center; }
   #preloader .title {
     font: normal normal 100 1rem/normal "Alegreya Sans SC";
     font-size: 7vw;
     color: #EFEFEF;
     margin-top: 1.25rem;
-    transition: opacity 0.5s ease-in-out; }
+    transition: 0.5s ease-in-out; }
   #preloader #preloaderButton {
     color: #BBB;
     font: normal normal 100 1rem/normal "Alegreya Sans SC";
@@ -55,9 +55,11 @@ html, body {
     margin-top: 1.5rem;
     border-radius: 2px; }
     #preloader #preloaderButton img {
+      height: 5rem;
+      margin: -1.5rem;
       opacity: 1; }
   #preloader #preloaderButton.button {
-    transition: 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
     cursor: pointer; }
   #preloader #preloaderButton.button:hover {
     color: #FFF;
@@ -71,6 +73,13 @@ html, body {
   #preloader.hide .button {
     opacity: 0; }
 
+@media only screen and (max-width: 750px), only screen and (max-device-width: 750px) {
+  #preloader .content {
+    position: static;
+    width: 100%;
+    margin-top: 50vh; }
+  #preloader .title {
+    font-size: 5rem; } }
 .index-wrapper {
   text-align: center; }
 
@@ -78,7 +87,7 @@ html, body {
   border-radius: 0.3rem;
   border: 2px solid gray;
   margin: 30vh auto;
-  transform: translate3d(0, 10vh, 0);
+  transform: translate3d(0, 100px, 0);
   display: inline-block;
   padding: 2%;
   background-color: rgba(255, 255, 255, 0.1);
@@ -149,19 +158,38 @@ hr.index-hr {
   opacity: 1; }
 
 #dali_bg.index-background-image {
-  background-image: url(content/images/index_bg/Dali_bg.jpg); }
-
-#manel_bg.index-background-image {
-  background-image: url(content/images/index_bg/Manel_bg.jpg); }
+  background-image: url(content/images/index_bg/Dali_TBC.jpg); }
 
 #mohammed_ali_bg.index-background-image {
-  background-image: url(content/images/index_bg/MohammedAli_bg.jpg); }
+  background-image: url(content/images/index_bg/MohamadAli_TBC.jpg); }
+
+#manel_bg.index-background-image {
+  background-image: url(content/images/index_bg/Manel_TBC.jpg); }
+
+#safa_bg.index-background-image {
+  background-image: url(content/images/index_bg/Safa_TBC.jpg); }
+
+#lilli_bg.index-background-image {
+  background-image: url(content/images/index_bg/Lili_TBC.jpg); }
+
+#underground_church_bg.index-background-image {
+  background-image: url(content/images/index_bg/Underground_TBC.jpg); }
+
+#islams_response_bg.index-background-image {
+  background-image: url(content/images/index_bg/IslamsResponse_TBC.jpg); }
+
+#tunisian_society_bg.index-background-image {
+  background-image: url(content/images/index_bg/TunisiasSoc_TBC.jpg); }
+
+#conclusion_bg.index-background-image {
+  background-image: url(content/images/index_bg/Marwan_TBC.jpg); }
 
 .background-media-container {
   /*padding-bottom: 56.25%;*/
   width: 100%;
   height: 100%;
   position: fixed;
+  top: 0;
   z-index: -2;
   background-color: #FFF;
   transition: opacity 0.2s ease-in-out; }
@@ -180,12 +208,13 @@ hr.index-hr {
   opacity: 0; }
 
 #intro-buffer {
-  height: 250vh; }
+  height: 400vh;
+  position: fixed; }
 
 .intro-title-container {
   position: fixed;
   margin: 10vh;
-  margin-top: 35vh;
+  top: 30vh;
   z-index: -1; }
 
 .intro-title {
@@ -198,16 +227,15 @@ hr.index-hr {
 #title1.intro-title {
   transition: transform 0.5s ease-in-out;
   -webkit-transition: transform 0.5s ease-in-out;
-  margin-bottom: 1.6rem; }
+  margin-bottom: 2vw; }
 
 #title1_text {
   color: #EEE;
-  padding: 0 0 0.75vw 0;
   font-size: 10vw;
   border-bottom: solid #E67A64 0.2rem; }
 
 #title2.intro-title {
-  transform: translate3d(0, 10vh, 0);
+  transform: translate3d(0, 100px, 0);
   transition: transform 0.5s ease-in-out, opacity 0.4s;
   -webkit-transition: transform 0.5s ease-in-out, opacity 0.4s;
   opacity: 0; }
@@ -231,24 +259,33 @@ hr.index-hr {
   justify-content: center;
   align-items: flex-end; }
   .video-overlay .down-caret {
-    height: 10%; }
+    cursor: pointer;
+    height: 10%;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0.5; }
+  .video-overlay .down-caret:hover {
+    opacity: 1; }
 
 @media only screen and (max-width: 640px), only screen and (max-device-width: 640px) {
   .intro-title-container {
-    text-align: center; } }
+    text-align: center; }
+    .intro-title-container #title1_text {
+      font-weight: 300; } }
 .article-container {
   min-width: 30rem;
   font-size: 1.2rem;
   line-height: 2;
-  font-family: Georgia, Times, "Times New Roman", serif;
+  font-family: "PT Serif", Georgia, Times, "Times New Roman", serif;
   margin: 0 auto;
+  margin-top: 400vh;
   z-index: 1; }
 
 #intro-paragraph {
   padding: 20vh 0 30vh 0;
   background-color: #FFF;
   font-size: 1.5rem;
-  line-height: 1.3; }
+  line-height: 1.3;
+  text-align: center; }
   #intro-paragraph p {
     width: 80%;
     min-width: 25rem;
@@ -256,19 +293,29 @@ hr.index-hr {
     margin: 0 auto;
     margin-bottom: 1.5rem;
     opacity: 0;
-    transition: opacity 0.5s ease-in-out 1.5s; }
+    transition: opacity 0.5s ease-in-out 3s;
+    text-align: left; }
   #intro-paragraph .divergent {
     opacity: 1;
     margin-bottom: 2.5rem; }
   #intro-paragraph .underground {
-    transition-delay: 0s;
+    transition-delay: 1s;
     margin-bottom: 2.5rem; }
   #intro-paragraph .undetected {
-    transition-delay: 1s;
+    transition-delay: 2s;
     margin-bottom: 2.5rem; }
   #intro-paragraph hr {
     width: 10%;
     margin: 7rem auto; }
+  #intro-paragraph .down-caret {
+    width: 5%;
+    min-width: 50px;
+    margin: 5rem auto;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0.5; }
+  #intro-paragraph .down-caret:hover {
+    opacity: 1; }
 
 #intro-paragraph.show p {
   opacity: 1; }
@@ -283,6 +330,11 @@ hr.index-hr {
 
 .section-content {
   text-align: left; }
+  .section-content a {
+    color: #df5438;
+    text-decoration: none; }
+  .section-content a:hover {
+    text-decoration: underline; }
   .section-content p {
     max-width: 38rem;
     width: 85%;
@@ -291,7 +343,10 @@ hr.index-hr {
     width: 5rem;
     margin: 3rem auto; }
   .section-content .align-center {
-    text-align: center; }
+    text-align: center;
+    max-width: 38rem;
+    width: 85%;
+    margin: 0 auto; }
   .section-content .italics {
     font-style: italic; }
 
@@ -300,7 +355,6 @@ hr.index-hr {
   font: normal normal 100 1rem/normal "Alegreya Sans SC";
   font-weight: 400;
   margin: 1rem;
-  line-height: 1.5;
   margin-left: 2.5%; }
   .section-title hr {
     border: 0;
@@ -375,7 +429,9 @@ hr.index-hr {
   font-size: 0.75rem;
   text-align: center;
   font-style: italic;
-  font-weight: bold; }
+  font-weight: bold;
+  max-width: 38rem;
+  margin: 0 auto; }
 
 .section-quote-container {
   box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.2);
@@ -400,17 +456,22 @@ hr.index-hr {
   margin-bottom: 5rem;
   max-height: 92vh; }
 
+@media only screen and (max-width: 775px), only screen and (max-device-width: 775px) {
+  .section-title-name .english {
+    font-size: 2.5rem; }
+  .section-title-name .arabic {
+    font-size: 2rem; } }
 .navbar {
   position: fixed;
   width: 100%;
-  margin-top: -150px;
+  top: -150px;
   opacity: 0;
-  transition: margin-top 0.5s ease-out 0.1s, opacity 0.5s ease 0.1s;
+  transition: top 0.5s ease-out 0.1s, opacity 0.5s ease 0.1s;
   z-index: 3; }
 
 .navbar.show {
   opacity: 1;
-  margin-top: 0; }
+  top: 0; }
 
 .navbar-first-level, .navbar-second-level {
   position: relative;
@@ -433,7 +494,8 @@ hr.index-hr {
   font: normal normal 100 1rem/normal "Alegreya Sans SC";
   font-size: 2rem;
   font-weight: 400;
-  margin: 0 1rem; }
+  margin: 0 1rem;
+  cursor: pointer; }
 
 .navbar-item-container {
   display: flex; }
@@ -489,7 +551,9 @@ hr.index-hr {
     justify-content: space-around; }
 
   .navbar-first-level {
-    flex-direction: column; } }
+    flex-direction: column; }
+    .navbar-first-level .navbar-title {
+      color: #FFF; } }
 footer {
   background-color: #333;
   color: #FFF;

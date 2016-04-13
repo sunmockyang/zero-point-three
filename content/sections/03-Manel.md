@@ -6,10 +6,10 @@
 
 “Mother, is it okay to love Jesus more than the Prophet Muhammad?” the little girl asked. She had just finished watching _A Walk to Remember on TV_. This was an American love-story between an irreligious and rebellious teenage boy and a dying, Christian girl. The scene when the boy recited the love poem was her favourite. The little girl had memorized the lines:
 
-<div class="align-center italics">_Love is always patient and kind. It is never jealous.</div>
+<div class="align-center italics">Love is always patient and kind. It is never jealous.</div>
 <div class="align-center italics">Love is never boastful nor conceited.</div>
 <div class="align-center italics">It is never rude or selfish.</div>
-<div class="align-center italics">It does not take offense and it is not resentful._</div>
+<div class="align-center italics">It does not take offense and it is not resentful.</div>
 
 “It’s okay to love him, _ya binti._ But you should love our prophet more,” answered her mother.
 

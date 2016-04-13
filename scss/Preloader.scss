@@ -17,7 +17,7 @@
 		display: inline-block;
 		position: absolute;
 		right: 5%;
-		top: 40%;
+		top: 50%;
 		text-align: center;
 	}
 
@@ -26,7 +26,7 @@
 		font-size: 7vw;
 		color: #EFEFEF;
 		margin-top: 1.25rem;
-		transition: opacity 0.5s ease-in-out;
+		transition: 0.5s ease-in-out;
 	}
 
 	#preloaderButton {
@@ -38,12 +38,14 @@
 		margin-top: 1.5rem;
 		border-radius: 2px;
 		img {
+			height: 5rem;
+			margin: -1.5rem;
 			opacity: 1;
 		}
 	}
 
 	#preloaderButton.button {
-		transition: 0.2s ease-in-out;
+		transition: opacity 0.2s ease-in-out;
 		cursor: pointer;
 	}
 
@@ -63,5 +65,20 @@
 
 	.button {
 		opacity: 0;
+	}
+}
+
+@media only screen and (max-width: 750px), only screen and (max-device-width: 750px) {
+
+	#preloader {
+		.content {
+			position: static;
+			width: 100%;
+			margin-top: 50vh;
+		}
+
+		.title {
+			font-size: 5rem;
+		}
 	}
 }

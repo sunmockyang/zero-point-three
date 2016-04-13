@@ -17,6 +17,10 @@ function NavigationBar(elements) {
 
 	this.setupFirstLevelButtons();
 	this.setupLinkButtons();
+
+	elements.title.onclick = function() {
+		animateScroll(document.documentElement, 3000, "easeInOutQuint", 0, "top");
+	}
 }
 
 NavigationBar.prototype.hideTimeout = 1000;
