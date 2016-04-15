@@ -2,7 +2,7 @@
 [chapter_title](Chapter 1)
 [chapter_name](Mohamed Ali)
 [chapter_name_arabic](محمد علي)
-[banner_video](https://s3.amazonaws.com/sunnymock/zeropointthree/content/ZeroPointThree_Christian.mp4)
+[banner_video](content/02_Mohammed_Ali/video/MohamedAli_CapHeader1.mp4)
 
 He stood behind his wooden stand layered with cell phones. 
 
@@ -54,7 +54,7 @@ Then black.
 
 ---
 
-[image](moha_img1.jpg " ")
+[image](content/02_Mohammed_Ali/MohA_IMG1.jpg " ")
 
 “I woke up in a hospital,” said Mohamed Ali Horchani, 29, sitting in the corner area of a shadowy, smoke-filled café. “The doctors didn’t believe what happened and that I was still alive.” 
 
@@ -62,7 +62,7 @@ The skull and muscles around his head were unaffected. There were just gashes on
 
 That was the first of many physical attacks he would receive as a Tunisian Christian. 
 
-[image](multimediamohamed.jpg " ")
+[image](Mohamed_multimedia " ")
 
 Mohamed Ali eventually made his way up to Tunis. From jobs at cafés to mall security, he was let go just after a week and at the most, a couple of months. Four months was his longest time with one workplace. Once his bosses found out that he was Christian, he was immediately fired. In the past five years, he spent over 27 months out on the streets, said Mohamed Ali. 
 
@@ -71,7 +71,7 @@ Mohamed Ali eventually made his way up to Tunis. From jobs at cafés to mall sec
 It was during some cold, wet nights in the backstreets of Tunis when police searched him. Upon finding his backpack filled with Christian books, some policemen would harass him, he said. Since under Tunisian law, it is not a crime to be Christian, the police would find ways to provoke Mohamed Ali to react in aggression, he said. He said they would verbally abuse him by slandering his father and mother and would physically assault him. Sometimes he reacted, and this eventually led to a couple of Mohamed Ali’s arrests and some weeks in jail. 
 
 
-[image](moha_police1.jpg, moha_police.jpg2 "Mohamed Ali blocked out his signature and private personal information in the green post-it notes.")
+[image](content/02_Mohammed_Ali/MohA_Police1.jpg, content/02_Mohammed_Ali/MohA_Police2.jpg "Mohamed Ali blocked out his signature and private personal information in the green post-it notes.")
 
 Mohamed Ali took out a piece of paper from his red backpack and placed it on the glass table. 
 
@@ -83,7 +83,7 @@ This was his most recent arrest warrant. He said that he spent over two weeks in
 
 “It’s hard. It’s really hard.” 
 
-[video](mohamed_video1.mp4 " ")
+[video](content/02_Mohammed_Ali/video/MohamedAli_Video1.mp4 " ")
 
 ## From Saudi to Tunisia 
 
@@ -107,7 +107,7 @@ Mohamed Ali is a hoarder of knowledge. He reads, researches and discusses.
 
 But “there is no other solution,” said Mohamed Ali. He carefully folded his black Dell laptop, ran his hand over it as if to pet it and tucked it away in his book-filled bag.
 
-[image](moha_bag.jpg " ")
+[image](content/02_Mohammed_Ali/MohA_Bag1.jpg " ")
 
 As of summer 2015, Mohamed Ali worked 12 hours a day, six days a week as a security guard at a college in Tunis. His identity as a Christian was still hidden at his workplace, “for now,” he said. But he said he’s searching for a job constantly, in case he gets fired after being exposed. 
 
@@ -121,7 +121,7 @@ Discrimination against religious minorities is not an issue that too many people
 
 “So within a society that is homogenous in terms of religion, the issue of religious minorities is not something that really comes up,” said Short.
 
---
+---
 
 Mohamed Ali took out his latest bank receipt from his pocket. The total on the bottom right corner said 356.594 DT (Tunisian Dinars). That’s a $179.61 USD salary per month.  
 

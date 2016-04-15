@@ -2,7 +2,7 @@
 [chapter_title](Prologue)
 [chapter_name](Dali)
 [chapter_name_arabic](دالي)
-[banner_video](content/Dali/videos/Dali_CapHeader1.mp4)
+[banner_video](content/01_Dali/videos/Dali_CapHeader1.mp4)
 
 It was a large, airy room. It was dark.
 
@@ -54,7 +54,7 @@ He’s a stranger in his own land.
 
 ---
 
-[image](content/IMG_8375.JPG, content/IMG_8375.JPG, content/IMG_8375.JPG, content/IMG_8375.JPG, content/IMG_8375.JPG "I’m drunk in the photography. I’m drunk in the dancing.")
+[image](content/01_Dali/Dali_IMG1.JPG, content/01_Dali/Dali_IMG2.JPG, content/01_Dali/Dali_IMG3.JPG, content/01_Dali/Dali_IMG4.JPG, content/01_Dali/Dali_IMG5.JPG "I’m drunk in the photography. I’m drunk in the dancing.")
 
 Dali Khlifi, 27, sat at a café bobbing his head to the music. He took an occasional sip of _qahwah_, a viscous, bitter Arabic espresso with Turkish roots that requires an acquired taste. 
 
@@ -81,6 +81,8 @@ But that wasn’t the case for Dali. He describes his journey into Christianity 
 ## Tunisia, The Arab Spring, and freedom of religion
 
 Tunisia is rated as “free” under the 2015 Freedom House ratings. It ranks as number two after Israel in the region, making it the first Arab country to receive this “free” rating. Almost all of North Africa and the Middle East are labeled “not free” by Freedom House, an independent watchdog organization that analyzes the status of freedom and democracy around the world; otherwise, only Morocco, Lebanon and Kuwait are the only three labeled “partly free” in the region. 
+
+<div class='tableauPlaceholder' style='width: 350px; height: 669px;'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fr&#47;FreedomHouse_2015_ME_NA&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='804' height='669' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='FreedomHouse_2015_ME_NA&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fr&#47;FreedomHouse_2015_ME_NA&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showTabs' value='y' /></object></div>
 
 Tunisia was the spark of the Arab Spring. The self-immolation of Mohamed Bouazizi, a fruit vendor protesting against government corruption, caused havoc across the country for a call to bring down the 23-year reign of its long-standing leader Zine El Abidine Ben Ali. Tunisia’s Jasmine Revolution spewed into mass protests across the country as Tunisians called for an end to poverty, corruption and political repression. From Tunisia, the Arab Spring revolutions spread across North Africa and the Middle East. 
 
@@ -153,7 +155,7 @@ Dali’s labeling of the Tunisian Christians’ ‘quasi-absent’ existence is 
 
 ---
 
-[image](Dali_IMG6.JPG "Tunisia just screams it loud. If they reject you, they will just say it to your face - I reject you and this is why: because you are not like us.")
+[image](content/01_Dali/Dali_IMG6.JPG "Tunisia just screams it loud. If they reject you, they will just say it to your face - I reject you and this is why: because you are not like us.")
 
 Dali said he struggles with feeling censored.
 
@@ -176,7 +178,7 @@ Firstly, it’s because many of his Christian brothers and sisters face far more
 
 “Why should I call it persecution?” he asked. “With that mindset, I will be easily depressed and maybe not be able to stand up on my feet again.” 
 
-[video](http://asldkfjalsdkfj " ")
+[video](content/01_Dali/videos/Dali_VideoClip1.mp4 " ")
 
 But this is the choice he made. And in that choice, he found his freedom. 
 

@@ -2,7 +2,7 @@
 [chapter_title](Chapter 2)
 [chapter_name](Manel)
 [chapter_name_arabic](منال)
-[banner_video](https://s3.amazonaws.com/sunnymock/zeropointthree/content/ZeroPointThree_Christian.mp4)
+[banner_video](content/03_Manel/video/Manel_CapHeader1.mp4)
 
 “Mother, is it okay to love Jesus more than the Prophet Muhammad?” the little girl asked. She had just finished watching _A Walk to Remember on TV_. This was an American love-story between an irreligious and rebellious teenage boy and a dying, Christian girl. The scene when the boy recited the love poem was her favourite. The little girl had memorized the lines:
 

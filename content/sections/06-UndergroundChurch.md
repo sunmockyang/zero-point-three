@@ -2,7 +2,7 @@
 [chapter_title](Chapter 5)
 [chapter_name](The Underground Church)
 [chapter_name_arabic](الكنيسة السرية)
-[banner_video](https://s3.amazonaws.com/sunnymock/zeropointthree/content/ZeroPointThree_Christian.mp4)
+[banner_video](content/06_UndergroundChurch/video/UndergroundChurchTourCaptioned.mp4)
 
 An underground church is a community of Christians gathered in a hidden location, or out of the public eye.
 
@@ -55,7 +55,7 @@ But Tunisians who are newly converted find it difficult to walk into a publicly 
 
 ## The church that exposed it all: Maya Ibrahim’s story
 
-[image](ChurchHBA/B/C.JPG, ChurchHBAB.JPG, ChruchHBAC.JPG "Muslim girl hesitates on the steps of the church before being led in by her friend. She spends some time contemplating and looking around, before stepping inside. <br/><br/> St. Vincent de Paul Cathedral is a Catholic church, located on L’Avenue Habib Bourguiba, the most famous street in downtown Tunis. This church is open for tourist hours during the day.")
+[image](content/06_UndergroundChurch/ChurchHB_A.jpg, content/06_UndergroundChurch/ChurchHB_B.jpg, content/06_UndergroundChurch/ChurchHB_C.jpg "Muslim girl hesitates on the steps of the church before being led in by her friend. She spends some time contemplating and looking around, before stepping inside. <br/>-<br/> St. Vincent de Paul Cathedral is a Catholic church, located on L’Avenue Habib Bourguiba, the most famous street in downtown Tunis. This church is open for tourist hours during the day.")
 
 Maya Ibrahim*, 26, became a Christian in 2012 and hid it from her conservative, Islamic family.  
 
@@ -63,7 +63,7 @@ Her brother was enticed by salafist teachings in 2013. During this time, Maya wa
 
 That night, she was chained to a leg of a living room table while her brother and father took turns beating her, she said. 
 
-[video](maya_video1.mp4 " ")
+[video](content/06_UndergroundChurch/video/Maya_VideoCaptioned.mp4 " ")
 
 The same week, she appeared to her friends, bruised. 
 
@@ -71,7 +71,7 @@ The same week, she appeared to her friends, bruised.
 
 ## The birth and hurdles of a house-church
 
-[video](HousechurchTour.MP4 " ")
+[video](content/06_UndergroundChurch/video/UndergroundChurchTourCaptioned.mp4 " ")
 
 The Church of Tunis is a house-church. 
 
@@ -81,7 +81,7 @@ The Pastor N’Cho Doffou Andre is from Côte d’Ivoire where he received pasto
 
 In 2013, “God laid on my heart to come to Tunisia,” he said, his voice echoing against the concrete walls of his empty living room. There is but one lonely, wooden fish etched with the word ‘Jesus’ hanging on a wall.
 
-[image](Housechurch_Fish.JPG " ")
+[image](content/06_UndergroundChurch/Housechurch_Fish.jpg " ")
 
 “Once I came to Tunisia, God entrusted to me to care for his children that are here,” he said. 
 
@@ -121,7 +121,7 @@ Once underground, today, the small church of 25 five members gather in an aboveg
 
 The plastic chairs in the pastor’s living room were untouched for just over two months, since the Church of Tunis was forced to move locations. 
 
-[image](Housechurch_chairs.JPG " ")
+[image](content/06_UndergroundChurch/Housechurch_chairs.jpg " ")
 
 Pastor Andre said he didn’t know of any other Tunisian house-churches. “We are a bit special because we are the only one,” he said about his Tunisian Christian church. 
 

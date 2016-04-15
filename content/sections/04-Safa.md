@@ -2,7 +2,7 @@
 [chapter_title](Chapter 3)
 [chapter_name](Safa)
 [chapter_name_arabic](صفاء)
-[banner_video](https://s3.amazonaws.com/sunnymock/zeropointthree/content/ZeroPointThree_Christian.mp4)
+[banner_video](content/04_Safa/video/Safa_CapHeader2.mp4)
 
 She glanced at the clock, tapping her foot on the floor of Tunisia’s Carthage Airport. It was past noon.  
 
@@ -56,7 +56,7 @@ She spends her whole day with Kevin, by text, by phone, and even by overnight Sk
 
 “It’s impossible that we spend two hours without communication.” 
 
-[image](Safa_Cat.JPG "Safa laughed as she held up this picture. “It’s his cat. That day I was laughing so, so much.”")
+[image](content/04_Safa/Safa_Cat.jpg "Safa laughed as she held up this picture. “It’s his cat. That day I was laughing so, so much.”")
 
 It’s been two years since their relationship sparked online through a Canadian-made mobile app called “Kik” where people around the world interact and chat. 
 
@@ -78,7 +78,7 @@ He visited again two months later, and then again in March 2015. By this time, t
 
 “He said I choose you to be my woman forever,” said Safa. “And I said I choose you to be my man forever.” 
 
-[image](Safa_Shell.JPG "A shell from Safa and Kevin’s most recent date on the beach. “We don’t throw anything from each other in the garbage, even the wrapper of chocolate. We still keep it.”")
+[image](content/04_Safa/Safa_Shell.jpg "A shell from Safa and Kevin’s most recent date on the beach. “We don’t throw anything from each other in the garbage, even the wrapper of chocolate. We still keep it.”")
 
 ---
 
@@ -98,7 +98,7 @@ The journalist pretended to be sympathetic to Safa and her friends, promising no
 
 Safa’s story is different from those of many of her Christian friends.  She is not persecuted at home. Nonetheless, many of her relatives still don’t know of her conversion and she’s keeping it a secret because she doesn’t want her parents to be bothered.  “For my (extended) family, I think it’s going to be a big problem.”
 
-[image](Safa_Website.JPG "The article that exposed Safa and her friends' Christian identities.")
+[image](content/04_Safa/Safa_Website.jpg "The article that exposed Safa and her friends' Christian identities.")
 
 But today, Safa has a problem with the law. 
 

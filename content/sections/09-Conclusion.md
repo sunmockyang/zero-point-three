@@ -2,7 +2,7 @@
 [chapter_title](Conclusion)
 [chapter_name](Marwan)
 [chapter_name_arabic](مروان)
-[banner_video](https://s3.amazonaws.com/sunnymock/zeropointthree/content/ZeroPointThree_Christian.mp4)
+[banner_video](content/09_Conclusion/video/Marwan_CapHeader1.mp4)
 
 _God, where are you?_
 
@@ -30,7 +30,7 @@ He walked out of the mosque for the last time in his life.
 
 ---
 
-[image](Marwan_Apt1-7.JPG, Marwan_Apt1-7.JPG, Marwan_Apt1-7.JPG, Marwan_Apt1-7.JPG, Marwan_Apt1-7.JPG, Marwan_Apt1-7.JPG "Items in Marwan's apartment.")
+[image](content/09_Conclusion/Marwan_Apt1.jpg, content/09_Conclusion/Marwan_Apt2.jpg, content/09_Conclusion/Marwan_Apt3.jpg, content/09_Conclusion/Marwan_Apt3.jpg, content/09_Conclusion/Marwan_Apt5.jpg, content/09_Conclusion/Marwan_Apt6.jpg, content/09_Conclusion/Marwan_Apt7.jpg "Items in Marwan's apartment.")
 
 > "But in Tunisia, you can do it. You can confess. And then you will face some problems. But after you will live your life like any other people." - Marwan
 
@@ -68,7 +68,7 @@ Coming out of hiding will be hard, he said, but there is a greater consequence f
 
 “But in Tunisia, you can do it. You can confess. And then you will face some problems, but after you will live your life like any other person.”
 
-[video](marwan_audioslideshow.mp4 " ")
+[video](content/09_Conclusion/video/Marwan_Audio_Slideshow.mp4 " ")
 
 ## The new church 
 

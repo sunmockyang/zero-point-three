@@ -2,7 +2,7 @@
 [chapter_title](Chapter 6)
 [chapter_name](Islam's Response)
 [chapter_name_arabic](استجابة للإسلام)
-[banner_video](https://s3.amazonaws.com/sunnymock/zeropointthree/content/ZeroPointThree_Christian.mp4)
+[banner_video](content/07_IslamsResponse/video/ImamBilelHeader.mp4)
 
 > "We were in the hands of our persecutors, when my father, out of the affection he bore me, made new efforts to shake my resolution.<br/>I said to him: ‘Can that vessel, which you see, change its name?’<br/>He said: ‘No.’<br/>I replied: ‘Nor can I call myself any other than I am, that is to say, a Christian.’?" - St. Perpetua, Martyr, 203 AD
 
@@ -27,7 +27,7 @@ Coming out from underground, Christians, who once vigorously fought for their fa
 During this time, the Early Church first agreed on a common canon of texts to include in the New Testament. This meeting took place in Carthage in the year 397 A.D. The New Testament of the Bible was codified in the land of Carthage, which would later become Tunisia.  
 
 
-[image](carthagephotos.jpg, carthagephoto2.jpg, carthagephoto3.jpg, carthagephoto4.jpg "The remains of the church Council of Carthage. <br/><br/> During the Islamic conquest of Carthage in the 7th century, all the churches in Carthage were destroyed and their pillars severed and taken to Kairouan to build the Great Mosque of Kairouan - The fourth holiest city of Islam") 
+[image](content/07_IslamsResponse/Carthagechurch1.jpg, content/07_IslamsResponse/Carthagechurch2.jpg, content/07_IslamsResponse/Carthagechurch3.jpg, content/07_IslamsResponse/Carthagechurch4.jpg "The remains of the church Council of Carthage. <br/><br/> During the Islamic conquest of Carthage in the 7th century, all the churches in Carthage were destroyed and their pillars severed and taken to Kairouan to build the Great Mosque of Kairouan - The fourth holiest city of Islam") 
 
 
 ## The Islamic conquest and extinction of the Church
@@ -56,12 +56,12 @@ Today he’s a part of an aboveground church community in Tunis. He’s able to 
 
 With two decades of practice ahead of the younger Christian generation, his church brothers and sisters call him their “spiritual dad” and he calls them his sons and daughters. 
 
-[video](ibrahim_video1.mp4 " ")
+[video](content/07_IslamsResponse/video/Ibrahim_VideoCaptioned.mp4 " ")
 
 
 But it is recently in the past five years when the Tunisian church is seeing patterns of conversions of young, Tunisian Muslims leaving Islam for Christianity. 
 
-## An imam’s response: Imam Bilel Arfaoui [video](ImamBilelHeader.MP4)
+## An imam’s response: Imam Bilel Arfaoui [video](content/07_IslamsResponse/video/ImamBilelHeader.mp4)
 
 Imam Bilel Arfaoui, 30, is the religious leader of Mosque Hay Raja in Tebourba, a small-town couched in olive groves on the outskirts of the capital. 
 
@@ -83,7 +83,7 @@ When asked if he’s ever met a Tunisian who became a Christian, he answered:
 
 “No. No. That’s impossible.” 
 
-[video](ImamBilel_VID.MP4 " ")
+[video](content/07_IslamsResponse/video/ImamBilel_Video1.mp4 " ")
 
 Turning to Christianity can be seen as going backwards, he said, since Muslims believe Islam advanced Christianity and that it is the most complete version of the religion of the Abrahamic God. 
 
@@ -144,7 +144,7 @@ Imam Arfaoui said that he considers the Tunisian Christian converts as “khayyi
 But in the end, “he has the right to choose what he wants.” 
 
 
-## An imam’s response: Imam Afif Sbabti [video](ImamAfif_Header.MP4 " ")
+## An imam’s response: Imam Afif Sbabti [video](content/07_IslamsResponse/video/ImamSbabtiHeader.mp4 " ")
 
 The basis of Christianity is illogical, said Imam Afif Sbabti. 
 
@@ -171,7 +171,7 @@ Some call Christians atheists. “Actually, I have some people who respect athei
 
 For Tunisian Christians living under such presumptions, these attitudes can be enough to keep them hidden or censor their identities and words. For other Christians, this misunderstanding is a source of deep, bottled up hurt.  
 
-[image](Zitouna_School.JPG " ")
+[image](content/07_IslamsResponse/Zitouna_School.jpg " ")
 
 There is no persecution in Tunisia, according to the Imam. “It has never existed in the past and it won’t exist in the future,” he said matter-of-factly. 
 

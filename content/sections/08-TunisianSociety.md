@@ -2,7 +2,7 @@
 [chapter_title](Chapter 7)
 [chapter_name](The Tunisian Society)
 [chapter_name_arabic](المجتمع التونسي)
-[banner_video](https://s3.amazonaws.com/sunnymock/zeropointthree/content/ZeroPointThree_Christian.mp4)
+[banner_video](content/08_TunisianSociety/video/TunisiaSociety_HeaderMenPray.mp4)
 
 Many countries in this region of the world have a deep-rooted religious history where regimes and dictators used religion as a tool of legitimacy. People in many of these North African and Middle Eastern countries often "hire themselves to protect God and to judge other people whether they’re religious or not," said Samy Gerges, Senior Program Officer and a specialist in religious freedoms at Freedom House. This is why religious minorities in these societies find it difficult to come out of hiding, especially if the government doesn't guarantee the exercise of their rights.
 
