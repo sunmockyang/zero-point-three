@@ -1,5 +1,3 @@
-
-
 .article-container {
 	min-width: $article-min-width;
 
@@ -115,6 +113,13 @@ $delay-amounts: 1s;
 	.italics {
 		font-style: italic;
 	}
+
+	.tableauPlaceholder {
+		// margin: 0 auto;
+		margin: 1.5rem auto;
+		border: 1px solid #EEE;
+		box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.2);
+	}
 }
 
 .section-title {
@@ -221,22 +226,22 @@ $delay-amounts: 1s;
 }
 
 .section-media-caption {
-	font-size: 0.75rem;
+	font-size: 1rem;
+	line-height: 1.5;
 	text-align: center;
 	font-style: italic;
 	font-weight: bold;
 	max-width: $section-text-max-width;
-	margin: 0 auto;
+	margin: 0.5rem auto;
 }
 
 .section-quote-container {
-	box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.2);
-	margin: 0 auto;
-	width: 90%;
-	font-size: 1.25rem;
-	border-left: 5px solid gray;
+	margin: 1.5rem auto;
 	padding: 0.5rem 1.5rem;
-	margin: 1.5rem 0;
+	width: 75%;
+	font-size: 1.25rem;
+	box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.2);
+	border-left: 5px solid $highlight-colour;
 }
 
 .section-quote {

@@ -8,7 +8,7 @@
 	<link href="http://vjs.zencdn.net/5.8.7/video-js.css" rel="stylesheet">
 	<link href="libs/videojs/videojs_stylesheet.css" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,300,100' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
 	<script type="text/javascript">
 
@@ -57,19 +57,18 @@
 		LoadFile("content/sections/" + sectionPaths[i], null, onSectionLoad.bind(window, sectionPaths[i]));
 	};
 	</script>
-
-	<div id="preloader">
-		<div class="content">
-			<div id="preloaderButton" data-text="- Enter -">
-				<img src="img/loading.svg"/>
-			</div>
-			<div class="title">Underground.</div>
-		</div>
-	</div>
 </head>
 <body>
 
 <!-- Preloader -->
+<div id="preloader">
+	<div class="content">
+		<div id="preloaderButton" data-text="<span>-</span> Enter <span>-</span>">
+			<img src="img/loading.svg" alt="Loading..." />
+		</div>
+		<div class="title">Underground</div>
+	</div>
+</div>
 
 <!-- Background media -->
 <div class="background-media-container">
@@ -343,14 +342,7 @@ function injectSections() {
 	var videos = document.getElementsByClassName('video-js');
 
 	for (var i = 0; i < videos.length; i++) {
-		var vid = videojs(videos[i])
-
-		if (videos[i].classList.contains("banner_video")) {
-			vid.on("play",
-				function() {
-					ScrollCenteredElemNavBar(this.el_);
-			});
-		}
+		videojs(videos[i])
 	}
 
 	// Build lightboxes
@@ -367,12 +359,16 @@ function injectSections() {
 	        }
 	    });
 	});
+
+	// Setup Tableau
+	window.tableau._createNewVizesAndStartLoading();
 }
 
 window.onload = onLoad;
 </script>
 
 <script src="http://vjs.zencdn.net/5.8.7/video.js"></script>
+<script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
 <script type="text/javascript" src="js/libs/zepto.min.js"></script>
 <script type="text/javascript" src="js/libs/magnific.min.js"></script>
 <script type="text/javascript" src="js/ZeroPointThree.js"></script>

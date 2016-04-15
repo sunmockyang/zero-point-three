@@ -58,6 +58,10 @@ html, body {
       height: 5rem;
       margin: -1.5rem;
       opacity: 1; }
+    #preloader #preloaderButton span {
+      font-family: sans-serif;
+      font-weight: 100;
+      color: #666; }
   #preloader #preloaderButton.button {
     transition: opacity 0.2s ease-in-out;
     cursor: pointer; }
@@ -349,6 +353,10 @@ hr.index-hr {
     margin: 0 auto; }
   .section-content .italics {
     font-style: italic; }
+  .section-content .tableauPlaceholder {
+    margin: 1.5rem auto;
+    border: 1px solid #EEE;
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.2); }
 
 .section-title {
   display: inline-block;
@@ -426,21 +434,21 @@ hr.index-hr {
   width: 100%; }
 
 .section-media-caption {
-  font-size: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
   text-align: center;
   font-style: italic;
   font-weight: bold;
   max-width: 38rem;
-  margin: 0 auto; }
+  margin: 0.5rem auto; }
 
 .section-quote-container {
-  box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.2);
-  margin: 0 auto;
-  width: 90%;
-  font-size: 1.25rem;
-  border-left: 5px solid gray;
+  margin: 1.5rem auto;
   padding: 0.5rem 1.5rem;
-  margin: 1.5rem 0; }
+  width: 75%;
+  font-size: 1.25rem;
+  box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.2);
+  border-left: 5px solid #E67A64; }
 
 .section-quote {
   font-size: 1.5rem; }
@@ -566,9 +574,10 @@ footer {
     width: 84%;
     margin: 0 auto;
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    font-family: "PT Serif", Georgia, Times, "Times New Roman", serif; }
   footer .notes {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     line-height: 1.25;
     text-align: center;
     margin-bottom: 3rem; }
@@ -875,6 +884,8 @@ img.mfp-img {
   cursor: auto; }
 
 .mfp-title {
+  font: "PT Serif", Georgia, Times, "Times New Roman", serif;
+  font-style: italic;
   text-align: left;
   line-height: 18px;
   color: #F3F3F3;

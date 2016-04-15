@@ -39,8 +39,12 @@ function OnMarkerCrossed(marker, last, current, onforward, onbackward) {
 	return false;
 };
 
+function ScrollToElemNavBar(elem) {
+	animateScroll(elem, 1000, "easeInOutQuint", elements.navbar.firstLevel.getBoundingClientRect().height + 10, "top");
+}
+
 function ScrollToSection(id) {
-	animateScroll(document.getElementById(id), 1000, "easeInOutQuint", elements.navbar.firstLevel.getBoundingClientRect().height + 10, "top");
+	ScrollToElemNavBar(document.getElementById(id));
 }
 
 function ScrollCenteredElem(elem, duration, padding) {
