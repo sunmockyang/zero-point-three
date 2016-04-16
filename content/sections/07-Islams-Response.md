@@ -4,13 +4,13 @@
 [chapter_name_arabic](استجابة للإسلام)
 [banner_video](content/07_IslamsResponse/video/ImamBilelHeader.mp4)
 
-> "We were in the hands of our persecutors, when my father, out of the affection he bore me, made new efforts to shake my resolution.<br/>I said to him: ‘Can that vessel, which you see, change its name?’<br/>He said: ‘No.’<br/>I replied: ‘Nor can I call myself any other than I am, that is to say, a Christian.’?" - St. Perpetua, Martyr, 203 AD
+> "We were in the hands of our persecutors, when my father, out of the affection he bore me, made new efforts to shake my resolution.<br/>I said to him: ‘Can that vessel, which you see, change its name?’<br/>He said: ‘No.’<br/>I replied: ‘Nor can I call myself any other than I am, that is to say, a Christian.’" - St. Perpetua, Martyr, 203 AD
 
 There’s a young heroine named Perpetua in Tunisian history. 
 
 She was a Christian convert in 2nd century Carthage – the modern day Tunisia.
 
-_(Insert map of Tunisia & Carthage here)_
+[image](content/07_IslamsResponse/Perpetua3.jpg, content/07_IslamsResponse/Perpetua2.jpg, content/07_IslamsResponse/Perpetua1.jpg "The stadium where Perpetua and her friends were martyred. The cave where she was held until she walked in to the arena. The small window above the prison where Perpetua was held. Symbol means 'Alpha and Omega.'")
 
 Perpetua was a young mother from a wealthy family. She was one of the first to be arrested, along with her Christian servant Felicitas, when an empire-wide verdict came from the Roman Emperor Septimus who had a strong distaste for Christianity which was booming underground in North Africa. 
 
@@ -69,7 +69,7 @@ It was in Tebourba, then _Thuburbo Minus_, where the Christian martyr Perpetua w
 
 Today, there is no sign of Christianity left in this town, except for the public library in the town’s center that was previously the Church of Tebourba (or sometimes referred to as the Church of St. Perpetua.)  
 
-[image](publiclibrarytebourba.jpg " ")
+[image](content/07_IslamsResponse/publiclibrarytebourba1.jpg "The public library in Tebourba, Tunisia. It was once the Church of Tebourba, or Church of St. Perpetua. | source: Kalechnizar, Creative Commons")
 
 With his reserved, gentle voice, the imam recited the Qur’an by heart: _“And you will find the nearest of them in affection to the believers (Muslims) those who say, ‘We are Christians.’”_ (Surat al-Maida 82)
 

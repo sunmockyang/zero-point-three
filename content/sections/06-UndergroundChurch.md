@@ -71,8 +71,6 @@ The same week, she appeared to her friends, bruised.
 
 ## The birth and hurdles of a house-church
 
-[video](content/06_UndergroundChurch/video/UndergroundChurchTourCaptioned.mp4 " ")
-
 The Church of Tunis is a house-church. 
 
 It was birthed in 2015. 

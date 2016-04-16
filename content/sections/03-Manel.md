@@ -51,7 +51,7 @@ When she told her family six months earlier, she ended up breaking her relations
 
 Her sister, aunts and uncles phoned her after the incident. “Are you trying to kill your mom?” “You made her crazy!” “What’s this nonsense with the Christian thing?” 
 
-[video](manel_video1.mp4 " ")
+[video](content/03_Manel/video/Manel_video1.mp4 " ")
 
 Since early 2015, her mother refused to let her go back home. She wasn’t allowed to see her little sister or her grandmother. Whenever someone would ask about her, Manel’s mother refused to have anything to do with her. 
 

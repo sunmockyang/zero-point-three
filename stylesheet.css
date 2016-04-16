@@ -464,6 +464,26 @@ hr.index-hr {
   margin-bottom: 5rem;
   max-height: 92vh; }
 
+.tableauBig {
+  visibility: visible;
+  position: static;
+  z-index: 1; }
+
+.tableauSmall {
+  visibility: hidden;
+  position: absolute;
+  z-index: -999; }
+
+@media only screen and (max-width: 1000px), only screen and (max-device-width: 1000px) {
+  .tableauBig {
+    visibility: hidden;
+    position: absolute;
+    z-index: -999; }
+
+  .tableauSmall {
+    visibility: visible;
+    position: static;
+    z-index: 1; } }
 @media only screen and (max-width: 775px), only screen and (max-device-width: 775px) {
   .section-title-name .english {
     font-size: 2.5rem; }

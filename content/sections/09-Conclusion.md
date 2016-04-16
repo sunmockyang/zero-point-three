@@ -30,7 +30,7 @@ He walked out of the mosque for the last time in his life.
 
 ---
 
-[image](content/09_Conclusion/Marwan_Apt1.jpg, content/09_Conclusion/Marwan_Apt2.jpg, content/09_Conclusion/Marwan_Apt3.jpg, content/09_Conclusion/Marwan_Apt3.jpg, content/09_Conclusion/Marwan_Apt5.jpg, content/09_Conclusion/Marwan_Apt6.jpg, content/09_Conclusion/Marwan_Apt7.jpg "Items in Marwan's apartment.")
+[image](content/09_Conclusion/Marwan_Apt1.jpg, content/09_Conclusion/Marwan_Apt2.jpg, content/09_Conclusion/Marwan_Apt3.jpg, content/09_Conclusion/Marwan_Apt4.jpg, content/09_Conclusion/Marwan_Apt5.jpg, content/09_Conclusion/Marwan_Apt6.jpg, content/09_Conclusion/Marwan_Apt7.jpg "Items in Marwan's apartment.")
 
 > "But in Tunisia, you can do it. You can confess. And then you will face some problems. But after you will live your life like any other people." - Marwan
 
@@ -102,7 +102,7 @@ Both choices will receive reactions, some harsher than others.
 
 “As light in the darkness. As salt of the earth.” 
 
-[video](marwan_video1.mp4 " ")
+[video](content/09_Conclusion/video/Marwan_video1.mp4 " ")
 
 
 

@@ -62,7 +62,7 @@ The skull and muscles around his head were unaffected. There were just gashes on
 
 That was the first of many physical attacks he would receive as a Tunisian Christian. 
 
-[image](Mohamed_multimedia " ")
+[video](content/02_Mohammed_Ali/video/Mohamedali_graphics.mp4 " ")
 
 Mohamed Ali eventually made his way up to Tunis. From jobs at cafés to mall security, he was let go just after a week and at the most, a couple of months. Four months was his longest time with one workplace. Once his bosses found out that he was Christian, he was immediately fired. In the past five years, he spent over 27 months out on the streets, said Mohamed Ali. 
 
