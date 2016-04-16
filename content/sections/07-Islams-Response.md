@@ -144,7 +144,7 @@ Imam Arfaoui said that he considers the Tunisian Christian converts as “khayyi
 But in the end, “he has the right to choose what he wants.” 
 
 
-## An imam’s response: Imam Afif Sbabti [video](content/07_IslamsResponse/video/ImamSbabtiHeader.mp4 " ")
+## An imam’s response: Imam Afif Sbabti [video](content/07_IslamsResponse/video/ImamSbabtiHeader.mp4)
 
 The basis of Christianity is illogical, said Imam Afif Sbabti. 
 
