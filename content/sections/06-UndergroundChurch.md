@@ -119,7 +119,7 @@ Once underground, today, the small church of 25 five members gather in an aboveg
 
 The plastic chairs in the pastor’s living room were untouched for just over two months, since the Church of Tunis was forced to move locations. 
 
-[image](content/06_UndergroundChurch/Housechurch_chairs.jpg " ")
+[image](content/06_UndergroundChurch/Housechurch_Chairs.jpg " ")
 
 Pastor Andre said he didn’t know of any other Tunisian house-churches. “We are a bit special because we are the only one,” he said about his Tunisian Christian church. 
 
