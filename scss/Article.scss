@@ -27,23 +27,22 @@ $delay-amounts: 1s;
 		margin: 0 auto;
 		margin-bottom: 1.5rem;
 		opacity: 0;
-		transition: opacity 0.5s ease-in-out $delay-amounts * 3;
+		transition: opacity 0.5s ease-in-out $delay-amounts * 2;
 		text-align: left;
 	}
 
 	.divergent {
 		opacity: 1;
-		// transition-delay: 0s;
 		margin-bottom: 2.5rem;
 	}
 
 	.underground {
-		transition-delay: $delay-amounts;
+		transition-delay: 0s;
 		margin-bottom: 2.5rem;
 	}
 
 	.undetected {
-		transition-delay: $delay-amounts * 2;
+		transition-delay: $delay-amounts;
 		margin-bottom: 2.5rem;
 	}
 
@@ -141,8 +140,8 @@ $delay-amounts: 1s;
 
 .section-title-name {
 	font-size: 4.5rem;
-	display: flex;
-	align-items: flex-end;
+	@include flexbox();
+	@include align-items(flex-end);
 
 	div {
 		padding: 0 1rem;
@@ -193,9 +192,9 @@ $delay-amounts: 1s;
 }
 
 .section-image {
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: center;
+	@include flexbox();
+	@include flex-flow(row nowrap);
+	@include justify-content(center);
 }
 
 .section-image-wrapper:first-child {
@@ -207,7 +206,7 @@ $delay-amounts: 1s;
 }
 
 .section-image-wrapper {
-	flex-grow: 1;
+	@include flex-grow(1);
 	margin: 0 0.5%;
 	background: #FFF no-repeat center center;
 	background-size: cover;

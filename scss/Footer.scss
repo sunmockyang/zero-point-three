@@ -4,13 +4,11 @@ footer {
 
 	padding: 2rem;
 
-	@include box-shadow(0px, 0px, 15px, rgba(0,0,0,0.5));
+	box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
 
 	.footer-container {
 		width: 84%;
 		margin: 0 auto;
-		display: flex;
-		flex-direction: column;
 		font-family: $article-font;
 	}
 
@@ -39,10 +37,7 @@ footer {
 	line-height: 1.25;
 
 	.priscilla {
-		display: flex;
-		flex-direction: column;
 		text-align: center;
-		justify-content: center;
 		margin-bottom: 3rem;
 
 		.headshot {

@@ -19,10 +19,11 @@ $title-height: 2rem;
 	width: 100%;
 	min-width: $article-min-width;
 	padding: 0.5rem 0;
-	display: flex;
-	align-items: center;
-	flex-wrap: wrap;
-	justify-content: space-between;
+	@include flexbox();
+	@include align-items(center);
+	@include flex-wrap(wrap);
+	@include justify-content(space-between);
+	box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
 }
 
 .navbar-first-level {
@@ -43,7 +44,7 @@ $title-height: 2rem;
 
 .navbar-item-container {
 	// padding-right: 1.5rem;
-	display: flex;
+	@include flexbox();
 }
 
 .navbar-item {
@@ -80,7 +81,7 @@ $title-height: 2rem;
 
 
 .navbar-second-level {
-	display: flex;
+	@include flexbox();
 	background-color: #DDD;
 	margin-top: -2.5rem;
 	z-index: 1;
@@ -88,7 +89,7 @@ $title-height: 2rem;
 
 	.navbar-item-container {
 		width:100%;
-		flex-direction: row-reverse;
+		@include flex-direction(row-reverse);
 	}
 
 	.navbar-item {
@@ -109,22 +110,22 @@ $title-height: 2rem;
 }
 
 #stories_container, #analysis_container {
-	display:flex;
+	@include flexbox();
 }
 
 @media only screen and (max-width: 750px), only screen and (max-device-width: 750px) {
 	.navbar-first-level, .navbar-second-level {
-		justify-content: space-around;
+		@include justify-content(space-around);
 		width: 100%;
 	}
 
 	#stories_container, #analysis_container {
-		flex-grow: 1;
-		justify-content: center;
+		@include flex-grow(1);
+		@include justify-content(center);
 	}
 
 	.navbar-first-level {
-		flex-direction: column;
+		@include flex-direction(column);
 
 		.navbar-title {
 			color: #FFF;
@@ -134,7 +135,7 @@ $title-height: 2rem;
 
 	.navbar-second-level {
 		.navbar-item-container {
-			justify-content: space-around;
+			@include justify-content(space-around);
 		}
 	}
 }

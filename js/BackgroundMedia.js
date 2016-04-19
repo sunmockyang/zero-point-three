@@ -76,13 +76,13 @@ BackgroundMedia.prototype.onScroll = function(y) {
 
 	// Container
 	if (currentYPercentage < 1) {
-		this.titleContainer.style.transform = translate3dY(-currentYPercentage * 50);
+		setTranslate3dY(this.titleContainer, -currentYPercentage * 50);
 	}
 
 	// Video1
 	// var video1Parallax = currentYPercentage / this.transitionPercentage;
 	// if (video1Parallax < 2) {
-	// 	this.video1.style.transform = translate3dY(-video1Parallax * 5);
+	// 	setTranslate3dY(this.video1, -video1Parallax * 5);
 	// }
 
 	// Video2
@@ -91,7 +91,7 @@ BackgroundMedia.prototype.onScroll = function(y) {
 		var percentage = Mathx.normalize(1 - Math.pow(fadePercentage, 2));
 		this.titleContainer.style.opacity = percentage;
 		this.video2.style.opacity = percentage;
-		// this.video2.style.transform = translate3dY(-fadePercentage * 30);
+		// setTranslate3dY(this.video2, -fadePercentage * 30);
 		this.videoOverlay.style.opacity = percentage;
 		this.volumeLerp = 0.02;
 		this.video2TargetVolume = percentage * this.maxVolume;
@@ -99,7 +99,7 @@ BackgroundMedia.prototype.onScroll = function(y) {
 	else if (this.video2.style.opacity != 1) {
 		this.titleContainer.style.opacity = 1;
 		this.video2.style.opacity = 1;
-		// this.video2.style.transform = translate3dY(0);
+		// setTranslate3dY(this.video2, 0);
 		this.videoOverlay.style.opacity = 1;
 	}
 

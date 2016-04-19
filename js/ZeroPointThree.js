@@ -79,7 +79,3 @@ function resizeFullscreen (elem) {
 		elem.style.left = - (width - document.documentElement.clientWidth) / 2 + "px";
 	}
 };
-
-function translate3dY(y) {
-	return "translate3d(0," + y + "vh, 0)"
-}

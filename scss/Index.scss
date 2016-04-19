@@ -8,13 +8,13 @@
 	border-radius: 0.3rem;
 	border: 2px solid gray;
 	margin: 30vh auto;
-	transform: translate3d(0, 100px, 0);
+	@include transform(translate3d(0, 100px, 0));
 	// text-align: center;
 	display: inline-block;
 	padding: 2%;
 	background-color: rgba(255, 255, 255, 0.1);
 	opacity: 0;
-	transition: opacity 0.3s ease-in-out, transform 0.5s ease-in-out;
+	@include transition(opacity 0.3s ease-in-out, transform 0.5s ease-in-out);
 	width: 50%;
 	min-width: 26rem;
 	max-width: 30rem;
@@ -22,20 +22,20 @@
 
 .index-box.animate-in {
 	opacity: 1;
-	transform: translate3d(0, 0, 0);
+	@include transform(translate3d(0, 0, 0));
 }
 
 // Contents
 
 .index-box > div{
 	opacity: 0;
-	transform: translate3d(0, 1rem, 0);
-	transition: transform 0.3s ease-in-out 0.1s, opacity 0.3s ease-in-out 0.1s;
+	@include transform(translate3d(0, 1rem, 0));
+	@include transition(transform 0.3s ease-in-out 0.1s, opacity 0.3s ease-in-out 0.1s);
 }
 
 .index-box > div.animate-in {
 	opacity: 1;
-	transform: translate3d(0, 0, 0);
+	@include transform(translate3d(0, 0, 0));
 }
 
 .index-title {
