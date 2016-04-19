@@ -2,7 +2,6 @@ content/01_Dali/Dali_IMG1.jpg
 content/01_Dali/Dali_IMG2.jpg
 content/01_Dali/Dali_IMG3.jpg
 content/01_Dali/Dali_IMG4.jpg
-content/01_Dali/Dali_IMG5.jpg
 content/01_Dali/Dali_IMG6.jpg
 content/02_Mohammed_Ali/MohA_IMG1.jpg
 content/02_Mohammed_Ali/MohA_Police1.jpg

@@ -15,12 +15,14 @@ ARGV.each { |md_file|
 puts html_file_list.to_s
 
 puts "Creating Image List file..."
+Section.inlineImages.push("")
 imageListFile = File.dirname(__FILE__) + "/" + imageListFile;
 File.open(imageListFile, "w") { |file|
 	file.write(Section.inlineImages.join("\n"))
 }
 
 puts "Creating Video List file..."
+Section.inlineVideos.push("")
 videoListFile = File.dirname(__FILE__) + "/" + videoListFile;
 File.open(videoListFile, "w") { |file|
 	file.write(Section.inlineVideos.join("\n"))

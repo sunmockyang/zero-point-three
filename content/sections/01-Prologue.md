@@ -54,7 +54,7 @@ He’s a stranger in his own land.
 
 ---
 
-[image](content/01_Dali/Dali_IMG1.jpg, content/01_Dali/Dali_IMG2.jpg, content/01_Dali/Dali_IMG3.jpg, content/01_Dali/Dali_IMG4.jpg,  "\"I’m drunk in the photography. I’m drunk in the dancing.\"")
+[image](content/01_Dali/Dali_IMG1.jpg, content/01_Dali/Dali_IMG2.jpg, content/01_Dali/Dali_IMG3.jpg, content/01_Dali/Dali_IMG4.jpg  "\"I’m drunk in the photography. I’m drunk in the dancing.\"")
 
 Dali Khlifi, 27, sat at a café bobbing his head to the music. He took an occasional sip of _qahwah_, a viscous, bitter Arabic espresso with Turkish roots that requires an acquired taste. 
 

@@ -14,8 +14,7 @@ After the toppling of Ben Ali’s 23-year, secular regime in 2011, the moderate 
 
 However, the interim En-Nahda government, inspired by the Muslim Brotherhood in Egypt, began to advocate a more Muslim Tunisia alongside its democratic transition. In reaction to the strict rules of the Ben Ali regime preventing Muslims from practicing their faith freely in public, religious freedoms were introduced in the revised 2014 constitution. The revised constitution of 2014 reflects this movement towards a more freely Islamic Tunisia in Article 6: 
 
-<div class="align-center italics">“The state is the guardian of religion. It guarantees freedom of conscience and belief, the free exercise of religious practices and the neutrality of mosques and places of worship from all partisan instrumentalisation.</div>
-<br/>
+<div class="align-center italics" style="margin-bottom: 1rem;">“The state is the guardian of religion. It guarantees freedom of conscience and belief, the free exercise of religious practices and the neutrality of mosques and places of worship from all partisan instrumentalisation.</div>
 <div class="align-center italics">The state undertakes to disseminate the values of moderation and tolerance and the protection of the sacred, and the prohibition of all violations thereof. It undertakes equally to prohibit and fight against calls for Takfir and the incitement of violence and hatred.”</div>
 
 The attempt to free the practice of Islam succeeded; an array of headscarves and full-body coverings for both men and women filled the streets of Tunisia. Previously jailed religious extremists were freed and once-exiled salafis (fundamental Islamists) flooded back to their country.  
