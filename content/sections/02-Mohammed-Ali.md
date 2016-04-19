@@ -107,7 +107,7 @@ Mohamed Ali is a hoarder of knowledge. He reads, researches and discusses.
 
 But “there is no other solution,” said Mohamed Ali. He carefully folded his black Dell laptop, ran his hand over it as if to pet it and tucked it away in his book-filled bag.
 
-[image](content/02_Mohammed_Ali/MohA_Bag1.jpg " ")
+[image](content/02_Mohammed_Ali/MohA_Bag1.jpg "Mohamed Ali said he always carries around several Christian books and Bibles in his backpack.")
 
 As of summer 2015, Mohamed Ali worked 12 hours a day, six days a week as a security guard at a college in Tunis. His identity as a Christian was still hidden at his workplace, “for now,” he said. But he said he’s searching for a job constantly, in case he gets fired after being exposed. 
 

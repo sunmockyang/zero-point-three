@@ -54,7 +54,7 @@ He’s a stranger in his own land.
 
 ---
 
-[image](content/01_Dali/Dali_IMG1.jpg, content/01_Dali/Dali_IMG2.jpg, content/01_Dali/Dali_IMG3.jpg, content/01_Dali/Dali_IMG4.jpg, content/01_Dali/Dali_IMG5.jpg "I’m drunk in the photography. I’m drunk in the dancing.")
+[image](content/01_Dali/Dali_IMG1.jpg, content/01_Dali/Dali_IMG2.jpg, content/01_Dali/Dali_IMG3.jpg, content/01_Dali/Dali_IMG4.jpg,  "\"I’m drunk in the photography. I’m drunk in the dancing.\"")
 
 Dali Khlifi, 27, sat at a café bobbing his head to the music. He took an occasional sip of _qahwah_, a viscous, bitter Arabic espresso with Turkish roots that requires an acquired taste. 
 
@@ -89,7 +89,7 @@ Tunisia was the spark of the Arab Spring. The self-immolation of Mohamed Bouaziz
 
 That’s why Tunisia was the west’s great hope for the emergence of liberal, democratic societies in the region. Tunisia was the darling of the Arab Spring; many governments and institutions around the world have called it the success story, a model nation.  
 
-Today in Tunisia, there is freedom of religion on paper. One is, by law, able to choose one’s own religion and practice it, just as long as it doesn’t disturb civil society. This provision is in the constitution as it was revised in the wake of the Arab Spring. It promises freedom of religion to those who, during the Ben Ali regime, were prevented from expressing religious identity in public. These included many Muslims: Islamic religious attire such as headscarves (_Hijab_) and full-body coverings (_Niqab_) were banned under Ben Ali who wanted a more visibly western society.
+Today in Tunisia, there is freedom of religion on paper. One is, by law, able to choose one’s own religion and practice it, just as long as it doesn’t disturb civil society. This provision is in the constitution as it was revised in the wake of the Arab Spring. It promises freedom of religion to those who, during the Ben Ali regime, were prevented from expressing religious identity in public. These included many Muslims: Islamic religious attire such as headscarves (_hijab_) and full-body coverings (_niqab_) were banned under Ben Ali who wanted a more visibly western society.
 
 This change may have seemed like it would benefit the Tunisian Christian minority.
 
@@ -156,7 +156,7 @@ Dali’s labeling of the Tunisian Christians’ ‘quasi-absent’ existence is 
 
 ---
 
-[image](content/01_Dali/Dali_IMG6.jpg "Tunisia just screams it loud. If they reject you, they will just say it to your face - I reject you and this is why: because you are not like us.")
+[image](content/01_Dali/Dali_IMG6.jpg "\"Tunisia just screams it loud. If they reject you, they will just say it to your face - I reject you and this is why: because you are not like us.\"")
 
 Dali said he struggles with feeling censored.
 

@@ -4,13 +4,13 @@
 [chapter_name_arabic](استجابة للإسلام)
 [banner_video](content/07_IslamsResponse/video/ImamBilelHeader.mp4)
 
-> "We were in the hands of our persecutors, when my father, out of the affection he bore me, made new efforts to shake my resolution.<br/>I said to him: ‘Can that vessel, which you see, change its name?’<br/>He said: ‘No.’<br/>I replied: ‘Nor can I call myself any other than I am, that is to say, a Christian.’" - St. Perpetua, Martyr, 203 AD
+> "We were in the hands of our persecutors, when my father, out of the affection he bore me, made new efforts to shake my resolution.<br/>I said to him: ‘Can that vessel, which you see, change its name?’<br/>He said: ‘No.’<br/>I replied: ‘Nor can I call myself any other than I am, that is to say, a Christian.’" - St. Perpetua, Christian Martyr, 203 AD
 
 There’s a young heroine named Perpetua in Tunisian history. 
 
 She was a Christian convert in 2nd century Carthage – the modern day Tunisia.
 
-[image](content/07_IslamsResponse/Perpetua3.jpg, content/07_IslamsResponse/Perpetua2.jpg, content/07_IslamsResponse/Perpetua1.jpg "The stadium where Perpetua and her friends were martyred. The cave where she was held until she walked in to the arena. The small window above the prison where Perpetua was held. Symbol means 'Alpha and Omega.'")
+[image](content/07_IslamsResponse/Perpetua3.jpg, content/07_IslamsResponse/Perpetua2.jpg, content/07_IslamsResponse/Perpetua1.jpg "The stadium where Perpetua and her friends were martyred. The small window above the prison where Perpetua was held. Symbol means 'Alpha and Omega.' The cave where she was held until she walked in to the arena. | Photo by Ivy Park")
 
 Perpetua was a young mother from a wealthy family. She was one of the first to be arrested, along with her Christian servant Felicitas, when an empire-wide verdict came from the Roman Emperor Septimus who had a strong distaste for Christianity which was booming underground in North Africa. 
 
@@ -27,7 +27,7 @@ Coming out from underground, Christians, who once vigorously fought for their fa
 During this time, the Early Church first agreed on a common canon of texts to include in the New Testament. This meeting took place in Carthage in the year 397 A.D. The New Testament of the Bible was codified in the land of Carthage, which would later become Tunisia.  
 
 
-[image](content/07_IslamsResponse/Carthagechurch1.jpg, content/07_IslamsResponse/Carthagechurch2.jpg, content/07_IslamsResponse/Carthagechurch3.jpg, content/07_IslamsResponse/Carthagechurch4.jpg "The remains of the church Council of Carthage. <br/><br/> During the Islamic conquest of Carthage in the 7th century, all the churches in Carthage were destroyed and their pillars severed and taken to Kairouan to build the Great Mosque of Kairouan - The fourth holiest city of Islam") 
+[image](content/07_IslamsResponse/Carthagechurch1.jpg, content/07_IslamsResponse/Carthagechurch2.jpg, content/07_IslamsResponse/Carthagechurch3.jpg, content/07_IslamsResponse/Carthagechurch4.jpg "The remains of a church in Carthage where the Council of Carthage took place. <br/><br/> During the Islamic conquest of Carthage in the 7th century, all the churches in Carthage were destroyed and their pillars severed and taken to Kairouan to build the Great Mosque of Kairouan - The fourth holiest city of Islam. | Photo by Ivy Park") 
 
 
 ## The Islamic conquest and extinction of the Church
@@ -69,7 +69,7 @@ It was in Tebourba, then _Thuburbo Minus_, where the Christian martyr Perpetua w
 
 Today, there is no sign of Christianity left in this town, except for the public library in the town’s center that was previously the Church of Tebourba (or sometimes referred to as the Church of St. Perpetua.)  
 
-[image](content/07_IslamsResponse/publiclibrarytebourba1.jpg "The public library in Tebourba, Tunisia. It was once the Church of Tebourba, or Church of St. Perpetua. | source: Kalechnizar, Creative Commons")
+[image](content/07_IslamsResponse/publiclibrarytebourba1.jpg "The public library in Tebourba, Tunisia. It was once the Church of Tebourba, or Church of St. Perpetua. | Photo by Kalechnizar, Creative Commons")
 
 With his reserved, gentle voice, the imam recited the Qur’an by heart: _“And you will find the nearest of them in affection to the believers (Muslims) those who say, ‘We are Christians.’”_ (Surat al-Maida 82)
 
@@ -171,7 +171,7 @@ Some call Christians atheists. “Actually, I have some people who respect athei
 
 For Tunisian Christians living under such presumptions, these attitudes can be enough to keep them hidden or censor their identities and words. For other Christians, this misunderstanding is a source of deep, bottled up hurt.  
 
-[image](content/07_IslamsResponse/Zitouna_School.jpg " ")
+[image](content/07_IslamsResponse/Zitouna_School.jpg "The entrance of Zitouna University in Tunis.")
 
 There is no persecution in Tunisia, according to the Imam. “It has never existed in the past and it won’t exist in the future,” he said matter-of-factly. 
 
