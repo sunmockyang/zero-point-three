@@ -1,6 +1,6 @@
 all: parse_content css
 
-generate:
+generate: css
 	./parser/generateWebpage.sh
 
 clean: clean-content clean-css

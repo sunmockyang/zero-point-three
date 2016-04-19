@@ -55,6 +55,10 @@ function ScrollCenteredElemNavBar(elem, duration) {
 	animateScroll(elem, (duration) ? duration : 1000, "easeInOutQuint", elements.navbar.firstLevel.getBoundingClientRect().height, "center");
 }
 
+function isIOS() {
+	return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+}
+
 var Mathx = {};
 
 Mathx.clamp = function(t, min, max) {

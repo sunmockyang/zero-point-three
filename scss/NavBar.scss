@@ -81,13 +81,14 @@ $title-height: 2rem;
 
 .navbar-second-level {
 	display: flex;
-	flex-direction: row-reverse;
 	background-color: #DDD;
 	margin-top: -2.5rem;
 	z-index: 1;
 	transition: margin-top 0.2s ease-out;
 
 	.navbar-item-container {
+		width:100%;
+		flex-direction: row-reverse;
 	}
 
 	.navbar-item {
@@ -109,12 +110,17 @@ $title-height: 2rem;
 
 #stories_container, #analysis_container {
 	display:flex;
-	margin-left:auto;
 }
 
 @media only screen and (max-width: 750px), only screen and (max-device-width: 750px) {
 	.navbar-first-level, .navbar-second-level {
 		justify-content: space-around;
+		width: 100%;
+	}
+
+	#stories_container, #analysis_container {
+		flex-grow: 1;
+		justify-content: center;
 	}
 
 	.navbar-first-level {
@@ -122,6 +128,13 @@ $title-height: 2rem;
 
 		.navbar-title {
 			color: #FFF;
+			margin-bottom: 0.5rem;
+		}
+	}
+
+	.navbar-second-level {
+		.navbar-item-container {
+			justify-content: space-around;
 		}
 	}
 }

@@ -28,8 +28,17 @@ function BackgroundMedia(elements) {
 	this.video1.volume = this.video2.volume = 0;
 
 	this.videoContainer.classList.remove("hidden");
-	this.playVideo(true);
-	this.updateVideoVolume();
+	if (isIOS()){
+		this.video1.outerHTML = '<div class="image" id="video1"></div>';
+		this.video2.outerHTML = '<div class="image" id="video2"></div>';
+
+		this.video1 = document.getElementById("video1");
+		this.video2 = document.getElementById("video2");
+	}
+	else {
+		this.playVideo(true);
+		this.updateVideoVolume();
+	}
 
 	this.indexBackground = elements.indexBackground;
 
@@ -82,7 +91,7 @@ BackgroundMedia.prototype.onScroll = function(y) {
 		var percentage = Mathx.normalize(1 - Math.pow(fadePercentage, 2));
 		this.titleContainer.style.opacity = percentage;
 		this.video2.style.opacity = percentage;
-		this.video2.style.transform = translate3dY(-fadePercentage * 30);
+		// this.video2.style.transform = translate3dY(-fadePercentage * 30);
 		this.videoOverlay.style.opacity = percentage;
 		this.volumeLerp = 0.02;
 		this.video2TargetVolume = percentage * this.maxVolume;
@@ -90,7 +99,7 @@ BackgroundMedia.prototype.onScroll = function(y) {
 	else if (this.video2.style.opacity != 1) {
 		this.titleContainer.style.opacity = 1;
 		this.video2.style.opacity = 1;
-		this.video2.style.transform = translate3dY(0);
+		// this.video2.style.transform = translate3dY(0);
 		this.videoOverlay.style.opacity = 1;
 	}
 
@@ -150,12 +159,12 @@ BackgroundMedia.prototype.animateVideoIn = function() {
 };
 
 BackgroundMedia.prototype.playVideo = function(play) {
-	if (play && !this.playing) {
+	if (!isIOS() && play && !this.playing) {
 		this.playing = true;
 		this.video1.play();
 		this.video2.play();
 	}
-	else if (!play && this.playing){
+	else if (!isIOS() && !play && this.playing){
 		this.playing = false;
 		this.video1.pause();
 		this.video2.pause();

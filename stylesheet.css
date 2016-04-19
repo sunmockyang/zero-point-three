@@ -14,8 +14,8 @@ html, body {
 
 .no-size {
   position: absolute;
-  width: 0;
-  height: 0; }
+  width: 0 !important;
+  height: 0 !important; }
 
 .fadeOut {
   opacity: 0; }
@@ -28,7 +28,7 @@ html, body {
   width: 100%;
   height: 100%;
   overflow: visible;
-  background: #333 url("content/images/preloader_bg.jpg") no-repeat left center fixed;
+  background: #333 url("content/images/preloader_bg.jpg") no-repeat left center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -64,7 +64,8 @@ html, body {
       color: #666; }
   #preloader #preloaderButton.button {
     transition: opacity 0.2s ease-in-out;
-    cursor: pointer; }
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.1); }
   #preloader #preloaderButton.button:hover {
     color: #FFF;
     background-color: rgba(255, 255, 255, 0.1); }
@@ -83,7 +84,9 @@ html, body {
     width: 100%;
     margin-top: 50vh; }
   #preloader .title {
-    font-size: 5rem; } }
+    font-size: 5rem; }
+  #preloader #preloaderButton {
+    font-weight: 300 !important; } }
 .index-wrapper {
   text-align: center; }
 
@@ -153,7 +156,7 @@ hr.index-hr {
   width: 100vw;
   height: 100vh;
   position: absolute;
-  background: #333 no-repeat center center fixed;
+  background: #333 no-repeat center center;
   background-size: cover;
   transition: opacity 0.75s linear;
   opacity: 0; }
@@ -200,6 +203,19 @@ hr.index-hr {
   .background-media-container video {
     position: absolute;
     opacity: 1; }
+  .background-media-container #video1.image {
+    background: url("content/intro_videos/F_Intro_Muslim_fallback.jpg") no-repeat center center; }
+  .background-media-container #video2.image {
+    background: url("content/intro_videos/F_Intro_Christian_fallback.jpg") no-repeat left center; }
+  .background-media-container .image {
+    position: absolute;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important; }
 
 #video1 {
   z-index: 2;
@@ -479,10 +495,15 @@ hr.index-hr {
     visibility: hidden;
     position: absolute;
     z-index: -999; }
+    .tableauBig .tableauPlaceholder {
+      width: 0 !important;
+      height: 0 !important; }
 
   .tableauSmall {
     visibility: visible;
     position: static;
+    width: 100%;
+    height: 100%;
     z-index: 1; } }
 @media only screen and (max-width: 775px), only screen and (max-device-width: 775px) {
   .section-title-name .english {
@@ -555,11 +576,13 @@ hr.index-hr {
 
 .navbar-second-level {
   display: flex;
-  flex-direction: row-reverse;
   background-color: #DDD;
   margin-top: -2.5rem;
   z-index: 1;
   transition: margin-top 0.2s ease-out; }
+  .navbar-second-level .navbar-item-container {
+    width: 100%;
+    flex-direction: row-reverse; }
   .navbar-second-level .navbar-item {
     color: #333; }
   .navbar-second-level .navbar-item:hover {
@@ -571,17 +594,25 @@ hr.index-hr {
   margin-top: 0; }
 
 #stories_container, #analysis_container {
-  display: flex;
-  margin-left: auto; }
+  display: flex; }
 
 @media only screen and (max-width: 750px), only screen and (max-device-width: 750px) {
   .navbar-first-level, .navbar-second-level {
-    justify-content: space-around; }
+    justify-content: space-around;
+    width: 100%; }
+
+  #stories_container, #analysis_container {
+    flex-grow: 1;
+    justify-content: center; }
 
   .navbar-first-level {
     flex-direction: column; }
     .navbar-first-level .navbar-title {
-      color: #FFF; } }
+      color: #FFF;
+      margin-bottom: 0.5rem; }
+
+  .navbar-second-level .navbar-item-container {
+    justify-content: space-around; } }
 footer {
   background-color: #333;
   color: #FFF;

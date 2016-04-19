@@ -9,6 +9,7 @@
 	<link href="libs/videojs/videojs_stylesheet.css" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,300,100|PT+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 	<link rel="prefetch" href="content/images/preloader_bg.jpg" />
+	<link rel="prefetch" href="img/loading.svg" />
 
 	<script type="text/javascript">
 
@@ -74,12 +75,13 @@
 <div class="background-media-container">
 	<div class="intro-video-container hidden">
 		<video class="fullscreen video" id="video1" data-aspect-ratio="1.7778" poster="content/intro_videos/F_Intro_Muslim_fallback.jpg" loop="">
-			<source src="content/intro_videos/F_Intro_Muslim2.webm" type="video/webm">
 			<source src="content/intro_videos/F_Intro_Muslim2.mp4" type="video/mp4">
+			<source src="content/intro_videos/F_Intro_Muslim2.webm" type="video/webm">
 		</video>
-		<video class="fullscreen video" id="video2" data-aspect-ratio="1.7778" data-scale="1.1" volume="0" poster="content/intro_videos/F_Intro_Christian_fallback.jpg" loop>
-			<source src="content/intro_videos/F_Intro_Christian1.webm" type="video/webm">
+		<video class="fullscreen video" id="video2" data-aspect-ratio="1.7778" volume="0" poster="content/intro_videos/F_Intro_Christian_fallback.jpg" loop>
 			<source src="content/intro_videos/F_Intro_Christian1.mp4" type="video/mp4">
+			<source src="content/intro_videos/F_Intro_Christian1.webm" type="video/webm">
+			<img src="content/intro_videos/F_Intro_Christian_fallback.jpg" />
 		</video>
 		<div class="video-overlay">
 			<img id="introDownCaret"class="down-caret" src="img/down_caret_white.svg" />
@@ -112,14 +114,14 @@
 	</div>
 	<div class="navbar-second-level">
 		<div class="navbar-item-container">
-			<div id="stories_container" class="item-box hidden no-size">
+			<div id="stories_container" class="hidden no-size">
 				<div class="navbar-item" data-link-id="dali">Dali</div>
 				<div class="navbar-item" data-link-id="mohammed_ali">Mohamed Ali</div>
 				<div class="navbar-item" data-link-id="manel">Manel</div>
 				<div class="navbar-item" data-link-id="safa">Safa</div>
 				<div class="navbar-item" data-link-id="lilli">Lili</div>
 			</div>
-			<div id="analysis_container" class="item-box hidden no-size">
+			<div id="analysis_container" class="hidden no-size">
 				<div class="navbar-item" data-link-id="underground_church">Underground Church</div>
 				<div class="navbar-item" data-link-id="islams_response">Islam's Response</div>
 				<div class="navbar-item" data-link-id="tunisian_society">Tunisian Society</div>
@@ -131,7 +133,7 @@
 <!-- Title -->
 <div class="intro-title-container">
 	<div id="title1" class="intro-title">
-		<span id="title1_text">Underground.</span>
+		<span id="title1_text">Underground</span>
 	</div>
 	<div id="title2" class="intro-title">
 		<div id="title2_text">
@@ -160,7 +162,7 @@
 	<div class="index-wrapper">
 		<div id="index-box" class="index-box">
 
-			<div class="index-title">Table of Contents</div>
+			<div class="index-title">Index</div>
 			<hr class="index-hr" />
 
 			<div class="index-header">Part 1: Stories</div>
@@ -207,7 +209,7 @@
 		<div class="priscilla">
 			<div class="headshot"></div>
 			<div class="name">Priscilla Hwang</div>
-			<div class="title">Professional Journalismer</div>
+			<div class="title">Carleton Journalism Student</div>
 			<div class="article">This article was published in April of 2016.</div>
 		</div>
 		<div class="notes">
@@ -225,7 +227,7 @@
 					<br/>
 					Dali Khlifi
 					<br/>
-					<b><a href="img/kekeke.jpg">Kristen Joo</a></b>
+					Kristen Joo
 					<br/>
 					Sunmock Yang
 					<br/>

@@ -6,7 +6,7 @@
 	width: 100%;
 	height: 100%;
 	overflow: visible;
-	background: #333 url('content/images/preloader_bg.jpg') no-repeat left center fixed;
+	background: #333 url('content/images/preloader_bg.jpg') no-repeat left center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -52,6 +52,7 @@
 	#preloaderButton.button {
 		transition: opacity 0.2s ease-in-out;
 		cursor: pointer;
+		background-color: rgba(0, 0, 0, 0.1);
 	}
 
 	#preloaderButton.button:hover {
@@ -84,6 +85,10 @@
 
 		.title {
 			font-size: 5rem;
+		}
+
+		#preloaderButton {
+			font-weight: 300 !important;
 		}
 	}
 }
