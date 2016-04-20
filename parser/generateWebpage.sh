@@ -2,7 +2,7 @@
 
 OUTPUT_DIR="upload"
 COPY_RAW=(zeropointthree.html stylesheet.css img js libs)
-COPY_CONTENT_RAW=(content/images content/intro_videos)
+COPY_CONTENT_RAW=(content/images)
 IMAGE_MAXSIZE=1280
 THUMBNAIL_MAXSIZE=720
 POSTER_MAXSIZE=1280
@@ -11,7 +11,7 @@ VIDEO_ASPECT_RATIO=$(echo "16/9" |bc -l)
 
 echo "GENERATING UNDERGROUND WEBPAGE"
 
-rm -rf $OUTPUT_DIR
+# rm -rf $OUTPUT_DIR
 mkdir -p $OUTPUT_DIR/content/sections
 
 # SASS PARSING
@@ -45,13 +45,18 @@ for image in "${IMAGES[@]}"; do
 	fi
 
 	echo "Copying and resizing: $FILE_NAME"
-	mkdir -p $IMAGE_OUTPUT_DIR
-	convert $image $IMAGE_COMPRESS_FLAGS -resize $IMAGE_MAXSIZE\> $OUTPUT_DIR/$image
 
-	# Create thumbnails at 3/2 aspect ratio
-	mkdir -p $IMAGE_OUTPUT_DIR/thumbs
-	convert $image -strip -interlace Plane $IMAGE_COMPRESS_FLAGS -quality 85% -resize $THUMBNAIL_MAXSIZE\> $IMAGE_OUTPUT_DIR/thumbs/$FILE_NAME
-	./parser/cropAspectRatio.sh $IMAGE_OUTPUT_DIR/thumbs/$FILE_NAME $THUMBNAIL_ASPECT_RATIO
+	if [ ! -f $OUTPUT_DIR/$image ]; then
+		mkdir -p $IMAGE_OUTPUT_DIR
+		convert $image $IMAGE_COMPRESS_FLAGS -resize $IMAGE_MAXSIZE\> $OUTPUT_DIR/$image
+	fi
+
+	if [ ! -f $IMAGE_OUTPUT_DIR/thumbs/$FILE_NAME ]; then
+		# Create thumbnails at 3/2 aspect ratio
+		mkdir -p $IMAGE_OUTPUT_DIR/thumbs
+		convert $image -strip -interlace Plane $IMAGE_COMPRESS_FLAGS -quality 85% -resize $THUMBNAIL_MAXSIZE\> $IMAGE_OUTPUT_DIR/thumbs/$FILE_NAME
+		./parser/cropAspectRatio.sh $IMAGE_OUTPUT_DIR/thumbs/$FILE_NAME $THUMBNAIL_ASPECT_RATIO
+	fi
 done
 
 
@@ -72,11 +77,17 @@ for video in "${VIDEOS[@]}"; do
 	mkdir -p $VIDEO_OUTPUT_DIR
 
 	# Convert video posters
-	convert $VIDEO_INPUT_DIR/$VIDEO_POSTER_NAME -strip -interlace Plane -gaussian-blur 0.05 -quality 85% -resize $POSTER_MAXSIZE\> $VIDEO_OUTPUT_DIR/$VIDEO_POSTER_NAME
-	./parser/cropAspectRatio.sh $VIDEO_OUTPUT_DIR/$VIDEO_POSTER_NAME $VIDEO_ASPECT_RATIO
+	if [ ! -f $VIDEO_OUTPUT_DIR/$VIDEO_POSTER_NAME ]; then
+		convert $VIDEO_INPUT_DIR/$VIDEO_POSTER_NAME -strip -interlace Plane -gaussian-blur 0.05 -quality 85% -resize $POSTER_MAXSIZE\> $VIDEO_OUTPUT_DIR/$VIDEO_POSTER_NAME
+		./parser/cropAspectRatio.sh $VIDEO_OUTPUT_DIR/$VIDEO_POSTER_NAME $VIDEO_ASPECT_RATIO
+	fi
 
-	# Convert videos to webm
-	ffmpeg -i $video -threads 0 -nostdin -movflags faststart -vcodec h264 -y -acodec aac -strict -2 "$VIDEO_OUTPUT_DIR/$FILE_NAME"
-	ffmpeg -i $video -threads 0 -nostdin -c:v libvpx -crf 4 -b:v 1500K -y -strict -2 "$VIDEO_OUTPUT_DIR/$WEBM_FILE_NAME"
+	# Convert videos to h.264 and webm
+	if [ ! -f $VIDEO_OUTPUT_DIR/$FILE_NAME ]; then
+		ffmpeg -i $video -threads 0 -nostdin -movflags faststart -vcodec h264 -y -acodec aac -strict -2 "$VIDEO_OUTPUT_DIR/$FILE_NAME"
+	fi
+	if [ ! -f $VIDEO_OUTPUT_DIR/$WEBM_FILE_NAME ]; then
+		ffmpeg -i $video -threads 0 -nostdin -c:v libvpx -crf 4 -b:v 1500K -y -strict -2 "$VIDEO_OUTPUT_DIR/$WEBM_FILE_NAME"
+	fi
 done
 
