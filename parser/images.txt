@@ -22,6 +22,7 @@ content/07_IslamsResponse/Carthagechurch1.jpg
 content/07_IslamsResponse/Carthagechurch2.jpg
 content/07_IslamsResponse/Carthagechurch3.jpg
 content/07_IslamsResponse/Carthagechurch4.jpg
+content/07_IslamsResponse/ImamBilelHeaderPhoto.jpg
 content/07_IslamsResponse/publiclibrarytebourba1.jpg
 content/07_IslamsResponse/Zitouna_School.jpg
 content/09_Conclusion/Marwan_Apt1.jpg

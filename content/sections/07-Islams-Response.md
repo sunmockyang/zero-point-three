@@ -61,7 +61,7 @@ With two decades of practice ahead of the younger Christian generation, his chur
 
 But it is recently in the past five years when the Tunisian church is seeing patterns of conversions of young, Tunisian Muslims leaving Islam for Christianity. 
 
-## An imam’s response: Imam Bilel Arfaoui [video](content/07_IslamsResponse/video/ImamBilelHeader.mp4)
+## An imam’s response: Imam Bilel Arfaoui [image](content/07_IslamsResponse/ImamBilelHeaderPhoto.jpg)
 
 Imam Bilel Arfaoui, 30, is the religious leader of Mosque Hay Raja in Tebourba, a small-town couched in olive groves on the outskirts of the capital. 
 

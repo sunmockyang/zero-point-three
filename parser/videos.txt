@@ -11,7 +11,6 @@ content/06_UndergroundChurch/video/UndergroundChurchTourCaptioned.mp4
 content/06_UndergroundChurch/video/Maya_VideoCaptioned.mp4
 content/07_IslamsResponse/video/ImamBilelHeader.mp4
 content/07_IslamsResponse/video/Ibrahim_VideoCaptioned.mp4
-content/07_IslamsResponse/video/ImamBilelHeader.mp4
 content/07_IslamsResponse/video/ImamBilel_Video1.mp4
 content/07_IslamsResponse/video/ImamSbabtiHeader.mp4
 content/08_TunisianSociety/video/TunisiaSociety_HeaderMenPray.mp4
