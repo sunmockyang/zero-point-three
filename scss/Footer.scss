@@ -5,6 +5,7 @@ footer {
 	padding: 2rem;
 
 	box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+	line-height: 1.25;
 
 	.footer-container {
 		width: 84%;
@@ -12,33 +13,9 @@ footer {
 		font-family: $article-font;
 	}
 
-	.notes {
-		font-size: 1.2rem;
-		line-height: 1.25;
-		text-align: center;
-		margin-bottom: 3rem;
-
-		.special-thanks {
-			.title {
-				font-size: 1.5rem;
-			}
-
-			.names {
-				font-style: italic;
-				margin-bottom: 0.25rem;
-
-				a {
-					color: #FFF;
-					text-decoration: none;
-				}
-			}
-		}
-	}
-	line-height: 1.25;
-
 	.priscilla {
 		text-align: center;
-		margin-bottom: 3rem;
+		margin-bottom: 1rem;
 
 		.headshot {
 			$headshot-size: 10rem;
@@ -49,6 +26,27 @@ footer {
 			background: url("content/images/priscilla_headshot.jpg") no-repeat center center;
 			background-size: cover;
 		}
+
+		.name a {
+			color: #FFF;
+			text-decoration: none;
+		}
+	}
+
+	.notes {
+		line-height: 1.25;
+		text-align: center;
+		margin-bottom: 3rem;
+
+		// .special-thanks {
+		// 	.title {
+		// 		margin-bottom: 0.25rem;
+		// 	}
+
+		// 	.names {
+		// 		margin-bottom: 0.25rem;
+		// 	}
+		// }
 	}
 
 	hr {

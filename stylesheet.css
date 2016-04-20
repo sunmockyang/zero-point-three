@@ -1,5 +1,5 @@
 html {
-  background-color: #EEE; }
+  background-color: #E5E5E5; }
 
 html.disable-scroll {
   height: 0;
@@ -32,7 +32,7 @@ html, body {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover; }
+  background-size: cover;
   transition: opacity 8s ease-in-out, visibility 1s linear 8s; }
   #preloader .content {
     display: inline-block;
@@ -734,22 +734,9 @@ footer {
     width: 84%;
     margin: 0 auto;
     font-family: "PT Serif", Georgia, Times, "Times New Roman", serif; }
-  footer .notes {
-    font-size: 1.2rem;
-    line-height: 1.25;
-    text-align: center;
-    margin-bottom: 3rem; }
-    footer .notes .special-thanks .title {
-      font-size: 1.5rem; }
-    footer .notes .special-thanks .names {
-      font-style: italic;
-      margin-bottom: 0.25rem; }
-      footer .notes .special-thanks .names a {
-        color: #FFF;
-        text-decoration: none; }
   footer .priscilla {
     text-align: center;
-    margin-bottom: 3rem; }
+    margin-bottom: 1rem; }
     footer .priscilla .headshot {
       width: 10rem;
       height: 10rem;
@@ -757,6 +744,13 @@ footer {
       margin: 1rem auto;
       background: url("content/images/priscilla_headshot.jpg") no-repeat center center;
       background-size: cover; }
+    footer .priscilla .name a {
+      color: #FFF;
+      text-decoration: none; }
+  footer .notes {
+    line-height: 1.25;
+    text-align: center;
+    margin-bottom: 3rem; }
   footer hr {
     border: solid white 1px;
     max-width: 13rem; }
