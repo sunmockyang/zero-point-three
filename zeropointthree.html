@@ -2,7 +2,7 @@
 <meta charset="utf-8" />
 <html>
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=0.65, maximum-scale=1.0, user-scalable=no">
+	<meta name="viewport" content="width=device-width, initial-scale=0.65, maximum-scale=1">
 	<title>Underground | Priscilla Hwang</title>
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
 	<link href="http://vjs.zencdn.net/5.8.7/video-js.css" rel="stylesheet">
@@ -142,8 +142,6 @@
 	</div>
 </div>
 
-<div id="intro-buffer">
-</div>
 <!-- Article -->
 
 <div id="articleContainer" class="article-container">
@@ -283,7 +281,6 @@ function main() {
 
 	elements = {
 		background: {
-			scrollBuffer: document.getElementById('intro-buffer'),
 			videoContainer: document.getElementsByClassName('intro-video-container')[0],
 			video1: document.getElementById('video1'),
 			video2: document.getElementById('video2'),
@@ -293,7 +290,8 @@ function main() {
 			indexBackground: document.getElementById('index-background'),
 			videoOverlay: document.getElementsByClassName('video-overlay')[0],
 			introDownCaret: document.getElementById('introDownCaret'),
-			introParagraph: document.getElementById("intro-paragraph")
+			introParagraph: document.getElementById("intro-paragraph"),
+			articleContainer: document.getElementById('articleContainer')
 		},
 
 		index: {
@@ -318,7 +316,7 @@ function main() {
 
 		article: {
 			introParagraph: document.getElementById("intro-paragraph"),
-			container: document.getElementsByClassName("article-container")[0]
+			container: document.getElementById('articleContainer')
 		},
 
 		fullscreenElements: document.getElementsByClassName('fullscreen')
@@ -375,6 +373,7 @@ window.onload = onLoad;
 <script type="text/javascript" src="js/libs/magnific.min.js"></script>
 <script type="text/javascript" src="js/ZeroPointThree.js"></script>
 <script type="text/javascript" src="js/BackgroundMedia.js"></script>
+<script type="text/javascript" src="js/IntroBuffer.js"></script>
 <script type="text/javascript" src="js/IndexController.js"></script>
 <script type="text/javascript" src="js/NavigationBar.js"></script>
 <script type="text/javascript" src="js/ScrollRange.js"></script>

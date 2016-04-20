@@ -1,7 +1,7 @@
 // BackgroundMedia.js
 
-function BackgroundMedia(elements) {
-	this.scrollBuffer = elements.scrollBuffer;
+function BackgroundMedia(elements, introBuffer) {
+	this.articleContainer = elements.articleContainer;
 
 	this.title1 = elements.title1;
 	this.title2 = elements.title2;
@@ -45,7 +45,7 @@ function BackgroundMedia(elements) {
 	this.lastY = 0;
 	this.lastYPercentage = 0;
 
-	this.onResize();
+	this.onResize(introBuffer);
 }
 
 BackgroundMedia.scrollRange = 999; // Gets adjusted to screen height
@@ -58,9 +58,9 @@ BackgroundMedia.prototype.volumeLerp = 0.02;
 BackgroundMedia.prototype.maxVolume = 0.2;
 BackgroundMedia.prototype.volumeRequestID = 0;
 
-BackgroundMedia.prototype.onResize = function() {
-	BackgroundMedia.scrollRange = this.scrollBuffer.getBoundingClientRect().height;
-
+BackgroundMedia.prototype.onResize = function(introBuffer) {
+	BackgroundMedia.scrollRange = introBuffer.getHeight();
+	this.articleContainer.style.marginTop = BackgroundMedia.scrollRange + "px";
 	this.onScroll();
 };
 

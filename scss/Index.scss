@@ -7,7 +7,7 @@
 .index-box {
 	border-radius: 0.3rem;
 	border: 2px solid gray;
-	margin: 30vh auto;
+	margin: 20rem auto;
 	@include transform(translate3d(0, 100px, 0));
 	// text-align: center;
 	display: inline-block;
@@ -83,13 +83,13 @@ hr.index-hr{
 
 .index-background-container {
 	background-color: #333;
-	width: 100vw;
-	height: 100vh;
+	width: 100%;
+	height: 100%;
 }
 
 .index-background-image {
-	width: 100vw;
-	height: 100vh;
+	width: 100%;
+	height: 100%;
 
 	position: absolute;
 

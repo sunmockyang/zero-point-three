@@ -33,6 +33,7 @@ html, body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
+  transition: opacity 8s ease-in-out, visibility 1s linear 8s; }
   #preloader .content {
     display: inline-block;
     position: absolute;
@@ -92,7 +93,7 @@ html, body {
 .index-box {
   border-radius: 0.3rem;
   border: 2px solid gray;
-  margin: 30vh auto;
+  margin: 20rem auto;
   -moz-transform: translate3d(0, 100px, 0);
   -o-transform: translate3d(0, 100px, 0);
   -ms-transform: translate3d(0, 100px, 0);
@@ -170,12 +171,12 @@ hr.index-hr {
 
 .index-background-container {
   background-color: #333;
-  width: 100vw;
-  height: 100vh; }
+  width: 100%;
+  height: 100%; }
 
 .index-background-image {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   position: absolute;
   background: #333 no-repeat center center;
   background-size: cover;
@@ -344,7 +345,7 @@ hr.index-hr {
   z-index: 1; }
 
 #intro-paragraph {
-  padding: 20vh 0 30vh 0;
+  padding: 10rem 0 15rem 0;
   background-color: #FFF;
   font-size: 1.5rem;
   line-height: 1.3;
@@ -540,8 +541,7 @@ hr.index-hr {
 .section-video {
   width: 95%;
   margin-left: 2.5%;
-  margin-bottom: 5rem;
-  max-height: 92vh; }
+  margin-bottom: 5rem; }
 
 .tableauBig {
   visibility: visible;
@@ -569,6 +569,10 @@ hr.index-hr {
     height: 100%;
     z-index: 1; } }
 @media only screen and (max-width: 775px), only screen and (max-device-width: 775px) {
+  .section {
+    width: 100%;
+    padding: 3rem 0 5vw 0; }
+
   .section-title-name .english {
     font-size: 2.5rem; }
   .section-title-name .arabic {
@@ -688,7 +692,7 @@ hr.index-hr {
   display: -webkit-flex;
   display: flex; }
 
-@media only screen and (max-width: 750px), only screen and (max-device-width: 750px) {
+@media only screen and (max-width: 47em), only screen and (max-device-width: 47em) {
   .navbar-first-level, .navbar-second-level {
     -webkit-justify-content: space-around;
     -moz-justify-content: space-around;

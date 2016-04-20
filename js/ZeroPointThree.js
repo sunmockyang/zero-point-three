@@ -5,10 +5,12 @@
 function ZeroPointThree(elements) {
 	this.elements = elements;
 
+	this.introBuffer = new IntroBuffer();
+
 	this.scrollRange = {start: 0, end: 0};
 	AddScrollHandler(this.scrollRange, this.onScroll.bind(this));
 
-	this.backgroundMediaController = new BackgroundMedia(this.elements.background);
+	this.backgroundMediaController = new BackgroundMedia(this.elements.background, this.introBuffer);
 	this.indexController = new IndexController(this.elements.index, this.onArticleStart.bind(this), this.onArticleUnstart.bind(this));
 	this.navBarController = new NavigationBar(this.elements.navbar);
 
@@ -16,9 +18,13 @@ function ZeroPointThree(elements) {
 }
 
 ZeroPointThree.prototype.onResize = function() {
+	this.introBuffer.onResize();
+
 	for (var i = 0; i < this.elements.fullscreenElements.length; i++) {
 		window.requestAnimationFrame(resizeFullscreen.bind(this, this.elements.fullscreenElements[i]));
 	};
+
+	this.backgroundMediaController.onResize(this.introBuffer);
 
 	// Overall scroll range
 	var docElem = document.documentElement;
@@ -28,8 +34,6 @@ ZeroPointThree.prototype.onResize = function() {
 	this.indexController.scrollRange.start = this.elements.article.introParagraph.getBoundingClientRect().bottom + window.pageYOffset;
 	this.indexController.scrollRange.end = this.elements.index.indexWrapper.getBoundingClientRect().height + this.indexController.scrollRange.start;
 	this.indexController.onScroll();
-
-	this.backgroundMediaController.onResize();
 };
 
 ZeroPointThree.prototype.onScroll = function(y) {
