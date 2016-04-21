@@ -138,7 +138,7 @@
 		<div id="title2_text">
 			The Plight of a religious minority living in a Muslim world | Priscilla Hwang
 			<br/>
-			Published in April of 2016.
+			April 2016.
 		</div>
 	</div>
 </div>
@@ -206,8 +206,10 @@
 <footer>
 	<div class="footer-container">
 		<div class="priscilla">
-			<div class="headshot"></div>
-			<div class="name"><a href="http://priscillahwang.com">Written by: Priscilla Hwang</a></div>
+			<a href="http://priscillahwang.com">
+				<div class="headshot" onmouseover=""></div>
+				<div class="name">Priscilla Hwang</div>
+			</a>
 		</div>
 		<div class="notes">
 			<div class="names-changed">* Some names of the Tunisian Christians in this report have been changed for their security.</div>
@@ -224,6 +226,7 @@
 				Special thanks to my supervisor and editor, Paul Adams, who supported me from the very beginning.
 			</div>
 		</div>
+		<div class="sunmock">Design by <a href="http://sunmock.com">Sunmock</a> <a href="http://github.com/sunmockyang">Yang</a></div>
 	</div>
 </footer>
 
@@ -330,7 +333,7 @@ function injectSections() {
 	var videos = document.getElementsByClassName('video-js');
 
 	for (var i = 0; i < videos.length; i++) {
-		videojs(videos[i])
+		videojs(videos[i]);
 	}
 
 	// Build lightboxes

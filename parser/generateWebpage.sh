@@ -1,7 +1,7 @@
 #!/bin/bash
 
 OUTPUT_DIR="upload"
-COPY_RAW=(zeropointthree.html stylesheet.css img js libs)
+COPY_RAW=(zeropointthree.html stylesheet.css favicon.ico img js libs)
 COPY_CONTENT_RAW=(content/images)
 IMAGE_MAXSIZE=1280
 THUMBNAIL_MAXSIZE=720

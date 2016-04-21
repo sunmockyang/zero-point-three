@@ -193,24 +193,26 @@ $delay-amounts: 1s;
 
 .section-image {
 	@include flexbox();
-	@include flex-flow(row nowrap);
+	@include flex-flow(row wrap);
 	@include justify-content(center);
+	margin: 0 auto;
+	width: 85%;
 }
 
-.section-image-wrapper:first-child {
-	margin-left: 0;
-}
+// .section-image-wrapper:first-child {
+// 	margin-left: 0;
+// }
 
-.section-image-wrapper:last-child {
-	margin-right: 0;
-}
+// .section-image-wrapper:last-child {
+// 	margin-right: 0;
+// }
 
 .section-image-wrapper {
 	@include flex-grow(1);
-	margin: 0 0.5%;
+	margin: 0.3rem;
 	background: #FFF no-repeat center center;
 	background-size: cover;
-	max-width: 50vw;
+	min-width: 17vh;
 }
 
 // Keep aspect ratio to 4:3
@@ -298,6 +300,10 @@ $section_video_width: 95%;
 	.section {
 		width: 100%;
 		padding: 3rem 0 5vw 0;
+	}	
+
+	.section-image-wrapper {
+		min-width: 7rem;
 	}
 
 	.section-title-name {

@@ -480,30 +480,26 @@ hr.index-hr {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  -webkit-flex-flow: row nowrap;
-  -moz-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
+  -webkit-flex-flow: row wrap;
+  -moz-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
   -webkit-justify-content: center;
   -moz-justify-content: center;
   -ms-justify-content: center;
-  justify-content: center; }
-
-.section-image-wrapper:first-child {
-  margin-left: 0; }
-
-.section-image-wrapper:last-child {
-  margin-right: 0; }
+  justify-content: center;
+  margin: 0 auto;
+  width: 85%; }
 
 .section-image-wrapper {
   -webkit-flex-grow: 1;
   -moz-flex-grow: 1;
   -ms-flex-grow: 1;
   flex-grow: 1;
-  margin: 0 0.5%;
+  margin: 0.3rem;
   background: #FFF no-repeat center center;
   background-size: cover;
-  max-width: 50vw; }
+  min-width: 17vh; }
 
 .section-image-wrapper:before {
   content: "";
@@ -572,6 +568,9 @@ hr.index-hr {
   .section {
     width: 100%;
     padding: 3rem 0 5vw 0; }
+
+  .section-image-wrapper {
+    min-width: 7rem; }
 
   .section-title-name .english {
     font-size: 2.5rem; }
@@ -733,24 +732,52 @@ footer {
   footer .footer-container {
     width: 84%;
     margin: 0 auto;
-    font-family: "PT Serif", Georgia, Times, "Times New Roman", serif; }
+    font-family: "PT Serif", Georgia, Times, "Times New Roman", serif;
+    text-align: center; }
   footer .priscilla {
     text-align: center;
-    margin-bottom: 1rem; }
+    margin-bottom: 1rem;
+    display: inline-block; }
     footer .priscilla .headshot {
       width: 10rem;
       height: 10rem;
       border-radius: 5rem;
       margin: 1rem auto;
       background: url("content/images/priscilla_headshot.jpg") no-repeat center center;
-      background-size: cover; }
-    footer .priscilla .name a {
+      background-size: cover;
+      -webkit-transition: 0.3s cubic-bezier(0.26, 1.65, 0.18, 0.83);
+      -moz-transition: 0.3s cubic-bezier(0.26, 1.65, 0.18, 0.83);
+      -o-transition: 0.3s cubic-bezier(0.26, 1.65, 0.18, 0.83);
+      transition: 0.3s cubic-bezier(0.26, 1.65, 0.18, 0.83); }
+    footer .priscilla .headshot:hover {
+      width: 12rem;
+      height: 12rem;
+      border-radius: 6rem;
+      margin: 0rem auto; }
+    footer .priscilla a {
       color: #FFF;
-      text-decoration: none; }
+      text-decoration: none;
+      -webkit-transition: 0.3s ease-in-out;
+      -moz-transition: 0.3s ease-in-out;
+      -o-transition: 0.3s ease-in-out;
+      transition: 0.3s ease-in-out; }
+    footer .priscilla a:hover {
+      color: #E67A64; }
   footer .notes {
     line-height: 1.25;
     text-align: center;
     margin-bottom: 3rem; }
+  footer .sunmock {
+    color: #BBB;
+    font-style: italic; }
+    footer .sunmock a {
+      color: #EEE;
+      -webkit-transition: color 0.3s cubic-bezier(0.26, 1.65, 0.18, 0.83);
+      -moz-transition: color 0.3s cubic-bezier(0.26, 1.65, 0.18, 0.83);
+      -o-transition: color 0.3s cubic-bezier(0.26, 1.65, 0.18, 0.83);
+      transition: color 0.3s cubic-bezier(0.26, 1.65, 0.18, 0.83); }
+    footer .sunmock a:hover {
+      color: #E67A64; }
   footer hr {
     border: solid white 1px;
     max-width: 13rem; }
