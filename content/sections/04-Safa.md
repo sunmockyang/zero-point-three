@@ -48,7 +48,7 @@ She took out her cell phone and began flipping through photos.
 
 “This is my dinner yesterday, his dinner yesterday,” she said, swiping left. “This is my tea. This is his grandpa – he’s so funny.”
 
-Safa and her fiancé Kevin are in a long-distance relationship. She’s in Tunisia and he’s in Germany almost 2000 kilometres away. They capture every moment of their day and share it with one another. 
+Safa and her fiancé Kevin are in a long-distance relationship. She’s in Tunisia and he’s in Germany almost 2,000 kilometres away. They capture every moment of their day and share it with one another. 
 
 “This is his allergy test, and this is his father’s cat – Sam from Russia,” she chortled, holding up a portrait of a cat.
 
@@ -118,7 +118,7 @@ Safa and Kevin have tried every possible route in Tunisia to find a loophole. Th
 
 “I’d have to marry in another country,” she said. They are preparing papers with the German embassy to get married in Germany.
 
-But even this is a problem for Safa and Kevin who want to come back to Tunisia to live. Under the law, their marriage in Germany will not be considered legitimate. 
+But even this is a problem for Safa and Kevin who want to come back to Tunisia to live. Under the law, their marriage in Germany will not be considered legal. 
 
 “The embassy said we can marry in Germany but it’s not guaranteed,” said Safa. “Because if I marry in Germany, in Tunisia I will be single.” 
 
@@ -130,7 +130,7 @@ Safa said she feels like this is a form of persecution by the supposedly democra
 
 “It’s hard and terrible. I hate it so much,” said Safa about having to do a long-distance relationship. “We try to forget about the distance. We try to keep ourselves busy.” 
 
-She smiled sadly, and turned her attention for the nineteenth or twentieth time that hour to her phone.
+She smiled sadly, and turned her attention for the 19th or 20th time that hour to her phone.
 
 She tapped her thumbs on the screen, composing yet another message to the love of her life, still thousands of kilometres away. 
 

@@ -4,7 +4,7 @@
 [chapter_name_arabic](المجتمع التونسي)
 [banner_video](content/08_TunisianSociety/video/TunisiaSociety_HeaderMenPray.mp4)
 
-Many countries in this region of the world have a deep-rooted religious history where regimes and dictators used religion as a tool of legitimacy. People in many of these North African and Middle Eastern countries often "hire themselves to protect God and to judge other people whether they’re religious or not," said Samy Gerges, Senior Program Officer and a specialist in religious freedoms at Freedom House. This is why religious minorities in these societies find it difficult to come out of hiding, especially if the government doesn't guarantee the exercise of their rights.
+Many countries in this region of the world have a deep-rooted religious history where regimes and dictators used religion as a tool of legitimacy. People in many of these North African and Middle Eastern countries often "hire themselves to protect God and to judge other people whether they’re religious or not," said Samy Gerges, senior program officer and a specialist in religious freedoms at Freedom House, an organization that measures democratic freedoms around the world. This is why religious minorities in these societies find it difficult to come out of hiding, especially if the government doesn't guarantee the exercise of their rights.
 
 But Tunisia is an anomaly. Since its independence in 1956, it had two presidents that advocated a more tolerant, secular country. Despite this, many people in Tunisian society still judge others based on Islam and feel the need to protect and defend Islam as their primary religion. 
 
@@ -38,7 +38,7 @@ Along with these security concerns, Tunisia is still facing many challenges in i
 “Most political regimes will favour the majority against the minority, because support for the regime comes from the majority.” – Samy Gerges, Freedom House)
 
 The Tunisian government’s response
-“Under the law, the majority and minority – they’re the same,” said Zied Hmoudi, Spokesman for Tunisia’s Ministry of Religious Affairs who’s also responsible for the office of minorities. Hmoudi described Tunisia as a “nation with a positive mentality towards minorities” while talking about the small, established Jewish community in the island of Djerba in Tunisia. 
+“Under the law, the majority and minority – they’re the same,” said Zied Hmoudi, spokesman for Tunisia’s Ministry of Religious Affairs who’s also responsible for the office of minorities. Hmoudi described Tunisia as a “nation with a positive mentality towards minorities” while talking about the small, established Jewish community in the island of Djerba in Tunisia. 
 “Tunisians always accept minorities,” said Hmoudi.
 
 But today in 2016, many Tunisian Christians are still facing hardships linked to their religious identities. 

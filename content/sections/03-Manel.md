@@ -23,7 +23,7 @@ Through the earpiece, came sobbing, weeping, then yelling.
 
 “I never want to see you again,” cried her mother. 
 
-So the little girl was disowned. 
+So the girl was disowned. 
 
 ---
 

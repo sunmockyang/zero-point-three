@@ -96,7 +96,7 @@ This story remains a secret, locked up behind Lili’s dark-chocolate eyes and h
 
 “I never go up to someone and tell them I’m a Christian. I avoid talking about it,” she said. 
 
-But ten days prior to this interview, Lili’s father discovered her identity through an unfortunate event.  
+But 10 days prior to this interview, Lili’s father discovered her identity through an unfortunate event.  
  
 Thieves broke in to her family home and they threw everything out of the drawers and closets in search for valuables. As her father began putting her belongings away, he discovered a little cross, tucked away in a drawer of her dresser. He confronted Lili and she told him the truth. 
 
@@ -112,7 +112,7 @@ Lili lives a double life.
 
 In France where she studies, “I live fully Christian,” she said. “But here in Tunisia, I live hidden and almost in inexistence.” 
 
-Her apartment in Paris has Christian books lying around. Her Bible is open on her night table and her cross-necklace can freely drape around her neck. 
+Lili said her apartment in Paris has Christian books lying around. Her Bible is open on her night table and her cross-necklace can freely drape around her neck. 
 
 “I run, I sing, I go freely to church, I pray in the streets, I read the Bible in the park,” said Lili. “Everything related to my faith that I don’t do here, I do it there.” 
 

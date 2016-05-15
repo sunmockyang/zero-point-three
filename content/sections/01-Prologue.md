@@ -20,7 +20,7 @@ He carefully shifted his olive-green sneakers and turned the lens of his Canon d
 
 They were inside Cinéma le Mondial (Universal Movie Theatre)– a theatre tucked away in a side street at the heart of Tunis. It’s a hot spot for many up and coming dancers in Tunisia. This day, the photographer was shooting the national breakdancing champions of Morocco and Algeria – B-boy Wolf and B-boy Amarou were prepping for their next competition. It was a freelance gig he landed through his cousin.  
 
-It was tough landing freelance work these days. It always is, said the photographer. He often found himself scrambling to pay his rent living in the capital for the past seven years. When he ran out of money, he’d have to drag his feet back home to small-town Jendouba where his family lived. He would work in a call center or find other work until he made just enough to come back to the capital for what he loved: He breathed breakdancing. He lived photography. 
+It was tough landing freelance work these days. It always is, said the photographer. He often found himself scrambling to pay his rent living in the capital for the past seven years. When he ran out of money, he’d have to drag his feet back home to small-town Jendouba where his family lived. He would work in a call centre or find other work until he made just enough to come back to the capital for what he loved: He breathed breakdancing. He lived photography. 
 
 His eyes traced every spin and shuffle of the two dancers. They were just an arms reach away. _How can we be so close, yet so distant?_
 
@@ -56,7 +56,7 @@ He’s a stranger in his own land.
 
 [image](content/01_Dali/Dali_IMG1.jpg, content/01_Dali/Dali_IMG2.jpg, content/01_Dali/Dali_IMG3.jpg, content/01_Dali/Dali_IMG4.jpg  "\"I’m drunk in the photography. I’m drunk in the dancing.\"")
 
-Dali Khlifi, 27, sat at a café bobbing his head to the music. He took an occasional sip of _qahwah_, a viscous, bitter Arabic espresso with Turkish roots that requires an acquired taste. 
+Dali Khlifi, 27, sat at a café bobbing his head to the music. He took an occasional sip of _qahwah_, a viscous, bitter Arabic espresso with Turkish roots that is an acquired taste. 
 
 Besides being a photographer and a breakdancer, he’s also a Tunisian Christian. He is one of the estimated 22,000 Tunisian Christians living among Tunisia’s 11 million Muslims.  
 
@@ -85,13 +85,13 @@ Tunisia is rated as “free” under the 2015 Freedom House ratings. It ranks as
 <div class="tableauBig"><div class='tableauPlaceholder' style='width: 804px; height: 669px;'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fr&#47;FreedomHouse_2015_ME_NA&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='804' height='669' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='FreedomHouse_2015_ME_NA&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fr&#47;FreedomHouse_2015_ME_NA&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showTabs' value='y' /></object></div></div>
 <div class="tableauSmall"><div class='tableauPlaceholder' style='width: 424px; height: 599px;'><noscript><a href='#'><img alt='Dashboard 2 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;XB&#47;XBNKSX9ZF&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='424' height='599' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='path' value='shared&#47;XBNKSX9ZF' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;XB&#47;XBNKSX9ZF&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showTabs' value='y' /></object></div></div>
 
-Tunisia was the spark of the Arab Spring. The self-immolation of Mohamed Bouazizi, a fruit vendor protesting against government corruption, caused havoc across the country for a call to bring down the 23-year reign of its long-standing leader Zine El Abidine Ben Ali. Tunisia’s Jasmine Revolution spewed into mass protests across the country as Tunisians called for an end to poverty, corruption and political repression. From Tunisia, the Arab Spring revolutions spread across North Africa and the Middle East. 
+Tunisia was the spark of the Arab Spring. The self-immolation of Mohamed Bouazizi, a fruit vendor protesting against government corruption, caused havoc across the country as a call to bring down the 23-year reign of its long-standing leader Zine El Abidine Ben Ali. Tunisia’s own revolution called the 'Jasmine Revolution' spewed into mass protests across the country as Tunisians called for an end to poverty, corruption and political repression. From Tunisia, the Arab Spring revolutions spread across North Africa and the Middle East. 
 
 That’s why Tunisia was the west’s great hope for the emergence of liberal, democratic societies in the region. Tunisia was the darling of the Arab Spring; many governments and institutions around the world have called it the success story, a model nation.  
 
 Today in Tunisia, there is freedom of religion on paper. One is, by law, able to choose one’s own religion and practice it, just as long as it doesn’t disturb civil society. This provision is in the constitution as it was revised in the wake of the Arab Spring. It promises freedom of religion to those who, during the Ben Ali regime, were prevented from expressing religious identity in public. These included many Muslims: Islamic religious attire such as headscarves (_hijab_) and full-body coverings (_niqab_) were banned under Ben Ali who wanted a more visibly western society.
 
-This change may have seemed like it would benefit the Tunisian Christian minority.
+This change may have seemed as if it would benefit the Tunisian Christian minority.
 
 But looks were deceiving.
 
@@ -120,9 +120,9 @@ The question arises, who is accountable for the marginalization of minorities wh
 ## The question of democracy 
 
 Tunisia is considered a success case for democracy in the Arab World. 
-Many governments, media outlets, and institutions have applauded its post-revolution efforts that resulted in a short-lived disorder. Since the end of its revolution dubbed the Jasmine Revolution in 2011, it has had two relatively successful presidential elections, unlike the tumultuous course of its neighbours in the region. It has avoided civil war, and although civilian protests are still common throughout the country, Tunisia does not see the same amount of violent uprisings as its regional counterparts. 
+Many governments, media outlets, and institutions have applauded its post-revolution efforts that resulted in a short-lived disorder. Since the end of its revolution dubbed the Jasmine Revolution in 2011, it has had two relatively successful presidential elections, unlike the tumultuous course of its neighbours in the region. It has avoided civil war, and although civilian protests are still common throughout the country, Tunisia does not see the same amount of violence as its regional counterparts. 
 
-In December 2015, Tunisia’s National Dialogue Quartet, which consists of four civil-society organizations, received a Nobel Peace Prize for promoting political negotiations and democracy. The Nobel committee said the group had made a “decisive contribution to the building of a pluralistic democracy in Tunisia in the wake of the Jasmine Revolution.” The committee said that the Quartet enabled Tunisia to “establish a constitutional system of government guaranteeing fundamental rights for the entire population, irrespective of gender, political conviction or religious belief.” 
+In December 2015, Tunisia’s National Dialogue Quartet, which consists of four civil-society organizations, received a Nobel Peace Prize for promoting political negotiations and democracy. The Nobel committee said the group had made a “decisive contribution to the building of a pluralistic democracy in Tunisia in the wake of the Jasmine Revolution.” The committee said the Quartet enabled Tunisia to “establish a constitutional system of government guaranteeing fundamental rights for the entire population, irrespective of gender, political conviction or religious belief.” 
 
 These institutions and decades of secular policies implemented by its previous two dictators may have primed the country for a less violent revolution and an easier democratic transition than other Arab lands.
 
@@ -130,7 +130,7 @@ However, Tunisia’s democratic transition is influenced by the region’s deepl
 
 Five years after the revolution, there is a group of people within this “model democratic society” who are still living under great social pressure to hide their identities. They are a religious minority who are treated like second-class citizens if they reveal their religious beliefs. Their rights are not protected. 
 
-As this unique movement towards democracy progresses in the heart of the Arab Spring, it is questionable as to who really flourishes from it. 
+As this unique movement towards democracy progresses in the heart of the Arab Spring, it is questionable as to who really flourishes as a result. 
 
 Is a democracy that benefits a particular group of people while neglecting another acceptable for this region of the world? How important are religious rights and freedom in the movement towards a successful democracy? 
 
@@ -138,19 +138,19 @@ And being aware of the harsh consequences, what motivates certain people to will
 
 ## The Tunisian Christian population
 
-The Christian phenomenon in Tunisia is relatively new, seemingly emerging since the revolution according to Christian religious leaders working in Tunisia. Specifically, many Tunisian youth, in their teens to late twenties, are turning to Christianity since the revolution. 
+The Christian phenomenon in Tunisia is relatively new, seemingly emerging since the revolution, according to Christian religious leaders working in Tunisia. Specifically, many Tunisian youth, in their teens to late 20s, are turning to Christianity since the revolution. 
 
-But the Tunisian Christian community remains microscopic. 
+But the Tunisian Christian community still remains microscopic. 
 
 “We are a minority of minorities,” said Dali. 
 
-The American government’s International Religious Freedom Report for 2011 states that Tunisia is 99 per cent Sunni Muslim; the remaining 1 per cent of population includes Shia Muslims, Jews, Bahais, and Christians. The report claims that Christianity is the second largest religion in Tunisia. However, most of these Christians are expatriates working or living in Tunisia. They come from all over the world, from France to Lebanon. The size of the indigenous Arab-Tunisian Christian population is hard to pinpoint mainly because many remain underground. Evangelical Christian research organizations, such as [Joshua Project](http://google.com) which have the most access to the underground religious communities, estimate that just over 0.2 per cent of the Arab Tunisians are professing Christians.
+The American government’s International Religious Freedom Report for 2011 states that Tunisia is 99-per-cent Sunni Muslim; the remaining one per cent of population includes Shia Muslims, Jews, Bahais, and Christians. The report claims that Christianity is the second largest religion in Tunisia. However, most of these Christians are expatriates working or living in Tunisia. They come from all over the world, from France to Lebanon. The size of the indigenous Arab-Tunisian Christian population is hard to pinpoint mainly because many remain underground. Evangelical Christian research organizations, such as [Joshua Project](http://google.com) which have the most access to the underground religious communities, estimate that just over 0.2 per cent of the Arab Tunisians are professing Christians.
 
-Due to their small numbers, Tunisian Christians living in Tunisia go unnoticed, sometimes even to one another. That’s why their persecution seems almost nonexistent, according to Dali. 
+Due to their small numbers, Tunisian Christians living in Tunisia go largely unnoticed, sometimes even to one another. That’s why their persecution seems almost nonexistent, according to Dali. 
 
 “Persecution is quasi-absent. We’re almost invisible.” 
 
-Dali’s labeling of the Tunisian Christians’ ‘quasi-absent’ existence is rooted in numbers. There’s an estimated 22,000 Tunisian Christians living among the 11 million Muslims. Statistically speaking, there are more extremist Muslims being persecuted in Tunisia than Christians. “Women, older people, lower class people in society are more persecuted than us,” said Dali. 
+Dali’s labeling of the Tunisian Christians’ “quasi-absent” existence is rooted in numbers. There’s an estimated 22,000 Tunisian Christians living among the 11 million Muslims. Statistically speaking, there are more extremist Muslims being persecuted in Tunisia than Christians. “Women, older people, lower class people in society are more persecuted than us,” said Dali. 
 
 “So why should anyone care about us?” he asked, as if he hadn’t entertained this thought before. This majority-centric mentality is a dominant worldview engrained in the society he lives in today.     
 
@@ -173,7 +173,7 @@ Ever since his conversion, he said he is constantly worried about other people�
 
 “It hurts how people find one thing that is different about you and they show all the hate of the world to you,” he said. Many times, these hurtful words and comments stayed with him for the rest of the month, “and maybe for the rest of my life,” he said.  
 
-But to him, this is far from victimization. In fact, Dali, like many other Tunisian Christians, refused to call it persecution. 
+But to him, this is far from victimization. In fact, Dali, like many other Tunisian Christians, refused to call their hardships persecution. 
 
 Firstly, it’s because many of his Christian brothers and sisters face far more harsh conditions in places like Saudi Arabia and Iran, he said. Secondly, he said that allowing oneself to be victimized is burdening oneself. 
 
