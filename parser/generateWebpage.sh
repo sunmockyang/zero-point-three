@@ -39,7 +39,7 @@ for image in "${IMAGES[@]}"; do
 	IMAGE_OUTPUT_DIR=$(dirname $OUTPUT_DIR/$image)
 	IMAGE_COMPRESS_FLAGS="-strip -interlace Plane -quality 85%"
 
-	# Add a blur if the image is less than 100kB
+	# Add a blur if the image is greater than 100kB
 	if [ $(wc -c <"$image") -gt 100000 ]; then
 		IMAGE_COMPRESS_FLAGS="$IMAGE_COMPRESS_FLAGS -gaussian-blur 0.02"
 	fi
