@@ -38,7 +38,7 @@ _God is here._
 
 _But I’m being attacked by little boys._
 
-One boy picked up a large block, he watched from the corner of his eye. It was around 20 kg. 
+One boy picked up a large block, he watched from the corner of his eye. It was around 20 kilograms. 
 
 _The ground._
 

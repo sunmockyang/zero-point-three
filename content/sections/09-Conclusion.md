@@ -86,7 +86,7 @@ But like any society, when faced with new challenges, it reacts.
 
 That is the case for the 99 per cent Muslim in Tunisia today. 
 
-With such a handful of Tunisian Christians exposing their identities, the 99 per cent have yet to understand and hear their stories. 
+With only a handful of Tunisian Christians exposing their identities, the 99 per cent have yet to understand and hear their stories. 
 
 Although there is a responsibility for the Tunisian government and society to respond to this dent in their democracy, the onus is also on the estimated 0.2 per cent of Tunisian Christians. 
 
