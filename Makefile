@@ -1,5 +1,8 @@
 all: parse_content css
 
+generate:
+	./parser/generateWebpage.sh
+
 clean: clean-content clean-css
 
 parse_content:
@@ -7,6 +10,9 @@ parse_content:
 	
 parse-test:
 	@ruby parser/compile_data.rb parser/Test.md
+
+convert-videos:
+	./parser/convertVideos.sh
 
 clean-content:
 	rm content/sections/*.html

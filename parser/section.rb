@@ -7,7 +7,6 @@ HandlebarsContext = Handlebars::Context.new
 MarkdownRenderer = Redcarpet::Markdown.new(Redcarpet::Render::HTML, extensions = {})
 TemplatesDirectory = File.dirname(__FILE__) + "/templates/";
 
-
 class Inline
 	def initialize(template_src)
 		@data = {}
@@ -50,7 +49,11 @@ class InlineImage < Inline
 		src = [];
 
 		sources.split(",").each { |s| 
-			src.push(remove_outer_whitespace(s))
+			filepath = remove_outer_whitespace(s)
+			thumbpath = File.dirname(filepath) + "/thumbs/" + File.basename(filepath);
+			src.push({src: filepath, thumb: thumbpath})
+
+			Section.inlineImages.push(filepath)
 		}
 
 		@data[:caption] = caption
@@ -62,11 +65,13 @@ class InlineVideo < Inline
 	def initialize(content)
 		super("inline_video.html")
 		caption = extract_from_quotes(content)
-		src = content[0, content.index(" \"")]
+		mp4_src = remove_outer_whitespace(content[0, content.index(" \"")])
+		webm_src = parse_webm_from_video_path(mp4_src)
 
 		@data[:caption] = caption
-		@data[:src] = remove_outer_whitespace(src)
-		@data[:poster] = parse_poster_from_video_path(src)
+		@data[:src] = {mp4: mp4_src, webm: webm_src}
+		@data[:poster] = parse_poster_from_video_path(mp4_src)
+		Section.inlineVideos.push(mp4_src)
 	end
 end
 
@@ -98,18 +103,34 @@ class InlineHeader < Inline
 		title = line.split("[").first
 
 		@data[:title] = remove_outer_whitespace(title)
-		# @data[:media_type] = remove_outer_whitespace(media_type)
-		@data[media_type] = remove_outer_whitespace(src)
 
 		if media_type == "video"
+			mp4_src = remove_outer_whitespace(src)
+			webm_src = parse_webm_from_video_path(mp4_src)
+			@data[media_type] = {mp4: mp4_src, webm: webm_src}
 			@data[:poster] = parse_poster_from_video_path(src)
+			Section.inlineVideos.push(src)
+		elsif media_type == "image"
+			@data[media_type] = remove_outer_whitespace(src)
+			Section.inlineImages.push(src)
 		end
 	end
 end
 
 class Section
+	@@inlineImages = []
+	@@inlineVideos = []
+
+	def self.inlineImages
+		@@inlineImages
+	end
+
+	def self.inlineVideos
+		@@inlineVideos
+	end
+
 	def initialize(input_file_path)
-		@section_wide_keys = ["chapter_title", "chapter_name", "banner_video", "section_id"]
+		@section_wide_keys = ["chapter_title", "chapter_name", "chapter_name_arabic", "banner_video", "section_id"]
 
 		@data = {
 			content: []
@@ -143,10 +164,13 @@ class Section
 
 		# Get section-wide keys
 		if @section_wide_keys.include?(type)
-			@data[type] = content
 
 			if type == "banner_video"
+				Section.inlineVideos.push(content)
 				@data["banner_poster"] = parse_poster_from_video_path(content)
+				@data[type] = {mp4: content, webm: parse_webm_from_video_path(content)}
+			else
+				@data[type] = content
 			end
 		elsif type == "image"
 			@data[:content].push(InlineImage.new(content))

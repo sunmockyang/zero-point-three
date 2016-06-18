@@ -10,16 +10,22 @@ function NavigationBar(elements) {
 	this.timeoutID = 0;
 	this.lastShownSecondLevel = "";
 
-	this.container.onmouseover = this.onMouseOver.bind(this);
-	this.container.onmouseout = this.onMouseOut.bind(this);
+	this.container.onmousemove = this.onMouseMove.bind(this);
+	if (isIOS()){
+		this.hideTimeout = 10000;
+	}
 
 	this.activeButton = null;
 
 	this.setupFirstLevelButtons();
 	this.setupLinkButtons();
+
+	elements.title.onclick = function() {
+		animateScroll(document.documentElement, 3000, "easeInOutQuint", 0, "top");
+	}
 }
 
-NavigationBar.prototype.hideTimeout = 1000;
+NavigationBar.prototype.hideTimeout = 5000;
 
 NavigationBar.prototype.setupFirstLevelButtons = function() {
 	for (var i = 0; i < this.firstLevelItems.length; i++) {
@@ -92,6 +98,8 @@ NavigationBar.prototype.showSecondLevel = function(id, button) {
 
 	this.lastShownSecondLevel = id;
 
+	this.onMouseMove();
+
 	show(this.secondLevel);
 };
 
@@ -106,6 +114,11 @@ NavigationBar.prototype.hideSecondLevel = function() {
 	}
 	this.lastShownSecondLevel = "";
 	unshow(this.secondLevel);
+};
+
+NavigationBar.prototype.onMouseMove = function() {
+	this.onMouseOver();
+	this.onMouseOut();
 };
 
 NavigationBar.prototype.onMouseOver = function() {

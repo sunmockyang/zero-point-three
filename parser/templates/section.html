@@ -1,17 +1,26 @@
 <div id="{{section_id}}" class="section">
 	<div class="section-title">
-		<div class="section-title-name">{{chapter_name}}</div>
+		<div class="section-title-name">
+			{{#if chapter_name_arabic}}
+			<div class="arabic">{{chapter_name_arabic}}</div> 
+			{{/if}}
+			<div class="english">{{chapter_name}}</div>
+		</div>
+		<hr/>
 		<div class="section-title-heading">{{chapter_title}}</div>
 	</div>
+	{{#if banner_video}}
 	<div class="section-video">
-		<video class="video-js vjs-default-skin banner_video" data-src="{{banner_video}}"
+		<video class="video-js vjs-default-skin banner_video"
 				controls="true" 
 				preload="none"
 				poster='{{banner_poster}}'
 				data-setup='{ "aspectRatio":"16:9" }'>
-			<source src="{{banner_video}}" type="video/webm"></source>
+			<source src="{{banner_video.mp4}}" type="video/mp4"></source>
+			<source src="{{banner_video.webm}}" type="video/webm"></source>
 		</video>
 	</div>
+	{{/if}}	
 		<div class="section-content">
 {{section_content}}
 		</div>

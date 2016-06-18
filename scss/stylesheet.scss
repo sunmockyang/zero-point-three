@@ -1,7 +1,21 @@
 // zeropoint3.css
+@import "Mixins";
+
+$intro-buffer-height: 400vh;
+
+$article-width: 70%;
+$article-min-width: 30rem;
+$section-text-max-width: 38rem;
+$section-content-max-width: 58rem;
+
+$highlight-colour: #E67A64;
+
+$title-font: normal normal 100 1rem/normal "Alegreya Sans SC";
+$article-font: "PT Serif", Georgia,Times,"Times New Roman",serif;
+// $article-font: "Open Sans",Helvetica,Arial;
 
 html {
-	background-color: #EEE;
+	background-color: #E5E5E5;
 }
 
 html.disable-scroll {
@@ -20,32 +34,12 @@ html,body {
 
 .no-size {
 	position: absolute;
-	width: 0;
-	height: 0;
+	width: 0 !important;
+	height: 0 !important;
 }
 
 .fadeOut {
 	opacity: 0;
-}
-
-$article-width: 70%;
-$article-min-width: 30rem;
-$section-max-width: 58rem;
-
-$highlight-colour: #E67A64;
-
-$title-font: "Georgia";
-
-@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
-	@if $inset {
-		-webkit-box-shadow:inset $top $left $blur $color;
-		-moz-box-shadow:inset $top $left $blur $color;
-		box-shadow:inset $top $left $blur $color;
-	} @else {
-		-webkit-box-shadow: $top $left $blur $color;
-		-moz-box-shadow: $top $left $blur $color;
-		box-shadow: $top $left $blur $color;
-	}
 }
 
 @import "Preloader";

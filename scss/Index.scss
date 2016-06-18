@@ -7,42 +7,49 @@
 .index-box {
 	border-radius: 0.3rem;
 	border: 2px solid gray;
-	margin: 30vh 0;
-	transform: translate3d(0, 10vh, 0);
+	margin: 20rem auto;
+	@include transform(translate3d(0, 100px, 0));
 	// text-align: center;
 	display: inline-block;
-	padding: 1rem 3rem;
+	padding: 2%;
 	background-color: rgba(255, 255, 255, 0.1);
 	opacity: 0;
-	transition: opacity 0.3s ease-in-out, transform 0.5s ease-in-out;
+	@include transition(opacity 0.3s ease-in-out, transform 0.5s ease-in-out);
+	width: 50%;
+	min-width: 26rem;
+	max-width: 30rem;
 }
 
 .index-box.animate-in {
 	opacity: 1;
-	transform: translate3d(0, 0, 0);
+	@include transform(translate3d(0, 0, 0));
 }
 
 // Contents
 
 .index-box > div{
 	opacity: 0;
-	transform: translate3d(0, 1rem, 0);
-	transition: transform 0.3s ease-in-out 0.1s, opacity 0.3s ease-in-out 0.1s;
+	@include transform(translate3d(0, 1rem, 0));
+	@include transition(transform 0.3s ease-in-out 0.1s, opacity 0.3s ease-in-out 0.1s);
 }
 
 .index-box > div.animate-in {
 	opacity: 1;
-	transform: translate3d(0, 0, 0);
+	@include transform(translate3d(0, 0, 0));
 }
 
 .index-title {
 	color: #FFF;
-	font-size: 4vh;
+	font: $title-font;
+	font-size: 3rem;
 }
 
 .index-header {
 	color: #FFF;
-	font-size: 3vh;
+	font: $title-font;
+	font-size: 1.5rem;
+	font-weight: 400;
+	line-height: 2;
 }
 
 hr.index-hr{
@@ -63,28 +70,30 @@ hr.index-hr{
 	font-style: italic;
 	transition: color 0.2s ease-in-out;
 	cursor: pointer;
-	font-size: 2.2vh;
+	font-size: 1.5rem;
+	line-height: 1.15;
+	margin-bottom: 1rem;
 }
 
 .index-item .item-link:hover{
-	color: #FFF;
+	color: lighten($highlight-colour, 10%);
 }
 
 // Background Images
 
 .index-background-container {
 	background-color: #333;
-	width: 100vw;
-	height: 100vh;
+	width: 100%;
+	height: 100%;
 }
 
 .index-background-image {
-	width: 100vw;
-	height: 100vh;
+	width: 100%;
+	height: 100%;
 
 	position: absolute;
 
-	background: #333 no-repeat center center fixed;
+	background: #333 no-repeat center center;
 	background-size: cover;
 	transition: opacity 0.75s linear;
 	opacity: 0;
@@ -95,13 +104,37 @@ hr.index-hr{
 }
 
 #dali_bg.index-background-image {
-	background-image: url(content/images/index_bg/Dali_bg.jpg);
-}
-
-#manel_bg.index-background-image {
-	background-image: url(content/images/index_bg/Manel_bg.jpg);
+	background-image: url(content/images/index_bg/Dali_TBC.jpg);
 }
 
 #mohammed_ali_bg.index-background-image {
-	background-image: url(content/images/index_bg/MohammedAli_bg.jpg);
+	background-image: url(content/images/index_bg/MohamadAli_TBC.jpg);
+}
+
+#manel_bg.index-background-image {
+	background-image: url(content/images/index_bg/Manel_TBC.jpg);
+}
+
+#safa_bg.index-background-image {
+	background-image: url(content/images/index_bg/Safa_TBC.jpg);
+}
+
+#lilli_bg.index-background-image {
+	background-image: url(content/images/index_bg/Lili_TBC.jpg);
+}
+
+#underground_church_bg.index-background-image {
+	background-image: url(content/images/index_bg/Underground_TBC.jpg);
+}
+
+#islams_response_bg.index-background-image {
+	background-image: url(content/images/index_bg/IslamsResponse_TBC.jpg);
+}
+
+#tunisian_society_bg.index-background-image {
+	background-image: url(content/images/index_bg/TunisiasSoc_TBC.jpg);
+}
+
+#conclusion_bg.index-background-image {
+	background-image: url(content/images/index_bg/Marwan_TBC.jpg);
 }

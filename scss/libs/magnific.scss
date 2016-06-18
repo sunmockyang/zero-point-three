@@ -438,6 +438,8 @@ button {
     cursor: auto;
   }
   .mfp-title {
+    font: $article-font;
+    font-style: italic;
     text-align: left;
     line-height: 18px;
     color: $mfp-caption-title-color;

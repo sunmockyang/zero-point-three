@@ -1,7 +1,7 @@
 // BackgroundMedia.js
 
-function BackgroundMedia(elements) {
-	this.scrollBuffer = elements.scrollBuffer;
+function BackgroundMedia(elements, introBuffer) {
+	this.articleContainer = elements.articleContainer;
 
 	this.title1 = elements.title1;
 	this.title2 = elements.title2;
@@ -14,57 +14,76 @@ function BackgroundMedia(elements) {
 	this.currentVideo = this.video1;
 
 	this.introParagraph = elements.introParagraph;
+	elements.introDownCaret.onclick = (function () {
+		if (window.pageYOffset < this.transitionPercentage * BackgroundMedia.scrollRange) {
+			animateScroll(this.transitionPercentage * BackgroundMedia.scrollRange, 1500, "easeInOutQuad", -10, "top");
+		}
+		else {
+			animateScroll(document.getElementById('introStart'), 3000, "easeInOutQuint", document.documentElement.clientHeight * 0.075, "top");
+		}
+	}).bind(this);
 
 	this.video1TargetVolume = this.maxVolume;
 	this.video2TargetVolume = 0;
 	this.video1.volume = this.video2.volume = 0;
 
 	this.videoContainer.classList.remove("hidden");
-	this.playVideo(true);
-	this.updateVideoVolume();
+	if (isIOS()){
+		this.video1.outerHTML = '<div class="image" id="video1"></div>';
+		this.video2.outerHTML = '<div class="image" id="video2"></div>';
+
+		this.video1 = document.getElementById("video1");
+		this.video2 = document.getElementById("video2");
+	}
+	else {
+		this.playVideo(true);
+		this.updateVideoVolume();
+	}
 
 	this.indexBackground = elements.indexBackground;
 
 	this.lastY = 0;
+	this.lastYPercentage = 0;
 
-	this.onResize();
+	this.onResize(introBuffer);
 }
 
 BackgroundMedia.scrollRange = 999; // Gets adjusted to screen height
 BackgroundMedia.prototype.transitionPercentage = 0.3;
-BackgroundMedia.prototype.articlePercentage = 1.1;
+BackgroundMedia.prototype.videoEndPercentage = 1.1;
+BackgroundMedia.prototype.introParagraphStart = -0.2;
 BackgroundMedia.prototype.fadeRange = 0.25;
 BackgroundMedia.prototype.fadeEnd = 0.9;
-BackgroundMedia.prototype.volumeLerp = 0.05;
-BackgroundMedia.prototype.maxVolume = 0.1;
+BackgroundMedia.prototype.volumeLerp = 0.02;
+BackgroundMedia.prototype.maxVolume = 0.2;
 BackgroundMedia.prototype.volumeRequestID = 0;
 
-BackgroundMedia.prototype.onResize = function() {
-	BackgroundMedia.scrollRange = this.scrollBuffer.getBoundingClientRect().height;
-
+BackgroundMedia.prototype.onResize = function(introBuffer) {
+	BackgroundMedia.scrollRange = introBuffer.getHeight();
+	this.articleContainer.style.marginTop = BackgroundMedia.scrollRange + "px";
 	this.onScroll();
 };
 
 BackgroundMedia.prototype.onScroll = function(y) {
-	var currentY = window.scrollY;
+	var currentY = window.pageYOffset;
 
-	var lastYPercentage = this.lastY / BackgroundMedia.scrollRange;
 	var currentYPercentage = currentY / BackgroundMedia.scrollRange;
 
 	// Transition between two videos
-	OnMarkerCrossed(this.transitionPercentage, lastYPercentage, currentYPercentage, this.animateSecondVideoIn.bind(this), this.animateSecondVideoOut.bind(this));
-	OnMarkerCrossed(this.articlePercentage, lastYPercentage, currentYPercentage, this.animateArticleIn.bind(this), this.animateArticleOut.bind(this));
+	OnMarkerCrossed(this.transitionPercentage, this.lastYPercentage, currentYPercentage, this.animateSecondVideoIn.bind(this), this.animateSecondVideoOut.bind(this));
+	OnMarkerCrossed(this.videoEndPercentage, this.lastYPercentage, currentYPercentage, this.animateVideoOut.bind(this), this.animateVideoIn.bind(this));
+	OnMarkerCrossed(BackgroundMedia.scrollRange + (this.introParagraphStart * document.documentElement.clientHeight), this.lastY, currentY, show.bind(window, this.introParagraph));
 
 	// Container
 	if (currentYPercentage < 1) {
-		this.titleContainer.style.transform = translate3dY(-currentYPercentage * 30);
+		setTranslate3dY(this.titleContainer, -currentYPercentage * 50);
 	}
 
 	// Video1
-	var video1Parallax = currentYPercentage / this.transitionPercentage;
-	if (video1Parallax < 2) {
-		this.video1.style.transform = translate3dY(-video1Parallax * 5);
-	}
+	// var video1Parallax = currentYPercentage / this.transitionPercentage;
+	// if (video1Parallax < 2) {
+	// 	setTranslate3dY(this.video1, -video1Parallax * 5);
+	// }
 
 	// Video2
 	var fadePercentage = 1 - (this.fadeEnd - currentYPercentage) / this.fadeRange;
@@ -72,19 +91,20 @@ BackgroundMedia.prototype.onScroll = function(y) {
 		var percentage = Mathx.normalize(1 - Math.pow(fadePercentage, 2));
 		this.titleContainer.style.opacity = percentage;
 		this.video2.style.opacity = percentage;
-		this.video2.style.transform = translate3dY(-fadePercentage * 30);
+		// setTranslate3dY(this.video2, -fadePercentage * 30);
 		this.videoOverlay.style.opacity = percentage;
-		this.volumeLerp = 0.5;
+		this.volumeLerp = 0.02;
 		this.video2TargetVolume = percentage * this.maxVolume;
 	}
 	else if (this.video2.style.opacity != 1) {
 		this.titleContainer.style.opacity = 1;
 		this.video2.style.opacity = 1;
-		this.video2.style.transform = translate3dY(0);
+		// setTranslate3dY(this.video2, 0);
 		this.videoOverlay.style.opacity = 1;
 	}
 
 	this.lastY = currentY;
+	this.lastYPercentage = this.lastY / BackgroundMedia.scrollRange;
 };
 
 BackgroundMedia.prototype.animateSecondVideoIn = function() {
@@ -118,7 +138,7 @@ BackgroundMedia.prototype.updateVideoVolume = function() {
 	window.requestAnimationFrame(this.updateVideoVolume.bind(this));
 };
 
-BackgroundMedia.prototype.animateArticleIn = function() {
+BackgroundMedia.prototype.animateVideoOut = function() {
 	this.playVideo(false);
 	this.title1.classList.add("hidden");
 	this.title2.classList.add("hidden");
@@ -126,11 +146,9 @@ BackgroundMedia.prototype.animateArticleIn = function() {
 	this.video2.classList.add("hidden");
 	this.videoContainer.classList.add("hidden");
 	this.indexBackground.classList.remove("hidden");
-
-	show(this.introParagraph);
 };
 
-BackgroundMedia.prototype.animateArticleOut = function() {
+BackgroundMedia.prototype.animateVideoIn = function() {
 	this.playVideo(true);
 	this.title1.classList.remove("hidden");
 	this.title2.classList.remove("hidden");
@@ -141,12 +159,12 @@ BackgroundMedia.prototype.animateArticleOut = function() {
 };
 
 BackgroundMedia.prototype.playVideo = function(play) {
-	if (play && !this.playing) {
+	if (!isIOS() && play && !this.playing) {
 		this.playing = true;
 		this.video1.play();
 		this.video2.play();
 	}
-	else if (!play && this.playing){
+	else if (!isIOS() && !play && this.playing){
 		this.playing = false;
 		this.video1.pause();
 		this.video2.pause();

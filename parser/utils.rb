@@ -33,3 +33,7 @@ end
 def parse_poster_from_video_path(path)
 	return File.dirname(path) + "/" + File.basename(path,File.extname(path)) + ".jpg"
 end
+
+def parse_webm_from_video_path(mp4_path)
+	return File.dirname(mp4_path) + "/" + File.basename(mp4_path, File.extname(mp4_path)) + ".webm"
+end

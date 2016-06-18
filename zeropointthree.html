@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <meta charset="utf-8" />
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=0.65, maximum-scale=1.0, user-scalable=no">
+	<meta name="viewport" content="width=device-width, initial-scale=0.65, maximum-scale=1">
 	<title>Underground | Priscilla Hwang</title>
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
 	<link href="http://vjs.zencdn.net/5.8.7/video-js.css" rel="stylesheet">
 	<link href="libs/videojs/videojs_stylesheet.css" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,300,100|PT+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+	<link rel="prefetch" href="content/images/preloader_bg.jpg" />
+	<link rel="prefetch" href="img/loading.svg" />
+	<meta property="og:url" content="http://underground.priscillahwang.com" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Underground | Priscilla Hwang" />
+	<meta property="og:site_name" content="Underground" />
+	<meta property="og:description" content="A multimedia investigation into the lives of a religious minority living in a Muslim society." />
+	<meta property="og:image" content="http://underground.priscillahwang.com/content/images/preloader_bg.jpg" />
 
 	<script type="text/javascript">
 
@@ -24,14 +33,16 @@
 
 	// Load sections
 	var sectionPaths = ["01-Prologue.html",
-						"02-Manel.html",
-						"03-Mohammed-Ali.html",
+						"02-Mohammed-Ali.html",
+						"03-Manel.html",
 						"04-Safa.html",
 						"05-Lilli.html",
 						"06-UndergroundChurch.html",
-						"07-ChurchOfTunisia.html",
+						"07-Islams-Response.html",
 						"08-TunisianSociety.html",
-						"09-Conclusion.html"];
+						"09-Conclusion.html",
+						"10-Epilogue.html"]
+
 	var sectionsLoaded = false;
 	var loadedSections = {};
 
@@ -57,39 +68,39 @@
 <body>
 
 <!-- Preloader -->
-
 <div id="preloader">
 	<div class="content">
-		<div id="preloaderButton" data-text="- Click to Enter -">
-			<img src="img/loading.svg"/>
+		<div id="preloaderButton" data-text="<span>-</span> Enter <span>-</span>">
+			<img src="img/loading.svg" alt="Loading..." />
 		</div>
-		<div class="title">Underground.</div>
+		<div class="title">Underground</div>
 	</div>
 </div>
 
 <!-- Background media -->
 <div class="background-media-container">
 	<div class="intro-video-container hidden">
-		<video class="fullscreen video" id="video1" data-aspect-ratio="1.7778" data-scale="1.1" poster="content/intro_videos/F_Intro_Muslim_fallback.jpg" loop>
-			<source src="https://s3-us-west-2.amazonaws.com/zero-point-three/content/intro_videos/F_Intro_Muslim2.mp4" type="video/mp4">
+		<video class="fullscreen video" id="video1" data-aspect-ratio="1.7778" poster="content/intro_videos/F_Intro_Muslim2.jpg" loop="">
+			<source src="content/intro_videos/F_Intro_Muslim2.mp4" type="video/mp4">
+			<source src="content/intro_videos/F_Intro_Muslim2.webm" type="video/webm">
 		</video>
-		<video class="fullscreen video" id="video2" data-aspect-ratio="1.7778" data-scale="1.1" volume="0" poster="content/intro_videos/F_Intro_Christian_fallback.jpg" loop>
-			<source src="https://s3-us-west-2.amazonaws.com/zero-point-three/content/intro_videos/F_Intro_Christian1.mp4" type="video/mp4">
+		<video class="fullscreen video" id="video2" data-aspect-ratio="1.7778" volume="0" poster="content/intro_videos/F_Intro_Christian1.jpg" loop>
+			<source src="content/intro_videos/F_Intro_Christian1.mp4" type="video/mp4">
+			<source src="content/intro_videos/F_Intro_Christian1.webm" type="video/webm">
 		</video>
 		<div class="video-overlay">
-			<img class="down-caret" src="img/down_caret.svg" />
+			<img id="introDownCaret"class="down-caret" src="img/down_caret_white.svg" />
 		</div>
-		<!-- add a down arrow here. Look up middle eastern street sign -->
 	</div>
 
 	<div id="index-background" class="index-background-container hidden">
 		<div class="index-background-image show" id="dali_bg"></div>
-		<div class="index-background-image" id="manel_bg"></div>
 		<div class="index-background-image" id="mohammed_ali_bg"></div>
+		<div class="index-background-image" id="manel_bg"></div>
 		<div class="index-background-image" id="safa_bg"></div>
 		<div class="index-background-image" id="lilli_bg"></div>
 		<div class="index-background-image" id="underground_church_bg"></div>
-		<div class="index-background-image" id="church_of_tunisia_bg"></div>
+		<div class="index-background-image" id="islams_response_bg"></div>
 		<div class="index-background-image" id="tunisian_society_bg"></div>
 		<div class="index-background-image" id="conclusion_bg"></div>
 	</div>
@@ -101,24 +112,24 @@
 		<div class="navbar-title">Underground.</div>
 		<div class="navbar-item-container">
 			<div class="navbar-item" data-link-id="index-box">Index</div>
-			<div class="navbar-item" data-second-layer="stories_container">Stories<img class="down-caret" src="img/down_caret.svg" /></div>
-			<div class="navbar-item" data-second-layer="analysis_container">Analysis<img class="down-caret" src="img/down_caret.svg" /></div>
+			<div class="navbar-item" data-second-layer="stories_container">Stories<img class="down-caret" src="img/down_caret_white.svg" /></div>
+			<div class="navbar-item" data-second-layer="analysis_container">Analysis<img class="down-caret" src="img/down_caret_white.svg" /></div>
 			<div class="navbar-item" data-link-id="conclusion">Conclusion</div>
 		</div>
 	</div>
 	<div class="navbar-second-level">
 		<div class="navbar-item-container">
-			<div id="stories_container" class="item-box hidden no-size">
+			<div id="stories_container" class="hidden no-size">
 				<div class="navbar-item" data-link-id="dali">Dali</div>
+				<div class="navbar-item" data-link-id="mohammed_ali">Mohamed Ali</div>
 				<div class="navbar-item" data-link-id="manel">Manel</div>
-				<div class="navbar-item" data-link-id="mohammed_ali">Mohammed Ali</div>
 				<div class="navbar-item" data-link-id="safa">Safa</div>
-				<div class="navbar-item" data-link-id="lilli">Lilli</div>
+				<div class="navbar-item" data-link-id="lilli">Lili</div>
 			</div>
-			<div id="analysis_container" class="item-box hidden no-size">
-				<div class="navbar-item" data-link-id="underground_church">The Underground Church</div>
-				<div class="navbar-item" data-link-id="church_of_tunisia">The Church of Tunisia</div>
-				<div class="navbar-item" data-link-id="tunisian_society">The Tunisian Society</div>
+			<div id="analysis_container" class="hidden no-size">
+				<div class="navbar-item" data-link-id="underground_church">Underground Church</div>
+				<div class="navbar-item" data-link-id="islams_response">Islam's Response</div>
+				<div class="navbar-item" data-link-id="tunisian_society">Tunisian Society</div>
 			</div>
 		</div>
 	</div>
@@ -127,35 +138,36 @@
 <!-- Title -->
 <div class="intro-title-container">
 	<div id="title1" class="intro-title">
-		<span id="title1_text">Underground.</span>
+		<span id="title1_text">Underground</span>
 	</div>
 	<div id="title2" class="intro-title">
 		<div id="title2_text">
-			The Plight of a religious minority living in a Muslim world | Priscilla Hwang
+			The plight of a religious minority living in a Muslim society | Priscilla Hwang
+			<br/>
+			April 2016.
 		</div>
 	</div>
 </div>
 
-<div id="intro-buffer"></div>
 <!-- Article -->
 
 <div id="articleContainer" class="article-container">
 	<div id="intro-paragraph">
-		<hr/>
+		<hr id="introStart"/>
 		<p class="divergent">Divergent. </p>
 		<p class="underground">Underground.</p>
 		<p class="undetected">Undetected. </p>
 		<p>They chose a life that deviates from the norm. </p>
-		<p>Some chose a life of hiding; some chose to expose themselves. Many of them don&#39;t even know if others like them exist. </p>
-		<p>What is life like for this almost invisible group in the periphery of Muslim society?  </p>
-		<p>This multimedia investigation takes a rare glance into the lives of Tunisian Christians, living as the 0.3 per cent among the 99.</p>
-		<hr/>
+		<p>Some chose a life of hiding; some chose to expose themselves to society. Many of them don't even know if others like them exist.</p>
+		<p>What is life like for this almost invisible group in the periphery of Muslim society?</p>
+		<p>This multimedia investigation gives a rare glimpse into the lives of Tunisian Christians, living as the estimated 0.2 per cent among the Muslim 99 per cent.</p>
+		<img class="down-caret" onclick="ScrollCenteredElem(document.getElementById('index-box'), 3000, 100);" src="img/down_caret_black.svg" />
 	</div>
 
 	<div class="index-wrapper">
 		<div id="index-box" class="index-box">
 
-			<div class="index-title">Table of Contents</div>
+			<div class="index-title">Index</div>
 			<hr class="index-hr" />
 
 			<div class="index-header">Part 1: Stories</div>
@@ -164,29 +176,29 @@
 				<div class="item-link" data-link-id="dali">Dali</div>
 			</div>
 			<div class="index-item">
-				<div class="item-link" data-link-id="manel">Manel</div>
+				<div class="item-link" data-link-id="mohammed_ali">Mohamed Ali</div>
 			</div>
 			<div class="index-item">
-				<div class="item-link" data-link-id="mohammed_ali">Mohammed Ali</div>
+				<div class="item-link" data-link-id="manel">Manel</div>
 			</div>
 			<div class="index-item">
 				<div class="item-link" data-link-id="safa">Safa</div>
 			</div>
 			<div class="index-item">
-				<div class="item-link" data-link-id="lilli">Lilli</div>
+				<div class="item-link" data-link-id="lilli">Lili</div>
 			</div>
 
 			<hr class="index-hr" />
-			<div class="index-header">Part 2: Stories</div>
+			<div class="index-header">Part 2: Analysis</div>
 
 			<div class="index-item">
-				<div class="item-link" data-link-id="underground_church">The Underground Church</div>
+				<div class="item-link" data-link-id="underground_church">Underground Church</div>
 			</div>
 			<div class="index-item">
-				<div class="item-link" data-link-id="church_of_tunisia">The Church of Tunisia &amp; Islam's Response</div>
+				<div class="item-link" data-link-id="islams_response">Islam's Response</div>
 			</div>
 			<div class="index-item">
-				<div class="item-link" data-link-id="tunisian_society">The Tunisian Society</div>
+				<div class="item-link" data-link-id="tunisian_society">Tunisian Society</div>
 			</div>
 			<hr class="index-hr" />
 			<div class="index-item">
@@ -198,28 +210,32 @@
 
 <!-- Footer -->
 <footer>
-	<div class="text">
-		Some names of the Tunisian Christians in this report have been changed for their security.
-	</div>
-	<div class="special-thanks">
-		<div class="title">Special Thanks to</div>
-		<hr/>
-		<div class="text">
-			Grace Kim,
-			<br/>
-			Khaled Ben Hafaiedh,
-			<br/>
-			Dali Khlifi,
-			<br/>
-			Kristen Joo,
-			<br/>
-			and Sunmock Yang,
-			<br/>
-			which without whom this project would not have been possible
+	<div class="footer-container">
+		<div class="priscilla">
+			<a href="http://priscillahwang.com">
+				<div class="headshot" onmouseover=""></div>
+				<div class="name">Priscilla Hwang</div>
+			</a>
 		</div>
-		<div class="text">Most interviews and field research done in July and August 2015.</div>
+		<div class="notes">
+			<div class="names-changed">* Some names of the Tunisian Christians in this report have been changed for their security.</div>
+			<br/>
+			<div class="reconstruction">All literary reconstructions were recreated from in-depth interviews with the subjects.</div>
+			<div class="interviews">Most interviews and field research done in July and August 2015.</div>
+			<br/>
+			<div class="special-thanks">
+				<div class="title">Special thanks to:</div>
+				<div class="names">
+					Grace Kim, Khaled Ben Hafaiedh, Dali Khlifi, Kristen Joo, Sunmock Yang
+				</div>
+				which without whom this project would not have been possible.
+				<br/>
+				<br/>
+				Special thanks to my supervisor and editor, Paul Adams, who supported me from the very beginning.
+			</div>
+		</div>
+		<div class="sunmock">Design by <a href="http://sunmock.com">Sunmock</a> <a href="http://github.com/sunmockyang">Yang</a></div>
 	</div>
-	<div class="title">Article by: Priscilla Hwang, professional Journalismer. April 2016</div>
 </footer>
 
 <script type="text/javascript">
@@ -236,17 +252,22 @@ function onLoad() {
 
 	if (document.readyState === "complete" &&
 		sectionsLoaded) {
-		main();
-
-		var preloaderButton = document.getElementById("preloaderButton");
-		preloaderButton.classList.add("button");
-		preloaderButton.innerHTML = preloaderButton.dataset.text;
-		preloaderButton.onclick = (function () {
-			document.getElementById("preloader").classList.add("hide");
-			document.documentElement.classList.remove("disable-scroll");
-			onAppEnter();
-		}).bind(this);
+		setTimeout(startApp, 2000);
 	}
+}
+
+function startApp() {
+	// After waiting a couple seconds more...
+	main();
+
+	var preloaderButton = document.getElementById("preloaderButton");
+	preloaderButton.classList.add("button");
+	preloaderButton.innerHTML = preloaderButton.dataset.text;
+	preloaderButton.onclick = (function () {
+		document.getElementById("preloader").classList.add("hide");
+		document.documentElement.classList.remove("disable-scroll");
+		onAppEnter();
+	}).bind(this);
 }
 
 // Start main app
@@ -259,7 +280,6 @@ function main() {
 
 	elements = {
 		background: {
-			scrollBuffer: document.getElementById('intro-buffer'),
 			videoContainer: document.getElementsByClassName('intro-video-container')[0],
 			video1: document.getElementById('video1'),
 			video2: document.getElementById('video2'),
@@ -268,7 +288,9 @@ function main() {
 			titleContainer: document.getElementsByClassName("intro-title-container")[0],
 			indexBackground: document.getElementById('index-background'),
 			videoOverlay: document.getElementsByClassName('video-overlay')[0],
-			introParagraph: document.getElementById("intro-paragraph")
+			introDownCaret: document.getElementById('introDownCaret'),
+			introParagraph: document.getElementById("intro-paragraph"),
+			articleContainer: document.getElementById('articleContainer')
 		},
 
 		index: {
@@ -281,6 +303,7 @@ function main() {
 		},
 
 		navbar: {
+			title: document.getElementsByClassName('navbar-title')[0],
 			container: document.getElementsByClassName('navbar')[0],
 			firstLevel: navFirstLevel,
 			secondLevel: navSecondLevel,
@@ -292,7 +315,7 @@ function main() {
 
 		article: {
 			introParagraph: document.getElementById("intro-paragraph"),
-			container: document.getElementsByClassName("article-container")[0]
+			container: document.getElementById('articleContainer')
 		},
 
 		fullscreenElements: document.getElementsByClassName('fullscreen')
@@ -301,7 +324,7 @@ function main() {
 
 function onAppEnter() {
 	app = new ZeroPointThree(elements);
-	window.onresize = app.onResize;
+	window.onresize = app.onResize.bind(app);
 }
 
 function injectSections() {
@@ -318,18 +341,11 @@ function injectSections() {
 	var videos = document.getElementsByClassName('video-js');
 
 	for (var i = 0; i < videos.length; i++) {
-		var vid = videojs(videos[i])
-
-		if (videos[i].classList.contains("banner_video")) {
-			vid.on("play",
-				function() {
-						ScrollCenteredElem(this.el_);
-			});
-		}
+		videojs(videos[i]);
 	}
 
 	// Build lightboxes
-	$(".section-image, .section-subtitle").each(function() {
+	$(".section-image, .section-subtitle, .special-thanks .names").each(function() {
 	    $(this).magnificPopup({
 	        delegate: 'a',
 	        type: 'image',
@@ -342,20 +358,35 @@ function injectSections() {
 	        }
 	    });
 	});
+
+	// Setup Tableau
+	window.tableau._createNewVizesAndStartLoading();
 }
 
 window.onload = onLoad;
 </script>
 
 <script src="http://vjs.zencdn.net/5.8.7/video.js"></script>
+<script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
 <script type="text/javascript" src="js/libs/zepto.min.js"></script>
 <script type="text/javascript" src="js/libs/magnific.min.js"></script>
 <script type="text/javascript" src="js/ZeroPointThree.js"></script>
 <script type="text/javascript" src="js/BackgroundMedia.js"></script>
+<script type="text/javascript" src="js/IntroBuffer.js"></script>
 <script type="text/javascript" src="js/IndexController.js"></script>
 <script type="text/javascript" src="js/NavigationBar.js"></script>
 <script type="text/javascript" src="js/ScrollRange.js"></script>
 <script type="text/javascript" src="js/Utils.js"></script>
 <script type="text/javascript" src="js/libs/AnimateScroll.min.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-76693602-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </body>
 </html>

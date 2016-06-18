@@ -39,12 +39,33 @@ function OnMarkerCrossed(marker, last, current, onforward, onbackward) {
 	return false;
 };
 
-function ScrollToSection(id) {
-	animateScroll(document.getElementById(id), 1000, "easeInOutQuint", 50, "top");
+function ScrollToElemNavBar(elem) {
+	animateScroll(elem, 1000, "easeInOutQuint", elements.navbar.firstLevel.getBoundingClientRect().height + 10, "top");
 }
 
-function ScrollCenteredElem(elem, duration) {
-	animateScroll(elem, (duration) ? duration : 1000, "easeInOutQuint", 0, "center");
+function ScrollToSection(id) {
+	ScrollToElemNavBar(document.getElementById(id));
+}
+
+function ScrollCenteredElem(elem, duration, padding) {
+	animateScroll(elem, (duration) ? duration : 1000, "easeInOutQuint", padding, "center");
+}
+
+function ScrollCenteredElemNavBar(elem, duration) {
+	animateScroll(elem, (duration) ? duration : 1000, "easeInOutQuint", elements.navbar.firstLevel.getBoundingClientRect().height, "center");
+}
+
+function isIOS() {
+	return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+}
+
+function setTranslate3dY(elem, y) {
+	var transform = "translate3d(0," + y + "vh, 0)";
+	elem.style.transform = transform
+	elem.style.webkitTransform = transform;
+	elem.style.mozTransform = transform;
+	elem.style.msTransform = transform;
+	elem.style.oTransform = transform;
 }
 
 var Mathx = {};

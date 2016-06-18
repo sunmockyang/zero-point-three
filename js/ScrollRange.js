@@ -2,7 +2,7 @@
 
 function AddScrollHandler (range, cb) {
 	function callbacker(e){
-		var currentY = window.scrollY;
+		var currentY = window.pageYOffset;
 		var t = (currentY - range.start) / (range.end - range.start);
 		cb(t, currentY);
 	}

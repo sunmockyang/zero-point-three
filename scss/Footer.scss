@@ -1,27 +1,86 @@
 footer {
-	background-color: #955293;
+	background-color: #333;
 	color: #FFF;
-	text-align: center;
 
-	padding: 1rem;
+	padding: 2rem;
 
-	@include box-shadow(0px, 0px, 15px, rgba(0,0,0,0.5));
+	box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+	line-height: 1.25;
+
+	.footer-container {
+		width: 84%;
+		margin: 0 auto;
+		font-family: $article-font;
+		text-align: center;
+	}
+
+	.priscilla {
+		text-align: center;
+		margin-bottom: 1rem;
+		display: inline-block;
+
+		$headshot-size: 10rem;
+		$headshot-max-size: $headshot-size + 2rem;
+
+		.headshot {
+			width: $headshot-size;
+			height: $headshot-size;
+			border-radius: $headshot-size / 2;
+			margin: 1rem auto;
+			background: url("content/images/priscilla_headshot.jpg") no-repeat center center;
+			background-size: cover;
+			@include transition(0.3s cubic-bezier(0.260, 1.650, 0.180, 0.830));
+		}
+		.headshot:hover {
+			width: $headshot-max-size;
+			height: $headshot-max-size;
+			border-radius: $headshot-max-size / 2;
+			margin: (1rem - ($headshot-max-size - $headshot-size)/2) auto;
+		}
+
+
+		a {
+			color: #FFF;
+			text-decoration: none;
+			@include transition(0.3s ease-in-out);
+		}
+		a:hover {
+			color: $highlight-colour;
+		}
+	}
+
+	.notes {
+		line-height: 1.25;
+		text-align: center;
+		margin-bottom: 3rem;
+
+		// .special-thanks {
+		// 	.title {
+		// 		margin-bottom: 0.25rem;
+		// 	}
+
+		// 	.names {
+		// 		margin-bottom: 0.25rem;
+		// 	}
+		// }
+	}
+
+	.sunmock {
+		color: #BBB;
+		font-style: italic;
+
+		a {
+			color: #EEE;
+			@include transition(color 0.3s cubic-bezier(0.260, 1.650, 0.180, 0.830));
+		}
+
+		a:hover {
+			color: $highlight-colour;
+		}
+	}
 
 	hr {
 		border: solid white 1px;
-		max-width: 10rem;
-	}
-
-	.text {
-		font-size: 1rem;
-		margin-bottom: 1.5rem;
-	}
-
-	.special-thanks {
-
-	}
-
-	.title {
-		font-size: 1rem;
+		max-width: 13rem;
 	}
 }
