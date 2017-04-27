@@ -84,7 +84,7 @@ for video in "${VIDEOS[@]}"; do
 
 	# Convert videos to h.264 and webm
 	if [ ! -f $VIDEO_OUTPUT_DIR/$FILE_NAME ]; then
-		ffmpeg -i $video -threads 0 -nostdin -movflags faststart -vcodec h264 -y -acodec aac -strict -2 "$VIDEO_OUTPUT_DIR/$FILE_NAME"
+		ffmpeg -i $video -threads 0 -nostdin -vcodec h264 -y -acodec aac -strict -2 "$VIDEO_OUTPUT_DIR/$FILE_NAME"
 	fi
 	if [ ! -f $VIDEO_OUTPUT_DIR/$WEBM_FILE_NAME ]; then
 		ffmpeg -i $video -threads 0 -nostdin -c:v libvpx -crf 4 -b:v 1500K -y -strict -2 "$VIDEO_OUTPUT_DIR/$WEBM_FILE_NAME"
