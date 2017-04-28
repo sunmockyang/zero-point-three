@@ -50,7 +50,14 @@
 		loadedSections[path] = html;
 
 		for (var i in loadedSections) {
-			if (!loadedSections[i]) return;
+			if (loadedSections[i] === null){
+				return;
+			}
+			else if (loadedSections[i] !== true) {
+				console.log("Injecting section: ", i);
+				injectSection(loadedSections[i]);
+				loadedSections[i] = true;
+			}
 		}
 
 		// All the sections have been loaded. proceed with rendering
@@ -79,14 +86,14 @@
 
 <!-- Background media -->
 <div class="background-media-container">
-	<div class="intro-video-container hidden">
-		<video class="fullscreen video" id="video1" data-aspect-ratio="1.7778" poster="content/intro_videos/F_Intro_Muslim2.jpg" loop="">
-			<source src="content/intro_videos/F_Intro_Muslim2.mp4" type="video/mp4">
-			<source src="content/intro_videos/F_Intro_Muslim2.webm" type="video/webm">
+	<div class="intro-video-container">
+		<video class="fullscreen video" id="video1" data-aspect-ratio="1.7778" poster="content/intro_videos/F_Intro_Muslim2.jpg" loop="" preload="auto">
+			<source src="https://s3.amazonaws.com/sunnymock/zeropointthree/content/F_Intro_Muslim2.webm" type="video/webm">
+			<source src="https://s3.amazonaws.com/sunnymock/zeropointthree/content/F_Intro_Muslim2.mp4" type="video/mp4">
 		</video>
-		<video class="fullscreen video" id="video2" data-aspect-ratio="1.7778" volume="0" poster="content/intro_videos/F_Intro_Christian1.jpg" loop>
-			<source src="content/intro_videos/F_Intro_Christian1.mp4" type="video/mp4">
-			<source src="content/intro_videos/F_Intro_Christian1.webm" type="video/webm">
+		<video class="fullscreen video" id="video2" data-aspect-ratio="1.7778" volume="0" poster="content/intro_videos/F_Intro_Christian1.jpg" loop preload="auto">
+			<source src="https://s3.amazonaws.com/sunnymock/zeropointthree/content/F_Intro_Christian1.webm" type="video/webm">
+			<source src="https://s3.amazonaws.com/sunnymock/zeropointthree/content/F_Intro_Christian1.mp4" type="video/mp4">
 		</video>
 		<div class="video-overlay">
 			<img id="introDownCaret"class="down-caret" src="img/down_caret_white.svg" />
@@ -247,12 +254,11 @@ document.documentElement.classList.add("disable-scroll");
 
 // Preload
 function onLoad() {
-	console.log(document.readyState === "complete",
+	console.log("Data ready?", document.readyState === "complete",
 		sectionsLoaded == true);
 
-	if (document.readyState === "complete" &&
-		sectionsLoaded) {
-		setTimeout(startApp, 2000);
+	if (document.readyState === "complete" && sectionsLoaded) {
+		setTimeout(startApp, 500);
 	}
 }
 
@@ -273,7 +279,7 @@ function startApp() {
 // Start main app
 
 function main() {
-	injectSections();
+	processSectionContents();
 
 	var navFirstLevel = document.getElementsByClassName("navbar-first-level")[0];
 	var navSecondLevel = document.getElementsByClassName("navbar-second-level")[0];
@@ -327,12 +333,13 @@ function onAppEnter() {
 	window.onresize = app.onResize.bind(app);
 }
 
-function injectSections() {
-	var sectionsRawText = "";
-	for (var i = 0; i < sectionPaths.length; i++) {
-		sectionsRawText += loadedSections[sectionPaths[i]];
-	};
-	document.getElementById('articleContainer').innerHTML += sectionsRawText;
+function injectSection(text) {
+	document.getElementById('articleContainer').innerHTML += text;
+}
+
+function processSectionContents() {
+	// Setup Tableau
+	window.tableau._createNewVizesAndStartLoading();
 
 	// Clear up some memory
 	loadedSections = null;
@@ -358,9 +365,6 @@ function injectSections() {
 	        }
 	    });
 	});
-
-	// Setup Tableau
-	window.tableau._createNewVizesAndStartLoading();
 }
 
 window.onload = onLoad;
