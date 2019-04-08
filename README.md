@@ -6,7 +6,7 @@ Created for a Master's in Journalism thesis of [Priscilla Hwang](http://priscill
 ### View the finished piece [here](http://underground.priscillahwang.com).
 
 ### To Generate Website
-Run `generateWebsite.sh` in the `parser` folder. Content has not been included in this repo since it may be sensitive.
+Run `./parser/generateWebsite.sh` from the root of the repository. Content has not been included in this repo since it may be sensitive.
 
 ## Dev Notes
 ### Situation
@@ -36,3 +36,13 @@ This way allowed the parsing system to also be aware of all types of media going
 ### Notes for future:
 - Consider a design to put everything into separate pages. Reduce load times
 - Add a minify step to minify + gzip everything
+
+### Things done since the website has launched:
+- Fixed some typos
+- Adjusted video encryption
+- Fixed initial page load flow, site will load far faster with less lags
+- Added basic minification to everything
+- Removed all generated content from git since we don't need them when the site is no longer under active development
+- Move hosting from standard hosting to github pages
+  - Serve all videos from AWS S3
+  - Export to `docs` folder
