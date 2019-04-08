@@ -1,4 +1,5 @@
 require_relative "section"
+require 'html_press'
 imageListFile = "images.txt"
 videoListFile = "videos.txt"
 
@@ -9,7 +10,10 @@ ARGV.each { |md_file|
 
 	puts "Parsing: #{md_file} -> #{output_file}"
 	File.open(output_file, "w") { |file|
-		file.write(Section.new(md_file).to_html)
+		html_output = Section.new(md_file).to_html
+		# Minify html
+		html_output = HtmlPress.press(html_output)
+		file.write(html_output)
 	}
 }
 puts html_file_list.to_s

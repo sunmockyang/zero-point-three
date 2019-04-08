@@ -26,6 +26,9 @@ for copy in "${COPY_CONTENT_RAW[@]}"; do
 done
 mv $OUTPUT_DIR/zeropointthree.html $OUTPUT_DIR/index.html
 
+# Compress all raw text files
+find upload -name '*.html' -or -name '*.css' -or -name "*.js" | xargs ruby parser/minify_web_text.rb
+
 # Parse and copy Markdown files
 ruby parser/compile_data.rb content/sections/*.md
 cp content/sections/*.html $OUTPUT_DIR/content/sections/
@@ -58,7 +61,6 @@ for image in "${IMAGES[@]}"; do
 		./parser/cropAspectRatio.sh $IMAGE_OUTPUT_DIR/thumbs/$FILE_NAME $THUMBNAIL_ASPECT_RATIO
 	fi
 done
-
 
 # Parse video files
 VIDEOS=()
