@@ -1,7 +1,7 @@
 #!/bin/bash
 
-OUTPUT_DIR="upload"
-COPY_RAW=(zeropointthree.html stylesheet.css favicon.ico img js libs)
+OUTPUT_DIR="docs"
+COPY_RAW=(zeropointthree.html favicon.ico img js libs)
 COPY_CONTENT_RAW=(content/images)
 IMAGE_MAXSIZE=1280
 THUMBNAIL_MAXSIZE=720
@@ -15,7 +15,7 @@ echo "GENERATING UNDERGROUND WEBPAGE"
 mkdir -p $OUTPUT_DIR/content/sections
 
 # SASS PARSING
-sass scss/stylesheet.scss stylesheet.css
+sass --sourcemap=none scss/stylesheet.scss $OUTPUT_DIR/stylesheet.css
 
 # Copy anything that doesn't need parsing
 for copy in "${COPY_RAW[@]}"; do
@@ -27,7 +27,7 @@ done
 mv $OUTPUT_DIR/zeropointthree.html $OUTPUT_DIR/index.html
 
 # Compress all raw text files
-find upload -name '*.html' -or -name '*.css' -or -name "*.js" | xargs ruby parser/minify_web_text.rb
+find $OUTPUT_DIR -name '*.html' -or -name '*.css' -or -name "*.js" | xargs ruby parser/minify_web_text.rb
 
 # Parse and copy Markdown files
 ruby parser/compile_data.rb content/sections/*.md
@@ -83,6 +83,11 @@ for video in "${VIDEOS[@]}"; do
 		convert $VIDEO_INPUT_DIR/$VIDEO_POSTER_NAME -strip -interlace Plane -gaussian-blur 0.05 -quality 85% -resize $POSTER_MAXSIZE\> $VIDEO_OUTPUT_DIR/$VIDEO_POSTER_NAME
 		./parser/cropAspectRatio.sh $VIDEO_OUTPUT_DIR/$VIDEO_POSTER_NAME $VIDEO_ASPECT_RATIO
 	fi
+
+	# Since we're serving our pages from github pages, we will be serving videos from S3.
+	# I've already uploaded to the bucket, so until we need to update the videos, we don't
+	# need to convert them below.
+	continue
 
 	# Convert videos to h.264 and webm
 	if [ ! -f $VIDEO_OUTPUT_DIR/$FILE_NAME ]; then
