@@ -1,0 +1,1 @@
+function AddScrollHandler(n,t){function d(d){var e=window.pageYOffset,r=(e-n.start)/(n.end-n.start);t(r,e)}window.addEventListener("scroll",d)}
