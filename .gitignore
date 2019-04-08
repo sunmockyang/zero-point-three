@@ -3,3 +3,7 @@ old
 stylesheet.css.map
 .DS_Store
 upload
+content/sections/*.html
+parser/videos.txt
+parser/images.txt
+.dropbox
